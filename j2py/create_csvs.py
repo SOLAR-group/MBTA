@@ -1,4 +1,3 @@
-import glob
 import os
 from typing import Union
 
@@ -17,7 +16,7 @@ def read_data_frame(csvs: Union[list, set]) -> DataFrame:
                 data_frame = pd.read_csv(csv, names=["class", "mutant", "result"], dtype=str)
                 data_frames.append(data_frame)
 
-    data_frame = pd.concat(data_frames).dropna()
+    data_frame = pd.concat(data_frames)
     data_frame['index'] = data_frame.index
     return data_frame
 
@@ -42,20 +41,22 @@ def print_data_frame_to_csv(data_frame: DataFrame, language: str):
 
 
 if __name__ == "__main__":
+    directory = '../../TransCode'
+    with open(f'{directory}/mutants.txt', 'r') as mutants_file:
+        lines = mutants_file.readlines()
+
     print("Getting Java CSVs")
-    java_csvs = set(glob.glob('../../Transcode/output/*.csv'))
-    print("Excluding Python CSVs")
-    java_csvs = java_csvs - set(glob.glob('../../Transcode/output/*python*.csv'))
-    print("Reading Java CSVs")
+    java_csvs = [directory + '/output/' + line.replace('/', '-').replace('\n', '') + ".csv" for line in lines]
     # java_data_frame = pd.read_csv("csvs/java.csv", low_memory=False, dtype=str)
+    print("Reading Java CSVs")
     java_data_frame = read_data_frame(java_csvs)
     java_data_frame = filter_data_frame(java_data_frame)
     print_data_frame_to_csv(java_data_frame, "java")
 
     print("Getting Python CSVs")
-    python_csvs = set(glob.glob('../../Transcode/output/*python*.csv'))
-    print("Reading Python CSVs")
+    python_csvs = [directory + '/output/' + line.replace('/', '-').replace('\n', '') + "_python.csv" for line in lines]
     # python_data_frame = pd.read_csv("csvs/python.csv", low_memory=False, dtype=str)
+    print("Reading Python CSVs")
     python_data_frame = read_data_frame(python_csvs)
     python_data_frame = filter_data_frame(python_data_frame)
     print_data_frame_to_csv(python_data_frame, "python")

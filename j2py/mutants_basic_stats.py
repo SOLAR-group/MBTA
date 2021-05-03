@@ -68,8 +68,6 @@ if __name__ == "__main__":
                                     num_python_exception += 1
                                 else:
                                     num_python_success += 1
-                    else:
-                        print(python_output)
 
     print(f'Number of Java Mutants: {num_java_mutants}')
     print(f'Number of Java Compiled Mutants: {num_java_compiled}')
