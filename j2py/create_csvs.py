@@ -31,14 +31,14 @@ def filter_data_frame(data_frame: DataFrame) -> DataFrame:
 
 def print_data_frame_to_csv(data_frame: DataFrame, language: str):
     if language is not None:
+        if not os.path.exists("csvs"):
+            os.makedirs("csvs", exist_ok=True)
         print(f"Writing {language} CSV")
-        data_frame.to_csv(f"{language}.csv", index=False, na_rep="NA")
+        data_frame.to_csv(f"csvs/{language}.csv", index=False, na_rep="NA")
         print(f"Writing {language} Mutants CSV")
-        data_frame[data_frame['mutant'] != "ORIGINAL"].to_csv(f"{language}_mutants.csv", index=False,
-                                                              na_rep="NA")
+        data_frame[data_frame['mutant'] != "ORIGINAL"].to_csv(f"csvs/{language}_mutants.csv", index=False, na_rep="NA")
         print(f"Writing {language} Original CSV")
-        data_frame[data_frame['mutant'] == "ORIGINAL"].to_csv(f"{language}_original.csv", index=False,
-                                                              na_rep="NA")
+        data_frame[data_frame['mutant'] == "ORIGINAL"].to_csv(f"csvs/{language}_original.csv", index=False, na_rep="NA")
 
 
 if __name__ == "__main__":
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     print("Excluding Python CSVs")
     java_csvs = java_csvs - set(glob.glob('../../Transcode/output/*python*.csv'))
     print("Reading Java CSVs")
-    # java_data_frame = pd.read_csv("java.csv", low_memory=False, dtype=str)
+    # java_data_frame = pd.read_csv("csvs/java.csv", low_memory=False, dtype=str)
     java_data_frame = read_data_frame(java_csvs)
     java_data_frame = filter_data_frame(java_data_frame)
     print_data_frame_to_csv(java_data_frame, "java")
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     print("Getting Python CSVs")
     python_csvs = set(glob.glob('../../Transcode/output/*python*.csv'))
     print("Reading Python CSVs")
-    # python_data_frame = pd.read_csv("python.csv", low_memory=False, dtype=str)
+    # python_data_frame = pd.read_csv("csvs/python.csv", low_memory=False, dtype=str)
     python_data_frame = read_data_frame(python_csvs)
     python_data_frame = filter_data_frame(python_data_frame)
     print_data_frame_to_csv(python_data_frame, "python")

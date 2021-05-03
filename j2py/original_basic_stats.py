@@ -30,48 +30,42 @@ if __name__ == "__main__":
             java_mutant = original_dir + '.java'
             if os.path.isfile(java_mutant) and os.path.getsize(java_mutant) > 0:
                 num_java_programs += 1
-
-            java_compiled = original_dir + '.class'
-            if os.path.isfile(java_compiled) and os.path.getsize(java_compiled) > 0:
-                num_java_compiled += 1
-            else:
-                print(original_dir)
+                java_compiled = original_dir + '.class'
+                if os.path.isfile(java_compiled) and os.path.getsize(java_compiled) > 0:
+                    num_java_compiled += 1
+                    java_output = directory + '/output/' + line + '_original.csv'
+                    if os.path.isfile(java_output) and os.path.getsize(java_output) > 0:
+                        num_java_runnable += 1
+                        with open(java_output, 'r') as output_file:
+                            output_lines = output_file.readlines()
+                            if len(output_lines) == 1 and 'TIMEOUT' in output_lines[0]:
+                                num_java_time_out += 1
+                            elif len(output_lines) == 10:
+                                num_java_10_outputs += 1
+                                if any("EXCEPTION" in element for element in output_lines):
+                                    num_java_exception += 1
+                                else:
+                                    num_java_success += 1
 
             python_mutant = original_dir + '.py'
             if os.path.isfile(python_mutant) and os.path.getsize(python_mutant) > 0:
                 num_python_programs += 1
-
-            python_compiled = original_dir + '.pyc'
-            if os.path.isfile(python_compiled) and os.path.getsize(python_compiled) > 0:
-                num_python_compiled += 1
-
-            java_output = directory + '/output/' + line + '_original.csv'
-            if os.path.isfile(java_output) and os.path.getsize(java_output) > 0:
-                num_java_runnable += 1
-                with open(java_output, 'r') as output_file:
-                    output_lines = output_file.readlines()
-                    if len(output_lines) == 1 and 'TIMEOUT' in output_lines[0]:
-                        num_java_time_out += 1
-                    elif len(output_lines) == 10:
-                        num_java_10_outputs += 1
-                        if any("EXCEPTION" in element for element in output_lines):
-                            num_java_exception += 1
-                        else:
-                            num_java_success += 1
-
-            python_output = directory + '/output/' + line + '_original_python.csv'
-            if os.path.isfile(python_output) and os.path.getsize(python_output) > 0:
-                num_python_runnable += 1
-                with open(python_output, 'r') as output_file:
-                    output_lines = output_file.readlines()
-                    if len(output_lines) == 1 and 'TIMEOUT' in output_lines[0]:
-                        num_python_time_out += 1
-                    elif len(output_lines) == 10:
-                        num_python_10_outputs += 1
-                        if any("EXCEPTION" in element for element in output_lines):
-                            num_python_exception += 1
-                        else:
-                            num_python_success += 1
+                python_compiled = original_dir + '.pyc'
+                if os.path.isfile(python_compiled) and os.path.getsize(python_compiled) > 0:
+                    num_python_compiled += 1
+                    python_output = directory + '/output/' + line + '_original_python.csv'
+                    if os.path.isfile(python_output) and os.path.getsize(python_output) > 0:
+                        num_python_runnable += 1
+                        with open(python_output, 'r') as output_file:
+                            output_lines = output_file.readlines()
+                            if len(output_lines) == 1 and 'TIMEOUT' in output_lines[0]:
+                                num_python_time_out += 1
+                            elif len(output_lines) == 10:
+                                num_python_10_outputs += 1
+                                if any("EXCEPTION" in element for element in output_lines):
+                                    num_python_exception += 1
+                                else:
+                                    num_python_success += 1
 
     print(f'Number of Java Programs: {num_java_programs}')
     print(f'Number of Java Compiled Programs: {num_java_compiled}')

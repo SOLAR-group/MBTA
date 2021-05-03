@@ -46,8 +46,8 @@ if __name__ == "__main__":
     print(f'Non-executable Python: {non_executable}')
     print(f'No timeout Python: {len(python_df.groupby(["class", "mutant"]))}')
 
-    java_df = pd.read_csv("java.csv")
-    python_df = pd.read_csv("python.csv")
+    java_df = pd.read_csv("csvs/java.csv")
+    python_df = pd.read_csv("csvs/python.csv")
     merged: pd.DataFrame = pd.merge(java_df, python_df, on=["class", "mutant", 'index'], suffixes=['_java', '_python'],
                                     how='left')
     merged = merged[['class', 'mutant', 'index', 'result_java', 'result_python']]
