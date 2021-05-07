@@ -61,26 +61,26 @@ if __name__ == "__main__":
         os.makedirs("plots", exist_ok=True)
 
     plt.figure()
-    violin = sns.violinplot(data=grouped, y="Mutant")
+    violin = sns.violinplot(data=grouped, y="Mutant", cut=0, bw=0.01)
     violin.set(ylabel="Number of Generated Mutants per Class")
     plt.savefig('plots/violin_number_mutants.png')
 
     plt.figure()
-    violin = sns.violinplot(data=grouped, y="Translated")
+    violin = sns.violinplot(data=grouped, y="Translated", cut=0, bw=0.01)
     violin.set(ylabel="Percentage of Translated Mutants per Class")
     plt.savefig('plots/violin_number_translated_mutants.png')
 
     plt.figure()
-    violin = sns.violinplot(data=grouped, y="Compiled")
+    violin = sns.violinplot(data=grouped, y="Compiled", cut=0, bw=0.01)
     violin.set(ylabel="Percentage of Compiled Mutants per Class")
     plt.savefig('plots/violin_number_compiled_mutants.png')
 
     plt.figure()
-    violin = sns.violinplot(data=grouped, y="Runnable")
+    violin = sns.violinplot(data=grouped, y="Runnable", cut=0, bw=0.01)
     violin.set(ylabel="Percentage of Runnable Mutants per Class")
     plt.savefig('plots/violin_number_runnable_mutants.png')
 
     plt.figure()
-    violin = sns.violinplot(data=grouped, y="Success")
+    violin = sns.violinplot(data=grouped, y="Success", cut=0, bw=0.01)
     violin.set(ylabel="Percentage of Success Mutants per Class")
     plt.savefig('plots/violin_number_success_mutants.png')

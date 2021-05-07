@@ -17,13 +17,13 @@ if __name__ == "__main__":
     grouped = grouped.rename(columns={"equal_results": "Surviving Score"})
 
     plt.figure()
-    violin = sns.violinplot(data=grouped, y="Surviving Score")
+    violin = sns.violinplot(data=grouped, y="Surviving Score", cut=0, bw=0.01)
     violin.set(ylabel="Mutant Surviving Score")
     plt.savefig('plots/violin_mtss_mutant.png')
 
     grouped = grouped.groupby('class')["Surviving Score"].mean().to_frame("Surviving Score")
 
     plt.figure()
-    violin = sns.violinplot(data=grouped, y="Surviving Score")
+    violin = sns.violinplot(data=grouped, y="Surviving Score", cut=0, bw=0.01)
     violin.set(ylabel="Mean Mutant Surviving Score per Class")
     plt.savefig('plots/violin_mtss.png')
