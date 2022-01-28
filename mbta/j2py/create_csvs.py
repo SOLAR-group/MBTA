@@ -12,9 +12,13 @@ def read_data_frame(csvs: Union[list, set]) -> DataFrame:
         bar.check_tty = False
         for csv in csvs:
             bar.next()
-            if os.path.getsize(csv) > 0:
-                data_frame = pd.read_csv(csv, names=["class", "mutant", "result"], dtype=str)
-                data_frames.append(data_frame)
+            if os.path.exists(csv) and os.path.getsize(csv) > 0:
+                with open(csv, 'r') as output_file:
+                    output_line = output_file.readline()
+                    if 'TIMEOUT' not in output_line:
+                        data_frame = pd.read_csv(csv, names=["class", "mutant", "result"], dtype=str,
+                                                 on_bad_lines='skip')
+                        data_frames.append(data_frame)
 
     data_frame = pd.concat(data_frames)
     data_frame['index'] = data_frame.index
