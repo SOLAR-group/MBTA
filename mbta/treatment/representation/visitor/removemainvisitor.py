@@ -10,10 +10,9 @@ class RemoveMainVisitor(ClassVisitor):
         with source_path.open("r+") as file_reader_writer:
             content = file_reader_writer.readlines()
             file_reader_writer.seek(0, 0)
-            file_reader_writer.write("""\
-import java.io.FileWriter;
-import java.io.IOException;
-""")
+            inject_imports = "import java.io.FileWriter;\nimport java.io.IOException;\n"
+            if inject_imports not in content:
+                file_reader_writer.write(inject_imports)
             copy = True
             for line in content:
                 if copy:

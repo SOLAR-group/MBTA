@@ -4,10 +4,11 @@ from mbta.treatment.representation.visitor.classvisitor import ClassVisitor
 class ExtractMainVisitor(ClassVisitor):
     def visit_java_file(self, source_file):
         source_path = source_file.source_path
-        source_stem = source_path.stem
-        main_path = source_path.with_stem(source_stem + "_MAIN")
-        main_stem = main_path.stem
-        self.create_java_main(main_path, main_stem, source_path, source_stem)
+        source_stem: str = source_path.stem
+        if "_MAIN" not in source_stem:
+            main_path = source_path.with_stem(source_stem + "_MAIN")
+            main_stem = main_path.stem
+            self.create_java_main(main_path, main_stem, source_path, source_stem)
 
     def create_java_main(self, main_path, main_stem, source_path, source_stem):
         with source_path.open() as file_reader, main_path.open("w") as file_writer:
