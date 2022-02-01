@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 // Copyright (c) 2019-present, Facebook, Inc.
 // All rights reserved.
 //
@@ -21,37 +23,4 @@ static boolean f_gold ( int n , int p ) {
 
 //TOFILL
 
-public static void main(String args[]) {
-    int n_success = 0;
-    List<Integer> param0 = new ArrayList<>();
-    param0.add(71);
-    param0.add(85);
-    param0.add(4);
-    param0.add(20);
-    param0.add(71);
-    param0.add(72);
-    param0.add(36);
-    param0.add(95);
-    param0.add(83);
-    param0.add(72);
-    List<Integer> param1 = new ArrayList<>();
-    param1.add(78);
-    param1.add(75);
-    param1.add(35);
-    param1.add(99);
-    param1.add(29);
-    param1.add(88);
-    param1.add(54);
-    param1.add(52);
-    param1.add(33);
-    param1.add(13);
-    for(int i = 0; i < param0.size(); ++i)
-    {
-        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
-        {
-            n_success+=1;
-        }
-    }
-    System.out.println("#Results:" + n_success + ", " + param0.size());
-}
 }

@@ -1,3 +1,5 @@
+import os.path
+
 from mbta.treatment.representation.visitor.classvisitor import ClassVisitor
 
 
@@ -5,8 +7,8 @@ class ExtractMainVisitor(ClassVisitor):
     def visit_java_file(self, source_file):
         source_path = source_file.source_path
         source_stem: str = source_path.stem
-        if "_MAIN" not in source_stem:
-            main_path = source_path.with_stem(source_stem + "_MAIN")
+        main_path = source_path.with_stem(source_stem + "_MAIN")
+        if "_MAIN" not in source_stem and not os.path.exists(main_path):
             main_stem = main_path.stem
             self.create_java_main(main_path, main_stem, source_path, source_stem)
 

@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 // Copyright (c) 2019-present, Facebook, Inc.
 // All rights reserved.
 //
@@ -42,37 +44,4 @@ static boolean f_gold ( String s1 , String s2 ) {
 
 //TOFILL
 
-public static void main(String args[]) {
-    int n_success = 0;
-    List<String> param0 = new ArrayList<>();
-    param0.add("daBcd");
-    param0.add("417514");
-    param0.add("010000");
-    param0.add("ZcKYguiMrdyn");
-    param0.add("argaju");
-    param0.add("1110101101");
-    param0.add("ySOCoSaygi");
-    param0.add("204");
-    param0.add("10011100000010");
-    param0.add("nMAioozPmY");
-    List<String> param1 = new ArrayList<>();
-    param1.add("ABC");
-    param1.add("9");
-    param1.add("1111011010");
-    param1.add("iz");
-    param1.add("RAJ");
-    param1.add("110101001");
-    param1.add("aRhxkYqh");
-    param1.add("6986871066");
-    param1.add("0");
-    param1.add("WZFdDKw");
-    for(int i = 0; i < param0.size(); ++i)
-    {
-        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
-        {
-            n_success+=1;
-        }
-    }
-    System.out.println("#Results:" + n_success + ", " + param0.size());
-}
 }

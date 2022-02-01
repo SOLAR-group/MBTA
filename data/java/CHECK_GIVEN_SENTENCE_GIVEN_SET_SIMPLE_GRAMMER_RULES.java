@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 // Copyright (c) 2019-present, Facebook, Inc.
 // All rights reserved.
 //
@@ -33,21 +35,4 @@ static boolean f_gold ( char [ ] str ) {
 
 //TOFILL
 
-public static void main(String args[]) {
-    int n_success = 0;
-    List<String> param0 = Arrays.asList("I love cinema.", "The vertex is S.",
-                         "I am single.", "My name is KG.",
-                         "I lovE cinema.", "GeeksQuiz. is a quiz site.",
-                         "I love Geeksquiz and Geeksforgeeks.",
-                         " You are my friend.", "I love cinema", "Hello world !");
-
-    for(int i = 0; i < param0.size(); ++i)
-    {
-        if(f_filled(param0.get(i).toCharArray()) == f_gold(param0.get(i).toCharArray()))
-        {
-            n_success+=1;
-        }
-    }
-    System.out.println("#Results:" + n_success + ", " + param0.size());
-}
 }

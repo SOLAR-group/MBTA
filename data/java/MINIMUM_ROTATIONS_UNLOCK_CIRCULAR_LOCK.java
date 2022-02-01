@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 // Copyright (c) 2019-present, Facebook, Inc.
 // All rights reserved.
 //
@@ -26,37 +28,4 @@ static int f_gold ( int input , int unlock_code ) {
 
 //TOFILL
 
-public static void main(String args[]) {
-    int n_success = 0;
-    List<Integer> param0 = new ArrayList<>();
-    param0.add(71);
-    param0.add(90);
-    param0.add(28);
-    param0.add(41);
-    param0.add(32);
-    param0.add(39);
-    param0.add(33);
-    param0.add(89);
-    param0.add(50);
-    param0.add(92);
-    List<Integer> param1 = new ArrayList<>();
-    param1.add(46);
-    param1.add(65);
-    param1.add(84);
-    param1.add(23);
-    param1.add(58);
-    param1.add(82);
-    param1.add(58);
-    param1.add(32);
-    param1.add(51);
-    param1.add(77);
-    for(int i = 0; i < param0.size(); ++i)
-    {
-        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
-        {
-            n_success+=1;
-        }
-    }
-    System.out.println("#Results:" + n_success + ", " + param0.size());
-}
 }

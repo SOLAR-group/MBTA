@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 // Copyright (c) 2019-present, Facebook, Inc.
 // All rights reserved.
 //
@@ -25,26 +27,4 @@ static String f_gold ( String str ) {
 
 //TOFILL
 
-public static void main(String args[]) {
-    int n_success = 0;
-    List<String> param0 = new ArrayList<>();
-    param0.add("HCoAefoaan");
-    param0.add("80336005");
-    param0.add("01111111110");
-    param0.add("qIH");
-    param0.add("4210598472796");
-    param0.add("10101");
-    param0.add("imqmKdatcgXjs");
-    param0.add("950509666021");
-    param0.add("10111101101");
-    param0.add("wasqgYFvz");
-    for(int i = 0; i < param0.size(); ++i)
-    {
-        if(f_filled(param0.get(i)).equals(f_gold(param0.get(i))))
-        {
-            n_success+=1;
-        }
-    }
-    System.out.println("#Results:" + n_success + ", " + param0.size());
-}
 }
