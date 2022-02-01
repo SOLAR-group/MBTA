@@ -17,22 +17,3 @@ def f_gold ( A , B ) :
 
 
 #TOFILL
-
-if __name__ == '__main__':
-    param = [
-    (79,84,),
-    (61,29,),
-    (39,77,),
-    (39,65,),
-    (61,78,),
-    (86,73,),
-    (7,92,),
-    (86,50,),
-    (86,63,),
-    (11,2,)
-        ]
-    n_success = 0
-    for i, parameters_set in enumerate(param):
-        if f_filled(*parameters_set) == f_gold(*parameters_set):
-            n_success+=1
-    print("#Results: %i, %i" % (n_success, len(param)))

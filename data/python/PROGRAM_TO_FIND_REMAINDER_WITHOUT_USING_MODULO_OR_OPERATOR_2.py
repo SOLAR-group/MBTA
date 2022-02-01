@@ -11,22 +11,3 @@ def f_gold ( num , divisor ) :
 
 
 #TOFILL
-
-if __name__ == '__main__':
-    param = [
-    (70,13,),
-    (77,3,),
-    (77,73,),
-    (88,54,),
-    (96,39,),
-    (6,10,),
-    (79,95,),
-    (44,32,),
-    (26,86,),
-    (82,91,)
-        ]
-    n_success = 0
-    for i, parameters_set in enumerate(param):
-        if f_filled(*parameters_set) == f_gold(*parameters_set):
-            n_success+=1
-    print("#Results: %i, %i" % (n_success, len(param)))

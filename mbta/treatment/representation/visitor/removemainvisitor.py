@@ -26,4 +26,17 @@ class RemoveMainVisitor(ClassVisitor):
                 file_reader_writer.truncate()
 
     def visit_python_file(self, source_file):
-        pass
+        source_path: Path = source_file.source_path
+        if "_MAIN" not in source_path.stem:
+            with source_path.open("r+") as file_reader_writer:
+                content = file_reader_writer.readlines()
+                file_reader_writer.seek(0, 0)
+                copy = True
+                for line in content:
+                    if copy:
+                        if line.startswith("#TOFILL"):
+                            copy = False
+                        file_reader_writer.write(line)
+                    else:
+                        break
+                file_reader_writer.truncate()

@@ -31,22 +31,3 @@ def f_gold ( a , b ) :
 
 
 #TOFILL
-
-if __name__ == '__main__':
-    param = [
-    ('abcccdf','abccdf',),
-    ('aabba','ab',),
-    ('aabsdfljk','aa',),
-    ('IONiqV','XKbBiGZ',),
-    ('9667771256770','50915176',),
-    ('10001011','01',),
-    ('fczbDtMDT','FbX',),
-    ('298746088','29888',),
-    ('01100011000','0',),
-    ('Qk','',)
-        ]
-    n_success = 0
-    for i, parameters_set in enumerate(param):
-        if f_filled(*parameters_set) == f_gold(*parameters_set):
-            n_success+=1
-    print("#Results: %i, %i" % (n_success, len(param)))
