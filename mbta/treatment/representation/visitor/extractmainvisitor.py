@@ -4,15 +4,27 @@ from mbta.treatment.representation.visitor.classvisitor import ClassVisitor
 
 
 class ExtractMainVisitor(ClassVisitor):
-    def visit_java_file(self, source_file):
+
+    def validate(self, source_stem, main_path):
+        return "_MAIN" not in source_stem and not os.path.exists(main_path)
+
+    def get_default_info(self, source_file):
         source_path = source_file.source_path
         source_stem: str = source_path.stem
         main_path = source_path.with_stem(source_stem + "_MAIN")
-        if "_MAIN" not in source_stem and not os.path.exists(main_path):
-            main_stem = main_path.stem
-            self.create_java_main(main_path, main_stem, source_path, source_stem)
+        return main_path, source_path, source_stem
 
-    def create_java_main(self, main_path, main_stem, source_path, source_stem):
+    def visit_java_file(self, source_file):
+        main_path, source_path, source_stem = self.get_default_info(source_file)
+        if self.validate(source_stem, main_path):
+            self.create_java_main(main_path, source_path, source_stem)
+
+    def visit_python_file(self, source_file):
+        main_path, source_path, source_stem = self.get_default_info(source_file)
+        if self.validate(source_stem, main_path):
+            self.create_python_main(main_path, source_path, source_stem)
+
+    def create_java_main(self, main_path, source_path, source_stem):
         with source_path.open() as file_reader, main_path.open("w") as file_writer:
             inside_main = 0
             for line in file_reader:
@@ -37,12 +49,12 @@ class ExtractMainVisitor(ClassVisitor):
                 elif inside_main == 3:
                     if line.strip().startswith("n_success+=1;"):
                         file_writer.write(f"""\
-                builder.append("{main_stem}," + args[1] + "," + i + ",SUCCESS\\n");
+                builder.append("{source_stem}," + args[1] + "," + i + ",SUCCESS\\n");
             }} else {{
-                builder.append("{main_stem}," + args[1] + "," + i + ",FAILURE\\n");
+                builder.append("{source_stem}," + args[1] + "," + i + ",FAILURE\\n");
             }}
         }} catch (Exception e) {{
-            builder.append("{main_stem}," + args[1] + "," + i + ",EXCEPTION\\n");
+            builder.append("{source_stem}," + args[1] + "," + i + ",EXCEPTION\\n");
         }}
     }}
     writer.write(builder.toString());
@@ -53,5 +65,5 @@ class ExtractMainVisitor(ClassVisitor):
                     else:
                         file_writer.write("\t" + line)
 
-    def visit_python_file(self, source_file):
+    def create_python_main(self, main_path, source_path, source_stem):
         pass
