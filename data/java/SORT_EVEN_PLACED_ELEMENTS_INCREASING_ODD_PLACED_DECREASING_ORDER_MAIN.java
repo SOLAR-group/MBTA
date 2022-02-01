@@ -76,12 +76,12 @@ public static void main(String args[]) throws IOException {
 	        f_gold(param0.get(i),param1.get(i),param2.get(i));
 	        if(Arrays.equals(param0.get(i), filled_function_param0.get(i)) && param1.get(i) == filled_function_param1.get(i) && param2.get(i) == filled_function_param2.get(i))
 	        {
-                builder.append("SORT_EVEN_PLACED_ELEMENTS_INCREASING_ODD_PLACED_DECREASING_ORDER_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("SORT_EVEN_PLACED_ELEMENTS_INCREASING_ODD_PLACED_DECREASING_ORDER," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("SORT_EVEN_PLACED_ELEMENTS_INCREASING_ODD_PLACED_DECREASING_ORDER_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("SORT_EVEN_PLACED_ELEMENTS_INCREASING_ODD_PLACED_DECREASING_ORDER," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("SORT_EVEN_PLACED_ELEMENTS_INCREASING_ODD_PLACED_DECREASING_ORDER_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("SORT_EVEN_PLACED_ELEMENTS_INCREASING_ODD_PLACED_DECREASING_ORDER," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

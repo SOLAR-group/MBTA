@@ -41,12 +41,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i),param2.get(i)) == f_gold(param0.get(i),param1.get(i),param2.get(i)))
 	        {
-                builder.append("PARTITION_INTO_TWO_SUBARRAYS_OF_LENGTHS_K_AND_N_K_SUCH_THAT_THE_DIFFERENCE_OF_SUMS_IS_MAXIMUM_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("PARTITION_INTO_TWO_SUBARRAYS_OF_LENGTHS_K_AND_N_K_SUCH_THAT_THE_DIFFERENCE_OF_SUMS_IS_MAXIMUM," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("PARTITION_INTO_TWO_SUBARRAYS_OF_LENGTHS_K_AND_N_K_SUCH_THAT_THE_DIFFERENCE_OF_SUMS_IS_MAXIMUM_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("PARTITION_INTO_TWO_SUBARRAYS_OF_LENGTHS_K_AND_N_K_SUCH_THAT_THE_DIFFERENCE_OF_SUMS_IS_MAXIMUM," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("PARTITION_INTO_TWO_SUBARRAYS_OF_LENGTHS_K_AND_N_K_SUCH_THAT_THE_DIFFERENCE_OF_SUMS_IS_MAXIMUM_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("PARTITION_INTO_TWO_SUBARRAYS_OF_LENGTHS_K_AND_N_K_SUCH_THAT_THE_DIFFERENCE_OF_SUMS_IS_MAXIMUM," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

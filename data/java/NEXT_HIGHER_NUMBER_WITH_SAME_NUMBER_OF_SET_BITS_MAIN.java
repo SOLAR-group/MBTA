@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
 	        {
-                builder.append("NEXT_HIGHER_NUMBER_WITH_SAME_NUMBER_OF_SET_BITS_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("NEXT_HIGHER_NUMBER_WITH_SAME_NUMBER_OF_SET_BITS," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("NEXT_HIGHER_NUMBER_WITH_SAME_NUMBER_OF_SET_BITS_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("NEXT_HIGHER_NUMBER_WITH_SAME_NUMBER_OF_SET_BITS," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("NEXT_HIGHER_NUMBER_WITH_SAME_NUMBER_OF_SET_BITS_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("NEXT_HIGHER_NUMBER_WITH_SAME_NUMBER_OF_SET_BITS," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

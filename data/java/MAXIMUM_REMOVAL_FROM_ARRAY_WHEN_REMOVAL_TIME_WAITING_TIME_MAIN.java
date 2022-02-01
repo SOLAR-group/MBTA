@@ -30,12 +30,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
 	        {
-                builder.append("MAXIMUM_REMOVAL_FROM_ARRAY_WHEN_REMOVAL_TIME_WAITING_TIME_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("MAXIMUM_REMOVAL_FROM_ARRAY_WHEN_REMOVAL_TIME_WAITING_TIME," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("MAXIMUM_REMOVAL_FROM_ARRAY_WHEN_REMOVAL_TIME_WAITING_TIME_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("MAXIMUM_REMOVAL_FROM_ARRAY_WHEN_REMOVAL_TIME_WAITING_TIME," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("MAXIMUM_REMOVAL_FROM_ARRAY_WHEN_REMOVAL_TIME_WAITING_TIME_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("MAXIMUM_REMOVAL_FROM_ARRAY_WHEN_REMOVAL_TIME_WAITING_TIME," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

@@ -41,12 +41,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(Math.abs(1 - (0.0000001 + Math.abs(f_gold(param0.get(i),param1.get(i),param2.get(i))) )/ (Math.abs(f_filled(param0.get(i),param1.get(i),param2.get(i))) + 0.0000001)) < 0.001F)
 	        {
-                builder.append("PROGRAM_TO_FIND_THE_VOLUME_OF_A_TRIANGULAR_PRISM_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("PROGRAM_TO_FIND_THE_VOLUME_OF_A_TRIANGULAR_PRISM," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("PROGRAM_TO_FIND_THE_VOLUME_OF_A_TRIANGULAR_PRISM_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("PROGRAM_TO_FIND_THE_VOLUME_OF_A_TRIANGULAR_PRISM," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("PROGRAM_TO_FIND_THE_VOLUME_OF_A_TRIANGULAR_PRISM_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("PROGRAM_TO_FIND_THE_VOLUME_OF_A_TRIANGULAR_PRISM," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

@@ -30,12 +30,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
 	        {
-                builder.append("EULERS_CRITERION_CHECK_IF_SQUARE_ROOT_UNDER_MODULO_P_EXISTS_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("EULERS_CRITERION_CHECK_IF_SQUARE_ROOT_UNDER_MODULO_P_EXISTS," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("EULERS_CRITERION_CHECK_IF_SQUARE_ROOT_UNDER_MODULO_P_EXISTS_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("EULERS_CRITERION_CHECK_IF_SQUARE_ROOT_UNDER_MODULO_P_EXISTS," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("EULERS_CRITERION_CHECK_IF_SQUARE_ROOT_UNDER_MODULO_P_EXISTS_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("EULERS_CRITERION_CHECK_IF_SQUARE_ROOT_UNDER_MODULO_P_EXISTS," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

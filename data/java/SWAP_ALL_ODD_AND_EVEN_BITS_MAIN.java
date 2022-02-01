@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
 	        {
-                builder.append("SWAP_ALL_ODD_AND_EVEN_BITS_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("SWAP_ALL_ODD_AND_EVEN_BITS," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("SWAP_ALL_ODD_AND_EVEN_BITS_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("SWAP_ALL_ODD_AND_EVEN_BITS," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("SWAP_ALL_ODD_AND_EVEN_BITS_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("SWAP_ALL_ODD_AND_EVEN_BITS," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

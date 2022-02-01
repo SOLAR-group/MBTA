@@ -30,12 +30,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
 	        {
-                builder.append("LONGEST_COMMON_SUBSTRING_SPACE_OPTIMIZED_DP_SOLUTION_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("LONGEST_COMMON_SUBSTRING_SPACE_OPTIMIZED_DP_SOLUTION," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("LONGEST_COMMON_SUBSTRING_SPACE_OPTIMIZED_DP_SOLUTION_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("LONGEST_COMMON_SUBSTRING_SPACE_OPTIMIZED_DP_SOLUTION," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("LONGEST_COMMON_SUBSTRING_SPACE_OPTIMIZED_DP_SOLUTION_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("LONGEST_COMMON_SUBSTRING_SPACE_OPTIMIZED_DP_SOLUTION," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

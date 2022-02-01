@@ -54,12 +54,12 @@ public static void main(String args[]) throws IOException {
 	        f_gold(param0.get(i),param1.get(i));
 	        if(Arrays.equals(param0.get(i), filled_function_param0.get(i)) && param1.get(i) == filled_function_param1.get(i))
 	        {
-                builder.append("FIND_DISTINCT_SUBSET_SUBSEQUENCE_SUMS_ARRAY_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("FIND_DISTINCT_SUBSET_SUBSEQUENCE_SUMS_ARRAY," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("FIND_DISTINCT_SUBSET_SUBSEQUENCE_SUMS_ARRAY_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("FIND_DISTINCT_SUBSET_SUBSEQUENCE_SUMS_ARRAY," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("FIND_DISTINCT_SUBSET_SUBSEQUENCE_SUMS_ARRAY_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("FIND_DISTINCT_SUBSET_SUBSEQUENCE_SUMS_ARRAY," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

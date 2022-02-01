@@ -52,12 +52,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i),param2.get(i),param3.get(i)) == f_gold(param0.get(i),param1.get(i),param2.get(i),param3.get(i)))
 	        {
-                builder.append("MINIMUM_TIME_WRITE_CHARACTERS_USING_INSERT_DELETE_COPY_OPERATION_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("MINIMUM_TIME_WRITE_CHARACTERS_USING_INSERT_DELETE_COPY_OPERATION," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("MINIMUM_TIME_WRITE_CHARACTERS_USING_INSERT_DELETE_COPY_OPERATION_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("MINIMUM_TIME_WRITE_CHARACTERS_USING_INSERT_DELETE_COPY_OPERATION," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("MINIMUM_TIME_WRITE_CHARACTERS_USING_INSERT_DELETE_COPY_OPERATION_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("MINIMUM_TIME_WRITE_CHARACTERS_USING_INSERT_DELETE_COPY_OPERATION," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

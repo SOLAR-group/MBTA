@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
 	        {
-                builder.append("MARKOV_MATRIX_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("MARKOV_MATRIX," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("MARKOV_MATRIX_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("MARKOV_MATRIX," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("MARKOV_MATRIX_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("MARKOV_MATRIX," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

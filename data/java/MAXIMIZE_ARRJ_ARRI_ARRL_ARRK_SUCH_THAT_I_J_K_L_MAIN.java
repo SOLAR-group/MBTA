@@ -30,12 +30,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
 	        {
-                builder.append("MAXIMIZE_ARRJ_ARRI_ARRL_ARRK_SUCH_THAT_I_J_K_L_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("MAXIMIZE_ARRJ_ARRI_ARRL_ARRK_SUCH_THAT_I_J_K_L," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("MAXIMIZE_ARRJ_ARRI_ARRL_ARRK_SUCH_THAT_I_J_K_L_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("MAXIMIZE_ARRJ_ARRI_ARRL_ARRK_SUCH_THAT_I_J_K_L," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("MAXIMIZE_ARRJ_ARRI_ARRL_ARRK_SUCH_THAT_I_J_K_L_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("MAXIMIZE_ARRJ_ARRI_ARRL_ARRK_SUCH_THAT_I_J_K_L," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

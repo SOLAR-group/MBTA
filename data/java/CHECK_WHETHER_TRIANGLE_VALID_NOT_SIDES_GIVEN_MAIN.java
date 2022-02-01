@@ -41,12 +41,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i),param2.get(i)) == f_gold(param0.get(i),param1.get(i),param2.get(i)))
 	        {
-                builder.append("CHECK_WHETHER_TRIANGLE_VALID_NOT_SIDES_GIVEN_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("CHECK_WHETHER_TRIANGLE_VALID_NOT_SIDES_GIVEN," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("CHECK_WHETHER_TRIANGLE_VALID_NOT_SIDES_GIVEN_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("CHECK_WHETHER_TRIANGLE_VALID_NOT_SIDES_GIVEN," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("CHECK_WHETHER_TRIANGLE_VALID_NOT_SIDES_GIVEN_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("CHECK_WHETHER_TRIANGLE_VALID_NOT_SIDES_GIVEN," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

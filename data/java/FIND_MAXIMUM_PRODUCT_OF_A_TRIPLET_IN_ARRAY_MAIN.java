@@ -30,12 +30,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
 	        {
-                builder.append("FIND_MAXIMUM_PRODUCT_OF_A_TRIPLET_IN_ARRAY_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("FIND_MAXIMUM_PRODUCT_OF_A_TRIPLET_IN_ARRAY," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("FIND_MAXIMUM_PRODUCT_OF_A_TRIPLET_IN_ARRAY_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("FIND_MAXIMUM_PRODUCT_OF_A_TRIPLET_IN_ARRAY," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("FIND_MAXIMUM_PRODUCT_OF_A_TRIPLET_IN_ARRAY_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("FIND_MAXIMUM_PRODUCT_OF_A_TRIPLET_IN_ARRAY," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

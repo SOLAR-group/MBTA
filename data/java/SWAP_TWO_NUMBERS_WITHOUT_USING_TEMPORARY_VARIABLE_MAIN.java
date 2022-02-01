@@ -54,12 +54,12 @@ public static void main(String args[]) throws IOException {
 	        f_gold(param0.get(i),param1.get(i));
 	        if(Arrays.equals(param0.get(i), filled_function_param0.get(i)) && Arrays.equals(param1.get(i), filled_function_param1.get(i)))
 	        {
-                builder.append("SWAP_TWO_NUMBERS_WITHOUT_USING_TEMPORARY_VARIABLE_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("SWAP_TWO_NUMBERS_WITHOUT_USING_TEMPORARY_VARIABLE," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("SWAP_TWO_NUMBERS_WITHOUT_USING_TEMPORARY_VARIABLE_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("SWAP_TWO_NUMBERS_WITHOUT_USING_TEMPORARY_VARIABLE," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("SWAP_TWO_NUMBERS_WITHOUT_USING_TEMPORARY_VARIABLE_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("SWAP_TWO_NUMBERS_WITHOUT_USING_TEMPORARY_VARIABLE," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

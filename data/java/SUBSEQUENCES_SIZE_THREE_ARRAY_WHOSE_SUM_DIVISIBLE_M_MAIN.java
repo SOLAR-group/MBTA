@@ -41,12 +41,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i),param2.get(i)) == f_gold(param0.get(i),param1.get(i),param2.get(i)))
 	        {
-                builder.append("SUBSEQUENCES_SIZE_THREE_ARRAY_WHOSE_SUM_DIVISIBLE_M_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("SUBSEQUENCES_SIZE_THREE_ARRAY_WHOSE_SUM_DIVISIBLE_M," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("SUBSEQUENCES_SIZE_THREE_ARRAY_WHOSE_SUM_DIVISIBLE_M_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("SUBSEQUENCES_SIZE_THREE_ARRAY_WHOSE_SUM_DIVISIBLE_M," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("SUBSEQUENCES_SIZE_THREE_ARRAY_WHOSE_SUM_DIVISIBLE_M_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("SUBSEQUENCES_SIZE_THREE_ARRAY_WHOSE_SUM_DIVISIBLE_M," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

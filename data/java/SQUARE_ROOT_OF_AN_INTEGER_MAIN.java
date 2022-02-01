@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
 	        {
-                builder.append("SQUARE_ROOT_OF_AN_INTEGER_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("SQUARE_ROOT_OF_AN_INTEGER," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("SQUARE_ROOT_OF_AN_INTEGER_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("SQUARE_ROOT_OF_AN_INTEGER," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("SQUARE_ROOT_OF_AN_INTEGER_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("SQUARE_ROOT_OF_AN_INTEGER," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

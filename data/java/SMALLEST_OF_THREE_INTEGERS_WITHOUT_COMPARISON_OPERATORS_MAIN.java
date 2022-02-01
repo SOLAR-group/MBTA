@@ -41,12 +41,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i),param2.get(i)) == f_gold(param0.get(i),param1.get(i),param2.get(i)))
 	        {
-                builder.append("SMALLEST_OF_THREE_INTEGERS_WITHOUT_COMPARISON_OPERATORS_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("SMALLEST_OF_THREE_INTEGERS_WITHOUT_COMPARISON_OPERATORS," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("SMALLEST_OF_THREE_INTEGERS_WITHOUT_COMPARISON_OPERATORS_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("SMALLEST_OF_THREE_INTEGERS_WITHOUT_COMPARISON_OPERATORS," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("SMALLEST_OF_THREE_INTEGERS_WITHOUT_COMPARISON_OPERATORS_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("SMALLEST_OF_THREE_INTEGERS_WITHOUT_COMPARISON_OPERATORS," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

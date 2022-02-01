@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)).equals(f_gold(param0.get(i))))
 	        {
-                builder.append("REMOVE_BRACKETS_ALGEBRAIC_STRING_CONTAINING_OPERATORS_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("REMOVE_BRACKETS_ALGEBRAIC_STRING_CONTAINING_OPERATORS," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("REMOVE_BRACKETS_ALGEBRAIC_STRING_CONTAINING_OPERATORS_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("REMOVE_BRACKETS_ALGEBRAIC_STRING_CONTAINING_OPERATORS," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("REMOVE_BRACKETS_ALGEBRAIC_STRING_CONTAINING_OPERATORS_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("REMOVE_BRACKETS_ALGEBRAIC_STRING_CONTAINING_OPERATORS," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

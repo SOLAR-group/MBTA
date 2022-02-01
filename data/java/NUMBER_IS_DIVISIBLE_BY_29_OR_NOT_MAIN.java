@@ -19,12 +19,12 @@ param0.add(292929002929L);
         try {
 	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
 	        {
-                builder.append("NUMBER_IS_DIVISIBLE_BY_29_OR_NOT_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("NUMBER_IS_DIVISIBLE_BY_29_OR_NOT," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("NUMBER_IS_DIVISIBLE_BY_29_OR_NOT_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("NUMBER_IS_DIVISIBLE_BY_29_OR_NOT," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("NUMBER_IS_DIVISIBLE_BY_29_OR_NOT_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("NUMBER_IS_DIVISIBLE_BY_29_OR_NOT," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

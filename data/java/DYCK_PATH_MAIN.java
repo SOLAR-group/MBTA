@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
 	        {
-                builder.append("DYCK_PATH_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("DYCK_PATH," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("DYCK_PATH_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("DYCK_PATH," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("DYCK_PATH_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("DYCK_PATH," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
 	        {
-                builder.append("ZECKENDORFS_THEOREM_NON_NEIGHBOURING_FIBONACCI_REPRESENTATION_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("ZECKENDORFS_THEOREM_NON_NEIGHBOURING_FIBONACCI_REPRESENTATION," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("ZECKENDORFS_THEOREM_NON_NEIGHBOURING_FIBONACCI_REPRESENTATION_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("ZECKENDORFS_THEOREM_NON_NEIGHBOURING_FIBONACCI_REPRESENTATION," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("ZECKENDORFS_THEOREM_NON_NEIGHBOURING_FIBONACCI_REPRESENTATION_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("ZECKENDORFS_THEOREM_NON_NEIGHBOURING_FIBONACCI_REPRESENTATION," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

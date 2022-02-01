@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
 	        {
-                builder.append("SMALLEST_POWER_OF_2_GREATER_THAN_OR_EQUAL_TO_N_1_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("SMALLEST_POWER_OF_2_GREATER_THAN_OR_EQUAL_TO_N_1," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("SMALLEST_POWER_OF_2_GREATER_THAN_OR_EQUAL_TO_N_1_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("SMALLEST_POWER_OF_2_GREATER_THAN_OR_EQUAL_TO_N_1," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("SMALLEST_POWER_OF_2_GREATER_THAN_OR_EQUAL_TO_N_1_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("SMALLEST_POWER_OF_2_GREATER_THAN_OR_EQUAL_TO_N_1," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

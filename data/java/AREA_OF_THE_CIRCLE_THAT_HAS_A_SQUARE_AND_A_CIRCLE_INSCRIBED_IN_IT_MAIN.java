@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(Math.abs(1 - (0.0000001 + Math.abs(f_gold(param0.get(i))) )/ (Math.abs(f_filled(param0.get(i))) + 0.0000001)) < 0.001F)
 	        {
-                builder.append("AREA_OF_THE_CIRCLE_THAT_HAS_A_SQUARE_AND_A_CIRCLE_INSCRIBED_IN_IT_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("AREA_OF_THE_CIRCLE_THAT_HAS_A_SQUARE_AND_A_CIRCLE_INSCRIBED_IN_IT," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("AREA_OF_THE_CIRCLE_THAT_HAS_A_SQUARE_AND_A_CIRCLE_INSCRIBED_IN_IT_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("AREA_OF_THE_CIRCLE_THAT_HAS_A_SQUARE_AND_A_CIRCLE_INSCRIBED_IN_IT," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("AREA_OF_THE_CIRCLE_THAT_HAS_A_SQUARE_AND_A_CIRCLE_INSCRIBED_IN_IT_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("AREA_OF_THE_CIRCLE_THAT_HAS_A_SQUARE_AND_A_CIRCLE_INSCRIBED_IN_IT," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

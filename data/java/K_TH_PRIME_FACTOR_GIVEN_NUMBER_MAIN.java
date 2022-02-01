@@ -30,12 +30,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
 	        {
-                builder.append("K_TH_PRIME_FACTOR_GIVEN_NUMBER_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("K_TH_PRIME_FACTOR_GIVEN_NUMBER," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("K_TH_PRIME_FACTOR_GIVEN_NUMBER_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("K_TH_PRIME_FACTOR_GIVEN_NUMBER," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("K_TH_PRIME_FACTOR_GIVEN_NUMBER_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("K_TH_PRIME_FACTOR_GIVEN_NUMBER," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

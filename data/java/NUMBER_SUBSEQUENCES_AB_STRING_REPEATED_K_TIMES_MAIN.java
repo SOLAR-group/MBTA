@@ -30,12 +30,12 @@ param0.add("PFXAhru");
         try {
 	        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
 	        {
-                builder.append("NUMBER_SUBSEQUENCES_AB_STRING_REPEATED_K_TIMES_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("NUMBER_SUBSEQUENCES_AB_STRING_REPEATED_K_TIMES," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("NUMBER_SUBSEQUENCES_AB_STRING_REPEATED_K_TIMES_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("NUMBER_SUBSEQUENCES_AB_STRING_REPEATED_K_TIMES," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("NUMBER_SUBSEQUENCES_AB_STRING_REPEATED_K_TIMES_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("NUMBER_SUBSEQUENCES_AB_STRING_REPEATED_K_TIMES," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

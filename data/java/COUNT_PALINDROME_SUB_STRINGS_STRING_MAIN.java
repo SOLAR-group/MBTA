@@ -30,12 +30,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
 	        {
-                builder.append("COUNT_PALINDROME_SUB_STRINGS_STRING_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("COUNT_PALINDROME_SUB_STRINGS_STRING," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("COUNT_PALINDROME_SUB_STRINGS_STRING_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("COUNT_PALINDROME_SUB_STRINGS_STRING," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("COUNT_PALINDROME_SUB_STRINGS_STRING_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("COUNT_PALINDROME_SUB_STRINGS_STRING," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

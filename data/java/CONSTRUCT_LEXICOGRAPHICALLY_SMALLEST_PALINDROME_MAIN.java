@@ -30,12 +30,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i),param1.get(i)).equals(f_gold(param0.get(i),param1.get(i))))
 	        {
-                builder.append("CONSTRUCT_LEXICOGRAPHICALLY_SMALLEST_PALINDROME_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("CONSTRUCT_LEXICOGRAPHICALLY_SMALLEST_PALINDROME," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("CONSTRUCT_LEXICOGRAPHICALLY_SMALLEST_PALINDROME_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("CONSTRUCT_LEXICOGRAPHICALLY_SMALLEST_PALINDROME," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("CONSTRUCT_LEXICOGRAPHICALLY_SMALLEST_PALINDROME_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("CONSTRUCT_LEXICOGRAPHICALLY_SMALLEST_PALINDROME," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

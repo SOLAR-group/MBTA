@@ -76,12 +76,12 @@ public static void main(String args[]) throws IOException {
 	        f_gold(param0.get(i),param1.get(i),param2.get(i));
 	        if(Arrays.equals(param0.get(i), filled_function_param0.get(i)) && param1.get(i) == filled_function_param1.get(i) && param2.get(i) == filled_function_param2.get(i))
 	        {
-                builder.append("STOOGE_SORT_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("STOOGE_SORT," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("STOOGE_SORT_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("STOOGE_SORT," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("STOOGE_SORT_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("STOOGE_SORT," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

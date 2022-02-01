@@ -120,12 +120,12 @@ public static void main(String args[]) throws IOException {
 	        f_gold(param0.get(i),param1.get(i),param2.get(i),param3.get(i),param4.get(i));
 	        if(Arrays.equals(param0.get(i), filled_function_param0.get(i)) && param1.get(i) == filled_function_param1.get(i) && param2.get(i) == filled_function_param2.get(i) && param3.get(i) == filled_function_param3.get(i) && param4.get(i) == filled_function_param4.get(i))
 	        {
-                builder.append("SORT_ARRAY_APPLYING_GIVEN_EQUATION_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("SORT_ARRAY_APPLYING_GIVEN_EQUATION," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("SORT_ARRAY_APPLYING_GIVEN_EQUATION_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("SORT_ARRAY_APPLYING_GIVEN_EQUATION," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("SORT_ARRAY_APPLYING_GIVEN_EQUATION_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("SORT_ARRAY_APPLYING_GIVEN_EQUATION," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

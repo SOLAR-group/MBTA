@@ -76,12 +76,12 @@ public static void main(String args[]) throws IOException {
 	        f_gold(param0.get(i),param1.get(i),param2.get(i));
 	        if(Arrays.equals(param0.get(i), filled_function_param0.get(i)) && param1.get(i) == filled_function_param1.get(i) && param2.get(i) == filled_function_param2.get(i))
 	        {
-                builder.append("SPLIT_ARRAY_ADD_FIRST_PART_END_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("SPLIT_ARRAY_ADD_FIRST_PART_END," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("SPLIT_ARRAY_ADD_FIRST_PART_END_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("SPLIT_ARRAY_ADD_FIRST_PART_END," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("SPLIT_ARRAY_ADD_FIRST_PART_END_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("SPLIT_ARRAY_ADD_FIRST_PART_END," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

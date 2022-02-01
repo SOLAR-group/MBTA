@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)).equals(f_gold(param0.get(i))))
 	        {
-                builder.append("PRINT_WORDS_STRING_REVERSE_ORDER_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("PRINT_WORDS_STRING_REVERSE_ORDER," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("PRINT_WORDS_STRING_REVERSE_ORDER_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("PRINT_WORDS_STRING_REVERSE_ORDER," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("PRINT_WORDS_STRING_REVERSE_ORDER_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("PRINT_WORDS_STRING_REVERSE_ORDER," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
 	        {
-                builder.append("SUM_OF_ALL_PROPER_DIVISORS_OF_A_NATURAL_NUMBER_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("SUM_OF_ALL_PROPER_DIVISORS_OF_A_NATURAL_NUMBER," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("SUM_OF_ALL_PROPER_DIVISORS_OF_A_NATURAL_NUMBER_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("SUM_OF_ALL_PROPER_DIVISORS_OF_A_NATURAL_NUMBER," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("SUM_OF_ALL_PROPER_DIVISORS_OF_A_NATURAL_NUMBER_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("SUM_OF_ALL_PROPER_DIVISORS_OF_A_NATURAL_NUMBER," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

@@ -19,12 +19,12 @@ public static void main(String args[]) throws IOException {
         try {
 	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
 	        {
-                builder.append("WAYS_REMOVE_ONE_ELEMENT_BINARY_STRING_XOR_BECOMES_ZERO_MAIN," + args[1] + "," + i + ",SUCCESS\n");
+                builder.append("WAYS_REMOVE_ONE_ELEMENT_BINARY_STRING_XOR_BECOMES_ZERO," + args[1] + "," + i + ",SUCCESS\n");
             } else {
-                builder.append("WAYS_REMOVE_ONE_ELEMENT_BINARY_STRING_XOR_BECOMES_ZERO_MAIN," + args[1] + "," + i + ",FAILURE\n");
+                builder.append("WAYS_REMOVE_ONE_ELEMENT_BINARY_STRING_XOR_BECOMES_ZERO," + args[1] + "," + i + ",FAILURE\n");
             }
         } catch (Exception e) {
-            builder.append("WAYS_REMOVE_ONE_ELEMENT_BINARY_STRING_XOR_BECOMES_ZERO_MAIN," + args[1] + "," + i + ",EXCEPTION\n");
+            builder.append("WAYS_REMOVE_ONE_ELEMENT_BINARY_STRING_XOR_BECOMES_ZERO," + args[1] + "," + i + ",EXCEPTION\n");
         }
     }
     writer.write(builder.toString());

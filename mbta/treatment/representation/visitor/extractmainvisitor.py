@@ -66,4 +66,31 @@ class ExtractMainVisitor(ClassVisitor):
                         file_writer.write("\t" + line)
 
     def create_python_main(self, main_path, source_path, source_stem):
-        pass
+        with source_path.open() as file_reader, main_path.open("w") as file_writer:
+            inside_main = 0
+            for line in file_reader:
+                if inside_main == 0 and line.strip().startswith("if __name__ == '__main__':"):
+                    inside_main = 1
+                    file_writer.write(line)
+                elif inside_main == 1:
+                    if line.strip().startswith("for i, parameters_set in enumerate(param):"):
+                        inside_main = 2
+                    file_writer.write(line)
+                elif inside_main == 2:
+                    file_writer.write("""\
+        try:
+""")
+                    file_writer.write("    " + line)
+                    inside_main = 3
+                elif inside_main == 3:
+                    if line.strip().startswith("n_success+=1"):
+                        file_writer.write(f"""\
+                print("{source_stem}," + sys.argv[1] + "," + str(i) + ",SUCCESS")
+            else:
+                print("{source_stem}," + sys.argv[1] + "," + str(i) + ",FAILURE")
+        except:
+            print("{source_stem}," + sys.argv[1] + "," + str(i) + ",EXCEPTION")
+""")
+                        break
+                    else:
+                        file_writer.write("    " + line)
