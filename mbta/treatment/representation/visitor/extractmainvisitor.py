@@ -6,7 +6,7 @@ from mbta.treatment.representation.visitor.classvisitor import ClassVisitor
 class ExtractMainVisitor(ClassVisitor):
 
     def validate(self, source_stem, main_path):
-        return "_MAIN" not in source_stem and not os.path.exists(main_path)
+        return "_MAIN" not in source_stem and "_TRANSLATED" not in source_stem and not os.path.exists(main_path)
 
     def get_default_info(self, source_file):
         source_path = source_file.source_path

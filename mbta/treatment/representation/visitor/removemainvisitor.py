@@ -7,7 +7,7 @@ from mbta.treatment.representation.visitor.classvisitor import ClassVisitor
 class RemoveMainVisitor(ClassVisitor):
     def visit_java_file(self, source_file):
         source_path: Path = source_file.source_path
-        if "_MAIN" not in source_path.stem:
+        if "_MAIN" not in source_path.stem and "_TRANSLATED" not in source_path.stem:
             with source_path.open("r+") as file_reader_writer:
                 content = file_reader_writer.readlines()
                 file_reader_writer.seek(0, 0)
@@ -27,7 +27,7 @@ class RemoveMainVisitor(ClassVisitor):
 
     def visit_python_file(self, source_file):
         source_path: Path = source_file.source_path
-        if "_MAIN" not in source_path.stem:
+        if "_MAIN" not in source_path.stem and "_TRANSLATED" not in source_path.stem:
             with source_path.open("r+") as file_reader_writer:
                 content = file_reader_writer.readlines()
                 file_reader_writer.seek(0, 0)
