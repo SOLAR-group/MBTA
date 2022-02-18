@@ -34,7 +34,7 @@ class TranslateVisitor(ClassVisitor):
             command = f'''
 cd {self.transcoder_path.resolve()}
 . venv/bin/activate
-python3 translate.py --src_lang java --tgt_lang python --model_path model_1.pth < {str(source_path.resolve())}
+python3 translate.py --src_lang java --tgt_lang python --model_path model_1.pth < "{str(source_path.resolve())}"
 '''
             # print(command)
             with subprocess.Popen(command, shell=True, stdout=stdout_file, stderr=subprocess.DEVNULL) as process_object:
@@ -45,7 +45,7 @@ python3 translate.py --src_lang java --tgt_lang python --model_path model_1.pth 
             command = f'''
 cd {self.transcoder_path.resolve()}
 . venv/bin/activate
-python3 translate.py --src_lang python --tgt_lang java --model_path model_2.pth < {str(source_path.resolve())}
+python3 translate.py --src_lang python --tgt_lang java --model_path model_2.pth < "{str(source_path.resolve())}"
 '''
             # print(command)
             with subprocess.Popen(command, shell=True, stdout=stdout_file, stderr=subprocess.DEVNULL) as process_object:
