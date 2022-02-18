@@ -21,5 +21,8 @@ if __name__ == '__main__':
     for i, parameters_set in enumerate(param):
         try:
             if f_filled(*parameters_set) == f_gold(*parameters_set):
-                n_success += 1
-        print("#Results: %i, %i" % (n_success, len(param)))
+                print("SEARCH_AN_ELEMENT_IN_A_SORTED_AND_PIVOTED_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
+            else:
+                print("SEARCH_AN_ELEMENT_IN_A_SORTED_AND_PIVOTED_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+        except:
+            print("SEARCH_AN_ELEMENT_IN_A_SORTED_AND_PIVOTED_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

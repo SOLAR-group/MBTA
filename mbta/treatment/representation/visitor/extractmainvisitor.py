@@ -83,7 +83,7 @@ class ExtractMainVisitor(ClassVisitor):
                     file_writer.write("    " + line)
                     inside_main = 3
                 elif inside_main == 3:
-                    if line.strip().startswith("n_success+=1"):
+                    if line.strip().startswith("n_success"):
                         file_writer.write(f"""\
                 print("{source_stem}," + sys.argv[1] + "," + str(i) + ",SUCCESS")
             else:

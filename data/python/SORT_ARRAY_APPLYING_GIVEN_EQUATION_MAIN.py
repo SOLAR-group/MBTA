@@ -45,5 +45,8 @@ if __name__ == '__main__':
             f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
             if parameters_set == filled_function_param[i]:
-                n_success += 1
-        print("#Results: %i, %i" % (n_success, len(param)))
+                print("SORT_ARRAY_APPLYING_GIVEN_EQUATION," + sys.argv[1] + "," + str(i) + ",SUCCESS")
+            else:
+                print("SORT_ARRAY_APPLYING_GIVEN_EQUATION," + sys.argv[1] + "," + str(i) + ",FAILURE")
+        except:
+            print("SORT_ARRAY_APPLYING_GIVEN_EQUATION," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

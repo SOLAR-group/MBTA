@@ -15,5 +15,8 @@ if __name__ == '__main__':
     for i, parameters_set in enumerate(param):
         try:
             if f_filled(*parameters_set) == f_gold(*parameters_set):
-                n_success += 1
-        print("#Results: %i, %i" % (n_success, len(param)))
+                print("COUNT_FREQUENCY_K_MATRIX_SIZE_N_MATRIXI_J_IJ," + sys.argv[1] + "," + str(i) + ",SUCCESS")
+            else:
+                print("COUNT_FREQUENCY_K_MATRIX_SIZE_N_MATRIXI_J_IJ," + sys.argv[1] + "," + str(i) + ",FAILURE")
+        except:
+            print("COUNT_FREQUENCY_K_MATRIX_SIZE_N_MATRIXI_J_IJ," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

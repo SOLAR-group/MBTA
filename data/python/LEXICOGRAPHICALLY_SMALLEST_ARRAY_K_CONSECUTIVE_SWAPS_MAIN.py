@@ -43,5 +43,8 @@ if __name__ == '__main__':
             f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
             if parameters_set == filled_function_param[i]:
-                n_success += 1
-        print("#Results: %i, %i" % (n_success, len(param)))
+                print("LEXICOGRAPHICALLY_SMALLEST_ARRAY_K_CONSECUTIVE_SWAPS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
+            else:
+                print("LEXICOGRAPHICALLY_SMALLEST_ARRAY_K_CONSECUTIVE_SWAPS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+        except:
+            print("LEXICOGRAPHICALLY_SMALLEST_ARRAY_K_CONSECUTIVE_SWAPS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

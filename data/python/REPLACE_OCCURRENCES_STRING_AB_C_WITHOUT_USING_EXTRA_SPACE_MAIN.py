@@ -45,5 +45,8 @@ if __name__ == '__main__':
             f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
             if parameters_set == filled_function_param[i]:
-                n_success += 1
-        print("#Results: %i, %i" % (n_success, len(param)))
+                print("REPLACE_OCCURRENCES_STRING_AB_C_WITHOUT_USING_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
+            else:
+                print("REPLACE_OCCURRENCES_STRING_AB_C_WITHOUT_USING_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+        except:
+            print("REPLACE_OCCURRENCES_STRING_AB_C_WITHOUT_USING_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

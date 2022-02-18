@@ -20,5 +20,8 @@ if __name__ == '__main__':
     for i, parameters_set in enumerate(param):
         try:
             if f_filled(*parameters_set) == f_gold(*parameters_set):
-                n_success += 1
-        print("#Results: %i, %i" % (n_success, len(param)))
+                print("MINIMUM_TIME_TO_FINISH_TASKS_WITHOUT_SKIPPING_TWO_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
+            else:
+                print("MINIMUM_TIME_TO_FINISH_TASKS_WITHOUT_SKIPPING_TWO_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+        except:
+            print("MINIMUM_TIME_TO_FINISH_TASKS_WITHOUT_SKIPPING_TWO_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

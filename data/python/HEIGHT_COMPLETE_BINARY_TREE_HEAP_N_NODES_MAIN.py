@@ -15,5 +15,8 @@ if __name__ == '__main__':
     for i, parameters_set in enumerate(param):
         try:
             if f_filled(*parameters_set) == f_gold(*parameters_set):
-                n_success += 1
-        print("#Results: %i, %i" % (n_success, len(param)))
+                print("HEIGHT_COMPLETE_BINARY_TREE_HEAP_N_NODES," + sys.argv[1] + "," + str(i) + ",SUCCESS")
+            else:
+                print("HEIGHT_COMPLETE_BINARY_TREE_HEAP_N_NODES," + sys.argv[1] + "," + str(i) + ",FAILURE")
+        except:
+            print("HEIGHT_COMPLETE_BINARY_TREE_HEAP_N_NODES," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

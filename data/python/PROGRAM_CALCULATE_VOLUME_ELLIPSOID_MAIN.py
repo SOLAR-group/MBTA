@@ -15,5 +15,8 @@ if __name__ == '__main__':
     for i, parameters_set in enumerate(param):
         try:
             if abs(1 - (0.0000001 + abs(f_gold(*parameters_set))) / (abs(f_filled(*parameters_set)) + 0.0000001)) < 0.001:
-                n_success += 1
-        print("#Results: %i, %i" % (n_success, len(param)))
+                print("PROGRAM_CALCULATE_VOLUME_ELLIPSOID," + sys.argv[1] + "," + str(i) + ",SUCCESS")
+            else:
+                print("PROGRAM_CALCULATE_VOLUME_ELLIPSOID," + sys.argv[1] + "," + str(i) + ",FAILURE")
+        except:
+            print("PROGRAM_CALCULATE_VOLUME_ELLIPSOID," + sys.argv[1] + "," + str(i) + ",EXCEPTION")
