@@ -34,17 +34,12 @@ public static void main(String args[]) throws IOException {
     param2.add(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1});
     param2.add(new int[]{97,4,69,27,23,97,26,67,72,26,15,67,66,73,27,68,27,60,53,80,20,59,96,9,94,66,5,32});
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i),param1.get(i),param2.get(i)) == f_gold(param0.get(i),param1.get(i),param2.get(i)))
-	        {
-                builder.append("SCHEDULE_ELEVATOR_TO_REDUCE_THE_TOTAL_TIME_TAKEN," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("SCHEDULE_ELEVATOR_TO_REDUCE_THE_TOTAL_TIME_TAKEN," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("SCHEDULE_ELEVATOR_TO_REDUCE_THE_TOTAL_TIME_TAKEN," + args[1] + "," + i + "," + f_gold(param0.get(i),param1.get(i),param2.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("SCHEDULE_ELEVATOR_TO_REDUCE_THE_TOTAL_TIME_TAKEN," + args[1] + "," + i + ",EXCEPTION\n");
         }

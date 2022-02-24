@@ -23,17 +23,12 @@ public static void main(String args[]) throws IOException {
     param1.add("0000000000000000000001111111111111111111111");
     param1.add("GLajZE");
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i).toCharArray(),param1.get(i).toCharArray()) == f_gold(param0.get(i).toCharArray(),param1.get(i).toCharArray()))
-	        {
-                builder.append("CHECK_WHETHER_TWO_STRINGS_ARE_ANAGRAM_OF_EACH_OTHER," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("CHECK_WHETHER_TWO_STRINGS_ARE_ANAGRAM_OF_EACH_OTHER," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("CHECK_WHETHER_TWO_STRINGS_ARE_ANAGRAM_OF_EACH_OTHER," + args[1] + "," + i + "," + f_gold(param0.get(i).toCharArray(),param1.get(i).toCharArray()) + "\n");
         } catch (Exception e) {
             builder.append("CHECK_WHETHER_TWO_STRINGS_ARE_ANAGRAM_OF_EACH_OTHER," + args[1] + "," + i + ",EXCEPTION\n");
         }

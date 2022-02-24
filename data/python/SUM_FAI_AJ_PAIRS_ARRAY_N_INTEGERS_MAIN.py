@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([10, 28, 63, 2, 78, 12, 51, 82, 89, 65, 99],8,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("SUM_FAI_AJ_PAIRS_ARRAY_N_INTEGERS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("SUM_FAI_AJ_PAIRS_ARRAY_N_INTEGERS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("SUM_FAI_AJ_PAIRS_ARRAY_N_INTEGERS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("SUM_FAI_AJ_PAIRS_ARRAY_N_INTEGERS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

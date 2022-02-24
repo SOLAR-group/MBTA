@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([[9, 99], [32, 43]],1,1,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("FIND_FREQUENCY_EVEN_ODD_NUMBERS_MATRIX," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_FREQUENCY_EVEN_ODD_NUMBERS_MATRIX," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_FREQUENCY_EVEN_ODD_NUMBERS_MATRIX," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("FIND_FREQUENCY_EVEN_ODD_NUMBERS_MATRIX," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

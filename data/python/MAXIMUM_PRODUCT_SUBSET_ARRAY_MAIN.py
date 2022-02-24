@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([1, 6, 32, 4, 63, 85, 48, 64, 11, 29, 77, 59, 1, 99, 17, 17, 38, 49, 78, 82, 50, 87, 75, 18, 75, 73, 98, 17, 27, 51, 4, 98, 96, 6, 74, 5],32,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_PRODUCT_SUBSET_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_PRODUCT_SUBSET_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_PRODUCT_SUBSET_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_PRODUCT_SUBSET_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

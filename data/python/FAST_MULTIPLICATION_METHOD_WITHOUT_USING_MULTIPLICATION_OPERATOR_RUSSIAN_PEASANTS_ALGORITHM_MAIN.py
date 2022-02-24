@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (67,84,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FAST_MULTIPLICATION_METHOD_WITHOUT_USING_MULTIPLICATION_OPERATOR_RUSSIAN_PEASANTS_ALGORITHM," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FAST_MULTIPLICATION_METHOD_WITHOUT_USING_MULTIPLICATION_OPERATOR_RUSSIAN_PEASANTS_ALGORITHM," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FAST_MULTIPLICATION_METHOD_WITHOUT_USING_MULTIPLICATION_OPERATOR_RUSSIAN_PEASANTS_ALGORITHM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FAST_MULTIPLICATION_METHOD_WITHOUT_USING_MULTIPLICATION_OPERATOR_RUSSIAN_PEASANTS_ALGORITHM," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

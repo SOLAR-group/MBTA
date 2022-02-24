@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([24, 13, 60, 7, 57, 36, 45, 20, 65, 8, 16, 14, 76, 87, 15, 92, 98, 66, 32, 87, 63, 86, 51, 25, 58],24,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("CHANGE_ARRAY_PERMUTATION_NUMBERS_1_N," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("CHANGE_ARRAY_PERMUTATION_NUMBERS_1_N," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("CHANGE_ARRAY_PERMUTATION_NUMBERS_1_N," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("CHANGE_ARRAY_PERMUTATION_NUMBERS_1_N," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

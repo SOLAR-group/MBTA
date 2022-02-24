@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([61, 69, 66, 3],[39, 84, 97, 15],3,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MEDIAN_OF_TWO_SORTED_ARRAYS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MEDIAN_OF_TWO_SORTED_ARRAYS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MEDIAN_OF_TWO_SORTED_ARRAYS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MEDIAN_OF_TWO_SORTED_ARRAYS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

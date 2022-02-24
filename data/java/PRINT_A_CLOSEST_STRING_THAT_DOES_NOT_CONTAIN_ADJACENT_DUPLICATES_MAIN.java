@@ -12,17 +12,12 @@ public static void main(String args[]) throws IOException {
     param0.add("101");
     param0.add("HXdDbjcyPc");
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i)).equals(f_gold(param0.get(i))))
-	        {
-                builder.append("PRINT_A_CLOSEST_STRING_THAT_DOES_NOT_CONTAIN_ADJACENT_DUPLICATES," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("PRINT_A_CLOSEST_STRING_THAT_DOES_NOT_CONTAIN_ADJACENT_DUPLICATES," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("PRINT_A_CLOSEST_STRING_THAT_DOES_NOT_CONTAIN_ADJACENT_DUPLICATES," + args[1] + "," + i + "," + f_gold(param0.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("PRINT_A_CLOSEST_STRING_THAT_DOES_NOT_CONTAIN_ADJACENT_DUPLICATES," + args[1] + "," + i + ",EXCEPTION\n");
         }

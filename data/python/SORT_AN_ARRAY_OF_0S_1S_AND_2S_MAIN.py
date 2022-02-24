@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([29, 37, 38, 83, 8],2,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("SORT_AN_ARRAY_OF_0S_1S_AND_2S," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("SORT_AN_ARRAY_OF_0S_1S_AND_2S," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("SORT_AN_ARRAY_OF_0S_1S_AND_2S," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("SORT_AN_ARRAY_OF_0S_1S_AND_2S," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

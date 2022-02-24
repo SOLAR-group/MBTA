@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (55,6,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("COUNT_FACTORIAL_NUMBERS_IN_A_GIVEN_RANGE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("COUNT_FACTORIAL_NUMBERS_IN_A_GIVEN_RANGE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("COUNT_FACTORIAL_NUMBERS_IN_A_GIVEN_RANGE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("COUNT_FACTORIAL_NUMBERS_IN_A_GIVEN_RANGE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

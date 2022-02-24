@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (['ERioPYDqgTSz bVCW'],['GLajZE'],)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("CHECK_WHETHER_TWO_STRINGS_ARE_ANAGRAM_OF_EACH_OTHER," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("CHECK_WHETHER_TWO_STRINGS_ARE_ANAGRAM_OF_EACH_OTHER," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("CHECK_WHETHER_TWO_STRINGS_ARE_ANAGRAM_OF_EACH_OTHER," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("CHECK_WHETHER_TWO_STRINGS_ARE_ANAGRAM_OF_EACH_OTHER," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

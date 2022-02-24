@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ("TTFT", "|^|",4,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("DYNAMIC_PROGRAMMING_SET_37_BOOLEAN_PARENTHESIZATION_PROBLEM," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("DYNAMIC_PROGRAMMING_SET_37_BOOLEAN_PARENTHESIZATION_PROBLEM," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("DYNAMIC_PROGRAMMING_SET_37_BOOLEAN_PARENTHESIZATION_PROBLEM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("DYNAMIC_PROGRAMMING_SET_37_BOOLEAN_PARENTHESIZATION_PROBLEM," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

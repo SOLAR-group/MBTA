@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([18, 93, 79, 20, 44, 36, 69, 37, 33, 82, 19, 51, 32, 22, 1, 54, 89, 20, 58, 35, 70, 70, 61, 63, 61, 57, 3, 95, 99, 45, 15, 17, 15, 5, 86, 46, 11, 64, 92, 14, 39, 67],40,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("CHECK_WHETHER_ARITHMETIC_PROGRESSION_CAN_FORMED_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("CHECK_WHETHER_ARITHMETIC_PROGRESSION_CAN_FORMED_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("CHECK_WHETHER_ARITHMETIC_PROGRESSION_CAN_FORMED_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("CHECK_WHETHER_ARITHMETIC_PROGRESSION_CAN_FORMED_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

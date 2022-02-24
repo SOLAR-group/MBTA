@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (-1722.873699288031,-8370.700544254058,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if abs(1 - (0.0000001 + abs(f_gold(*parameters_set))) / (abs(f_filled(*parameters_set)) + 0.0000001)) < 0.001:
-                print("MODULUS_TWO_FLOAT_DOUBLE_NUMBERS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MODULUS_TWO_FLOAT_DOUBLE_NUMBERS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MODULUS_TWO_FLOAT_DOUBLE_NUMBERS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MODULUS_TWO_FLOAT_DOUBLE_NUMBERS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

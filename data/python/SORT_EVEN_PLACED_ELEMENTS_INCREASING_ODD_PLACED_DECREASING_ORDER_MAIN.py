@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([61, 11, 46, 40, 82, 35, 37, 41, 52, 76, 13, 53, 53, 3, 40, 29, 7, 51, 20, 51, 87, 1, 80, 73, 89, 93, 1, 71, 33, 50, 62, 85, 46, 1, 71, 54, 81, 85],36,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("SORT_EVEN_PLACED_ELEMENTS_INCREASING_ODD_PLACED_DECREASING_ORDER," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("SORT_EVEN_PLACED_ELEMENTS_INCREASING_ODD_PLACED_DECREASING_ORDER," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("SORT_EVEN_PLACED_ELEMENTS_INCREASING_ODD_PLACED_DECREASING_ORDER," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("SORT_EVEN_PLACED_ELEMENTS_INCREASING_ODD_PLACED_DECREASING_ORDER," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

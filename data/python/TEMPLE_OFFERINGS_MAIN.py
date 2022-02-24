@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (29,[96, 15, 9, 9, 40, 34, 17, 4, 51, 49, 34, 66, 97, 28, 64, 65, 92, 56, 74, 48, 43, 17, 82, 8, 21, 39, 83, 35, 42, 37, 64, 34, 42, 59, 45, 61, 55, 93, 94, 29, 20, 96, 77, 66],)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("TEMPLE_OFFERINGS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("TEMPLE_OFFERINGS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("TEMPLE_OFFERINGS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("TEMPLE_OFFERINGS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

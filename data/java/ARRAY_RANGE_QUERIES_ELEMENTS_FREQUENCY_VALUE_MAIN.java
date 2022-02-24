@@ -34,17 +34,12 @@ public static void main(String args[]) throws IOException {
     param2.add(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1});
     param2.add(new int[]{2,91,42,85,97,92,24,39,63,89,31,59,51,89,72,62,26,92,75,4,6,13,20,95,22,30,52,60,37,27,49,15,67,26});
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i),param1.get(i),param2.get(i)) == f_gold(param0.get(i),param1.get(i),param2.get(i)))
-	        {
-                builder.append("ARRAY_RANGE_QUERIES_ELEMENTS_FREQUENCY_VALUE," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("ARRAY_RANGE_QUERIES_ELEMENTS_FREQUENCY_VALUE," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("ARRAY_RANGE_QUERIES_ELEMENTS_FREQUENCY_VALUE," + args[1] + "," + i + "," + f_gold(param0.get(i),param1.get(i),param2.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("ARRAY_RANGE_QUERIES_ELEMENTS_FREQUENCY_VALUE," + args[1] + "," + i + ",EXCEPTION\n");
         }

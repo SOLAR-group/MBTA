@@ -45,7 +45,7 @@ def zip_translated_mutant(path: str, mutant: str):
     translated_path = translated_path.with_name(translated_path.stem + "_TRANSLATED.py")
     command = f'''
 cd {path}
-zip -q MuJava.zip "{translated_path}"
+zip -q "{sys.argv[3]}" "{translated_path}"
 '''
     with subprocess.Popen(command, shell=True) as process_object:
         process_object.wait()

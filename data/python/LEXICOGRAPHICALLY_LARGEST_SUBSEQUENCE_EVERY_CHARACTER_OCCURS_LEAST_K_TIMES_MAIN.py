@@ -24,13 +24,10 @@ if __name__ == '__main__':
     (['n', 'T', 't', 'o', 'i', 'p', 'f', 'R', 'x', 'I', 'p', 'E', 'C', 'm', 'r', 'c', 'U', 'e', ' ', 'o', 'e', 'J', 'C', 'd', 'G', 'l'],['b', 'u', 'F', 'm', 's', 'x', 'T', 'm', 'x', 'o', 'i', 'U', 'd', 'N', 'h', 'z', 'I', 'u', 'g', 'J', 'u', 'f', 'e', 'Q', 'H', 'y'],16,21,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("LEXICOGRAPHICALLY_LARGEST_SUBSEQUENCE_EVERY_CHARACTER_OCCURS_LEAST_K_TIMES," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("LEXICOGRAPHICALLY_LARGEST_SUBSEQUENCE_EVERY_CHARACTER_OCCURS_LEAST_K_TIMES," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("LEXICOGRAPHICALLY_LARGEST_SUBSEQUENCE_EVERY_CHARACTER_OCCURS_LEAST_K_TIMES," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("LEXICOGRAPHICALLY_LARGEST_SUBSEQUENCE_EVERY_CHARACTER_OCCURS_LEAST_K_TIMES," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

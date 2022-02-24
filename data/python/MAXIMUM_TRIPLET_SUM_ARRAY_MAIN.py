@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([85, 31, 15, 68, 92, 89, 32, 56, 27, 70, 82, 58, 63, 83, 89, 95, 78, 9, 27, 34, 24, 42, 66, 6, 1, 71, 55, 23, 75, 26, 19, 58, 25],16,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_TRIPLET_SUM_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_TRIPLET_SUM_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_TRIPLET_SUM_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_TRIPLET_SUM_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([25, 17, 58, 40, 53, 73, 23, 77, 38],8,6,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("CHOCOLATE_DISTRIBUTION_PROBLEM," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("CHOCOLATE_DISTRIBUTION_PROBLEM," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("CHOCOLATE_DISTRIBUTION_PROBLEM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("CHOCOLATE_DISTRIBUTION_PROBLEM," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

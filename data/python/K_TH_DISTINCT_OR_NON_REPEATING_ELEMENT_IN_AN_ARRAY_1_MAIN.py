@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([1, 23, 75, 84, 28, 34, 15, 13, 51, 69, 94, 45, 38, 38],13,12,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("K_TH_DISTINCT_OR_NON_REPEATING_ELEMENT_IN_AN_ARRAY_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("K_TH_DISTINCT_OR_NON_REPEATING_ELEMENT_IN_AN_ARRAY_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("K_TH_DISTINCT_OR_NON_REPEATING_ELEMENT_IN_AN_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("K_TH_DISTINCT_OR_NON_REPEATING_ELEMENT_IN_AN_ARRAY_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([17, 60],1,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("FIND_TRIPLETS_ARRAY_WHOSE_SUM_EQUAL_ZERO," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_TRIPLETS_ARRAY_WHOSE_SUM_EQUAL_ZERO," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_TRIPLETS_ARRAY_WHOSE_SUM_EQUAL_ZERO," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("FIND_TRIPLETS_ARRAY_WHOSE_SUM_EQUAL_ZERO," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

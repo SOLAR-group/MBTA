@@ -12,17 +12,12 @@ param0.add(34L);
 param0.add(1160L);
 param0.add(292929002929L);
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
-	        {
-                builder.append("NUMBER_IS_DIVISIBLE_BY_29_OR_NOT," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("NUMBER_IS_DIVISIBLE_BY_29_OR_NOT," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("NUMBER_IS_DIVISIBLE_BY_29_OR_NOT," + args[1] + "," + i + "," + f_gold(param0.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("NUMBER_IS_DIVISIBLE_BY_29_OR_NOT," + args[1] + "," + i + ",EXCEPTION\n");
         }

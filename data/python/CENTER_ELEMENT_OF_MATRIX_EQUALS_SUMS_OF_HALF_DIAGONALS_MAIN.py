@@ -31,11 +31,9 @@ if __name__ == '__main__':
     ([[64, 81, 37, 36, 97, 10, 34, 45, 63, 13, 25, 44, 97], [74, 24, 69, 74, 47, 91, 50, 36, 33, 92, 3, 31, 60], [29, 44, 45, 42, 21, 32, 28, 85, 47, 99, 94, 47, 17], [29, 48, 2, 33, 63, 68, 39, 89, 5, 68, 52, 52, 29], [37, 8, 20, 41, 70, 36, 32, 5, 20, 68, 22, 97, 31], [41, 93, 5, 10, 75, 37, 56, 86, 24, 85, 16, 2, 15], [41, 63, 49, 26, 94, 66, 29, 70, 60, 65, 40, 11, 52], [87, 90, 95, 79, 73, 64, 98, 81, 99, 3, 11, 28, 62], [48, 28, 46, 64, 55, 83, 2, 96, 75, 16, 11, 3, 55], [42, 29, 69, 92, 31, 77, 25, 6, 60, 67, 22, 41, 53], [60, 39, 55, 96, 30, 71, 89, 2, 8, 63, 59, 97, 28], [74, 38, 18, 62, 77, 85, 97, 23, 65, 40, 60, 85, 5], [99, 18, 38, 29, 26, 60, 36, 82, 29, 31, 63, 13, 94]],12,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("CENTER_ELEMENT_OF_MATRIX_EQUALS_SUMS_OF_HALF_DIAGONALS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("CENTER_ELEMENT_OF_MATRIX_EQUALS_SUMS_OF_HALF_DIAGONALS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("CENTER_ELEMENT_OF_MATRIX_EQUALS_SUMS_OF_HALF_DIAGONALS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("CENTER_ELEMENT_OF_MATRIX_EQUALS_SUMS_OF_HALF_DIAGONALS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

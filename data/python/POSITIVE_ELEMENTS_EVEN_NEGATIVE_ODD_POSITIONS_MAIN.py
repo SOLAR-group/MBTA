@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([62, 36, 39, 53, 90, 78, 56, 1, 56, 4, 30],8,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("POSITIVE_ELEMENTS_EVEN_NEGATIVE_ODD_POSITIONS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("POSITIVE_ELEMENTS_EVEN_NEGATIVE_ODD_POSITIONS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("POSITIVE_ELEMENTS_EVEN_NEGATIVE_ODD_POSITIONS," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("POSITIVE_ELEMENTS_EVEN_NEGATIVE_ODD_POSITIONS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

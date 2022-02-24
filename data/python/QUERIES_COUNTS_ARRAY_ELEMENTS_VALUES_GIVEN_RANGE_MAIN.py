@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([37, 84, 97, 74, 12, 26, 47, 10, 14, 33],5,9,8,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("QUERIES_COUNTS_ARRAY_ELEMENTS_VALUES_GIVEN_RANGE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("QUERIES_COUNTS_ARRAY_ELEMENTS_VALUES_GIVEN_RANGE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("QUERIES_COUNTS_ARRAY_ELEMENTS_VALUES_GIVEN_RANGE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("QUERIES_COUNTS_ARRAY_ELEMENTS_VALUES_GIVEN_RANGE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

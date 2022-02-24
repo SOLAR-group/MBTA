@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (15,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FIND_LARGEST_PRIME_FACTOR_NUMBER," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_LARGEST_PRIME_FACTOR_NUMBER," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_LARGEST_PRIME_FACTOR_NUMBER," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FIND_LARGEST_PRIME_FACTOR_NUMBER," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

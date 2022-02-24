@@ -17,11 +17,9 @@ if __name__ == '__main__':
           6, 94, 81, 85, 4, 86, 88, 75, 94], 18,)
     ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_TIME_TO_FINISH_TASKS_WITHOUT_SKIPPING_TWO_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_TIME_TO_FINISH_TASKS_WITHOUT_SKIPPING_TWO_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_TIME_TO_FINISH_TASKS_WITHOUT_SKIPPING_TWO_CONSECUTIVE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_TIME_TO_FINISH_TASKS_WITHOUT_SKIPPING_TWO_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

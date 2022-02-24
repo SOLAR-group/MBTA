@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ('IbmRqJcU',21,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_SUM_SQUARES_CHARACTERS_COUNTS_GIVEN_STRING_REMOVING_K_CHARACTERS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_SUM_SQUARES_CHARACTERS_COUNTS_GIVEN_STRING_REMOVING_K_CHARACTERS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_SUM_SQUARES_CHARACTERS_COUNTS_GIVEN_STRING_REMOVING_K_CHARACTERS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_SUM_SQUARES_CHARACTERS_COUNTS_GIVEN_STRING_REMOVING_K_CHARACTERS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

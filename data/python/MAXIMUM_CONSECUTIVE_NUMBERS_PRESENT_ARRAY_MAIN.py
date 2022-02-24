@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([50, 48, 61, 87, 7, 78, 93, 44, 16, 88, 98, 15, 73, 93, 43, 46, 42, 34, 1, 35, 79, 35, 84, 60, 18, 79, 17, 4, 78, 1, 20, 64],25,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_CONSECUTIVE_NUMBERS_PRESENT_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_CONSECUTIVE_NUMBERS_PRESENT_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_CONSECUTIVE_NUMBERS_PRESENT_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_CONSECUTIVE_NUMBERS_PRESENT_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

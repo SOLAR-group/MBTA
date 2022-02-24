@@ -12,17 +12,12 @@ public static void main(String args[]) throws IOException {
     param0.add(26);
     param0.add(40);
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
-	        {
-                builder.append("PIZZA_CUT_PROBLEM_CIRCLE_DIVISION_LINES," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("PIZZA_CUT_PROBLEM_CIRCLE_DIVISION_LINES," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("PIZZA_CUT_PROBLEM_CIRCLE_DIVISION_LINES," + args[1] + "," + i + "," + f_gold(param0.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("PIZZA_CUT_PROBLEM_CIRCLE_DIVISION_LINES," + args[1] + "," + i + ",EXCEPTION\n");
         }

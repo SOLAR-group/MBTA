@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([46, 77, 73, 20, 7, 59, 58, 92, 44, 61, 16, 65, 36, 32, 52, 92, 70, 85, 57, 4, 30, 41, 43, 88],20,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("ODD_EVEN_SORT_BRICK_SORT," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("ODD_EVEN_SORT_BRICK_SORT," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("ODD_EVEN_SORT_BRICK_SORT," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("ODD_EVEN_SORT_BRICK_SORT," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

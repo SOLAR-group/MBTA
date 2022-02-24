@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (24,55,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("HOW_TO_TURN_OFF_A_PARTICULAR_BIT_IN_A_NUMBER," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("HOW_TO_TURN_OFF_A_PARTICULAR_BIT_IN_A_NUMBER," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("HOW_TO_TURN_OFF_A_PARTICULAR_BIT_IN_A_NUMBER," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("HOW_TO_TURN_OFF_A_PARTICULAR_BIT_IN_A_NUMBER," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
    ([62,99,29,23,55,30,79,63,1,88,59,8,11,80,23,51,97,32,80,48,84,36,73,59,1,34,92,10],18,1),
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_INCREMENT_K_OPERATIONS_MAKE_ELEMENTS_EQUAL," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_INCREMENT_K_OPERATIONS_MAKE_ELEMENTS_EQUAL," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_INCREMENT_K_OPERATIONS_MAKE_ELEMENTS_EQUAL," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_INCREMENT_K_OPERATIONS_MAKE_ELEMENTS_EQUAL," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

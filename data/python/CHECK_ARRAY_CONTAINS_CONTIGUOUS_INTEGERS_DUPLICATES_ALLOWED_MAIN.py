@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([81, 25, 50, 48, 35, 38, 49, 21, 47, 94, 94, 55, 23, 45, 92, 23, 93, 33, 64, 9, 90, 64, 81, 17, 2, 73, 8, 7, 35, 36, 72],27,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("CHECK_ARRAY_CONTAINS_CONTIGUOUS_INTEGERS_DUPLICATES_ALLOWED," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("CHECK_ARRAY_CONTAINS_CONTIGUOUS_INTEGERS_DUPLICATES_ALLOWED," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("CHECK_ARRAY_CONTAINS_CONTIGUOUS_INTEGERS_DUPLICATES_ALLOWED," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("CHECK_ARRAY_CONTAINS_CONTIGUOUS_INTEGERS_DUPLICATES_ALLOWED," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

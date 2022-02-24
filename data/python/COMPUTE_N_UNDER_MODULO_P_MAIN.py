@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (46,73,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("COMPUTE_N_UNDER_MODULO_P," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("COMPUTE_N_UNDER_MODULO_P," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("COMPUTE_N_UNDER_MODULO_P," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("COMPUTE_N_UNDER_MODULO_P," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

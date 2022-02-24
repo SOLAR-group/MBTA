@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([80, 89, 83, 42, 75, 30, 64, 25, 95, 17, 90, 6, 11, 1, 77, 16, 75, 86, 96, 67, 27, 80, 27],16,108,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FIND_SUBARRAY_WITH_GIVEN_SUM_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_SUBARRAY_WITH_GIVEN_SUM_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_SUBARRAY_WITH_GIVEN_SUM_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FIND_SUBARRAY_WITH_GIVEN_SUM_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

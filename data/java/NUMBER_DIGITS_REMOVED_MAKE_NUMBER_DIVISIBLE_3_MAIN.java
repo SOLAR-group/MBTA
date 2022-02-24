@@ -12,17 +12,12 @@ public static void main(String args[]) throws IOException {
     param0.add("11011001001");
     param0.add("YJ");
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
-	        {
-                builder.append("NUMBER_DIGITS_REMOVED_MAKE_NUMBER_DIVISIBLE_3," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("NUMBER_DIGITS_REMOVED_MAKE_NUMBER_DIVISIBLE_3," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("NUMBER_DIGITS_REMOVED_MAKE_NUMBER_DIVISIBLE_3," + args[1] + "," + i + "," + f_gold(param0.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("NUMBER_DIGITS_REMOVED_MAKE_NUMBER_DIVISIBLE_3," + args[1] + "," + i + ",EXCEPTION\n");
         }

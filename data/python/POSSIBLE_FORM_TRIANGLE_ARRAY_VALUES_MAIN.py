@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([24, 80, 16, 31, 5, 31, 66, 1, 13, 77, 88, 40, 34, 15, 90, 46, 8, 26, 39, 52, 22, 33, 3, 30, 49, 51, 69, 50, 39, 59],23,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("POSSIBLE_FORM_TRIANGLE_ARRAY_VALUES," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("POSSIBLE_FORM_TRIANGLE_ARRAY_VALUES," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("POSSIBLE_FORM_TRIANGLE_ARRAY_VALUES," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("POSSIBLE_FORM_TRIANGLE_ARRAY_VALUES," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

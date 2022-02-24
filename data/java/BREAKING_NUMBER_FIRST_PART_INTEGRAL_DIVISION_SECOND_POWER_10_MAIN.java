@@ -12,17 +12,12 @@ public static void main(String args[]) throws IOException {
     param0.add("1110101101");
     param0.add("2202200");
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
-	        {
-                builder.append("BREAKING_NUMBER_FIRST_PART_INTEGRAL_DIVISION_SECOND_POWER_10," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("BREAKING_NUMBER_FIRST_PART_INTEGRAL_DIVISION_SECOND_POWER_10," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("BREAKING_NUMBER_FIRST_PART_INTEGRAL_DIVISION_SECOND_POWER_10," + args[1] + "," + i + "," + f_gold(param0.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("BREAKING_NUMBER_FIRST_PART_INTEGRAL_DIVISION_SECOND_POWER_10," + args[1] + "," + i + ",EXCEPTION\n");
         }

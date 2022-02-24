@@ -23,17 +23,12 @@ public static void main(String args[]) throws IOException {
     param1.add("1");
     param1.add("iAfjQRwuVyost");
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i),param1.get(i)).equals(f_gold(param0.get(i),param1.get(i))))
-	        {
-                builder.append("MULTIPLY_LARGE_NUMBERS_REPRESENTED_AS_STRINGS," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("MULTIPLY_LARGE_NUMBERS_REPRESENTED_AS_STRINGS," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("MULTIPLY_LARGE_NUMBERS_REPRESENTED_AS_STRINGS," + args[1] + "," + i + "," + f_gold(param0.get(i),param1.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("MULTIPLY_LARGE_NUMBERS_REPRESENTED_AS_STRINGS," + args[1] + "," + i + ",EXCEPTION\n");
         }

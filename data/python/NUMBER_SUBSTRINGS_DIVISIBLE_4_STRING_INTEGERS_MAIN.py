@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ('uZftT iDHcYiCt',)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("NUMBER_SUBSTRINGS_DIVISIBLE_4_STRING_INTEGERS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("NUMBER_SUBSTRINGS_DIVISIBLE_4_STRING_INTEGERS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("NUMBER_SUBSTRINGS_DIVISIBLE_4_STRING_INTEGERS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("NUMBER_SUBSTRINGS_DIVISIBLE_4_STRING_INTEGERS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

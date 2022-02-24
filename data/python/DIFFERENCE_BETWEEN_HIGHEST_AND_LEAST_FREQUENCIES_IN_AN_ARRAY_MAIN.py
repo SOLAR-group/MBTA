@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([64, 76, 49, 55, 92, 15, 4, 8, 95, 60, 90, 3, 7, 79, 84, 17, 96, 10, 80, 26, 22, 15],20,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("DIFFERENCE_BETWEEN_HIGHEST_AND_LEAST_FREQUENCIES_IN_AN_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("DIFFERENCE_BETWEEN_HIGHEST_AND_LEAST_FREQUENCIES_IN_AN_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("DIFFERENCE_BETWEEN_HIGHEST_AND_LEAST_FREQUENCIES_IN_AN_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("DIFFERENCE_BETWEEN_HIGHEST_AND_LEAST_FREQUENCIES_IN_AN_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
         (3, 99, 6, 19, 21, 28,)
     ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("CHECK_TWO_GIVEN_CIRCLES_TOUCH_INTERSECT," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("CHECK_TWO_GIVEN_CIRCLES_TOUCH_INTERSECT," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("CHECK_TWO_GIVEN_CIRCLES_TOUCH_INTERSECT," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("CHECK_TWO_GIVEN_CIRCLES_TOUCH_INTERSECT," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

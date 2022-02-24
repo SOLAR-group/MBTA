@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([7, 3, 37, 60, 6, 26, 30, 21, 7, 59, 18, 69, 40, 47, 34, 19, 51, 27, 4, 7, 56, 4, 57, 62, 54, 9, 93, 31, 9, 85],28,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("FIND_TRIPLETS_ARRAY_WHOSE_SUM_EQUAL_ZERO_2," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_TRIPLETS_ARRAY_WHOSE_SUM_EQUAL_ZERO_2," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_TRIPLETS_ARRAY_WHOSE_SUM_EQUAL_ZERO_2," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("FIND_TRIPLETS_ARRAY_WHOSE_SUM_EQUAL_ZERO_2," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

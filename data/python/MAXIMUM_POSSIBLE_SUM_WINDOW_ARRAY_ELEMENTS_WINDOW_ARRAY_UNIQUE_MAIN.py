@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([86, 30, 87, 99, 8, 1, 24, 46, 12, 21, 43, 73, 28, 3, 35, 49, 14, 37, 63, 98, 65, 43, 86, 69, 27, 60, 45, 88, 25, 86, 11, 9, 86, 73, 40, 70, 49, 50, 95, 69, 94],[27, 66, 77, 34, 98, 75, 43, 27, 79, 32, 54, 40, 29, 47, 63, 15, 23, 33, 59, 76, 27, 31, 92, 43, 12, 20, 97, 67, 11, 12, 83, 79, 52, 46, 51, 36, 87, 96, 90, 6, 62],34,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_POSSIBLE_SUM_WINDOW_ARRAY_ELEMENTS_WINDOW_ARRAY_UNIQUE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_POSSIBLE_SUM_WINDOW_ARRAY_ELEMENTS_WINDOW_ARRAY_UNIQUE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_POSSIBLE_SUM_WINDOW_ARRAY_ELEMENTS_WINDOW_ARRAY_UNIQUE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_POSSIBLE_SUM_WINDOW_ARRAY_ELEMENTS_WINDOW_ARRAY_UNIQUE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

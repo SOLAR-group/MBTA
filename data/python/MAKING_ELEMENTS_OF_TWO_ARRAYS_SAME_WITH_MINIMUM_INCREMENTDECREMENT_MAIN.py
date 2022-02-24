@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([42, 24, 43, 64, 55, 94, 26, 30, 76, 3, 37, 43, 81, 7, 15, 64, 63, 88, 34, 8, 55, 32, 19, 55],[96, 11, 63, 90, 28, 80, 44, 63, 17, 81, 80, 69, 66, 22, 81, 4, 86, 74, 91, 17, 3, 81, 65, 98],22,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAKING_ELEMENTS_OF_TWO_ARRAYS_SAME_WITH_MINIMUM_INCREMENTDECREMENT," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAKING_ELEMENTS_OF_TWO_ARRAYS_SAME_WITH_MINIMUM_INCREMENTDECREMENT," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAKING_ELEMENTS_OF_TWO_ARRAYS_SAME_WITH_MINIMUM_INCREMENTDECREMENT," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAKING_ELEMENTS_OF_TWO_ARRAYS_SAME_WITH_MINIMUM_INCREMENTDECREMENT," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([65, 1, 34, 38, 15, 6, 55, 21, 32, 90, 39, 25, 43, 48, 64, 66, 88, 70, 82, 75, 25, 56, 23, 27, 41, 33, 33, 55, 60, 90, 41, 58, 42, 53, 38, 90, 7, 15],37,33,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_SUM_SUBSEQUENCE_LEAST_K_DISTANT_ELEMENTS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_SUM_SUBSEQUENCE_LEAST_K_DISTANT_ELEMENTS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_SUM_SUBSEQUENCE_LEAST_K_DISTANT_ELEMENTS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_SUM_SUBSEQUENCE_LEAST_K_DISTANT_ELEMENTS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

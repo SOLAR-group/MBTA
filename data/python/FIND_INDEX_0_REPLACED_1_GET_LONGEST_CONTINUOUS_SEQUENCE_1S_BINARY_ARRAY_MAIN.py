@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([58, 22, 15, 85, 8, 74, 93, 76, 44, 51, 43, 93, 20, 51, 52, 35, 17, 13, 96, 82, 23, 51, 44, 18, 45, 79, 66, 48, 16, 31, 62, 99, 46, 66, 53, 89, 87, 2, 87, 20, 30],24,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FIND_INDEX_0_REPLACED_1_GET_LONGEST_CONTINUOUS_SEQUENCE_1S_BINARY_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_INDEX_0_REPLACED_1_GET_LONGEST_CONTINUOUS_SEQUENCE_1S_BINARY_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_INDEX_0_REPLACED_1_GET_LONGEST_CONTINUOUS_SEQUENCE_1S_BINARY_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FIND_INDEX_0_REPLACED_1_GET_LONGEST_CONTINUOUS_SEQUENCE_1S_BINARY_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([5, 69, 37, 80, 21, 98, 70, 70, 74, 95, 6, 67, 44, 55, 52, 89, 84, 99, 65, 52],12,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("COUNT_PAIRS_WHOSE_PRODUCTS_EXIST_IN_ARRAY_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("COUNT_PAIRS_WHOSE_PRODUCTS_EXIST_IN_ARRAY_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("COUNT_PAIRS_WHOSE_PRODUCTS_EXIST_IN_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("COUNT_PAIRS_WHOSE_PRODUCTS_EXIST_IN_ARRAY_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

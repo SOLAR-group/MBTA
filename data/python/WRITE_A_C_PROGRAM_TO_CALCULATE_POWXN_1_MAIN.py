@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (-7219.421835366018,31,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if abs(1 - (0.0000001 + abs(f_gold(*parameters_set))) / (abs(f_filled(*parameters_set)) + 0.0000001)) < 0.001:
-                print("WRITE_A_C_PROGRAM_TO_CALCULATE_POWXN_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("WRITE_A_C_PROGRAM_TO_CALCULATE_POWXN_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("WRITE_A_C_PROGRAM_TO_CALCULATE_POWXN_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("WRITE_A_C_PROGRAM_TO_CALCULATE_POWXN_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

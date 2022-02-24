@@ -40,13 +40,10 @@ if __name__ == '__main__':
         (['b', 't', 'X', 'F'],)
     ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("REPLACE_OCCURRENCES_STRING_AB_C_WITHOUT_USING_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("REPLACE_OCCURRENCES_STRING_AB_C_WITHOUT_USING_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("REPLACE_OCCURRENCES_STRING_AB_C_WITHOUT_USING_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("REPLACE_OCCURRENCES_STRING_AB_C_WITHOUT_USING_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

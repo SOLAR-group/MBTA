@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([76, 59, 38, 83, 38, 93, 27, 11, 17, 80, 26, 28, 35, 53, 88, 10, 9, 75],12,13,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("SEARCH_INSERT_AND_DELETE_IN_AN_UNSORTED_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("SEARCH_INSERT_AND_DELETE_IN_AN_UNSORTED_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("SEARCH_INSERT_AND_DELETE_IN_AN_UNSORTED_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("SEARCH_INSERT_AND_DELETE_IN_AN_UNSORTED_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

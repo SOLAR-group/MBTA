@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([63, 82, 22, 84, 11, 62, 18, 43, 57, 25, 4, 27, 62, 46, 55, 16, 1, 9, 10, 73, 36, 80, 95, 87, 47, 64, 27, 25, 70],22,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("NUMBER_ORDERED_PAIRS_AI_AJ_0," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("NUMBER_ORDERED_PAIRS_AI_AJ_0," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("NUMBER_ORDERED_PAIRS_AI_AJ_0," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("NUMBER_ORDERED_PAIRS_AI_AJ_0," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

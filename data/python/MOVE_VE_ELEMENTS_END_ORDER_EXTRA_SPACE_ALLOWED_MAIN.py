@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([69, 45, 44, 19, 56, 22, 7, 31, 19, 33, 71, 84, 55, 62, 6, 84, 36, 7, 40],15,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("MOVE_VE_ELEMENTS_END_ORDER_EXTRA_SPACE_ALLOWED," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MOVE_VE_ELEMENTS_END_ORDER_EXTRA_SPACE_ALLOWED," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MOVE_VE_ELEMENTS_END_ORDER_EXTRA_SPACE_ALLOWED," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("MOVE_VE_ELEMENTS_END_ORDER_EXTRA_SPACE_ALLOWED," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

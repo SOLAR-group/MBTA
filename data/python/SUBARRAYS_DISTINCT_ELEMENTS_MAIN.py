@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([19, 13, 61, 32, 92, 90, 12, 81, 52],5,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("SUBARRAYS_DISTINCT_ELEMENTS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("SUBARRAYS_DISTINCT_ELEMENTS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("SUBARRAYS_DISTINCT_ELEMENTS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("SUBARRAYS_DISTINCT_ELEMENTS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

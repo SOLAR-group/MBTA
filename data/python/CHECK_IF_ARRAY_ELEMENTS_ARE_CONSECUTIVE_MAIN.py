@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([81, 7, 2, 33, 45, 57, 33, 24, 26, 86, 35, 73, 40, 17, 37, 6, 80, 53, 33, 56, 97, 77, 93, 71, 87, 13, 56, 23, 63, 91, 21, 6, 53, 77, 36, 31, 63, 88, 51, 45, 51, 17],31,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("CHECK_IF_ARRAY_ELEMENTS_ARE_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("CHECK_IF_ARRAY_ELEMENTS_ARE_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("CHECK_IF_ARRAY_ELEMENTS_ARE_CONSECUTIVE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("CHECK_IF_ARRAY_ELEMENTS_ARE_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

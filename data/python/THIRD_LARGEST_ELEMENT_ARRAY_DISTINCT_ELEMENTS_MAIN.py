@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([43, 88, 28, 24, 58, 40, 33, 90, 69, 37, 13, 9, 28, 83, 65, 63, 96, 36, 64, 20, 21, 90, 60, 18, 58, 18, 68, 58, 50, 13, 79, 92, 3, 63, 19, 20, 79, 68, 83, 47],24,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("THIRD_LARGEST_ELEMENT_ARRAY_DISTINCT_ELEMENTS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("THIRD_LARGEST_ELEMENT_ARRAY_DISTINCT_ELEMENTS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("THIRD_LARGEST_ELEMENT_ARRAY_DISTINCT_ELEMENTS," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("THIRD_LARGEST_ELEMENT_ARRAY_DISTINCT_ELEMENTS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

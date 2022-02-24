@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([20, 94, 36, 2, 50, 62, 84, 50, 66, 75, 1, 18, 41, 48, 72, 61, 86, 22, 54, 6, 71, 46, 92, 68, 59, 51, 89, 31, 58, 78, 82, 84],25,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_SUM_IARRI_AMONG_ROTATIONS_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_SUM_IARRI_AMONG_ROTATIONS_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_SUM_IARRI_AMONG_ROTATIONS_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_SUM_IARRI_AMONG_ROTATIONS_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

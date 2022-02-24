@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (-5218.286665567171,-8265.153014320813,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if abs(1 - (0.0000001 + abs(f_gold(*parameters_set))) / (abs(f_filled(*parameters_set)) + 0.0000001)) < 0.001:
-                print("PROGRAM_CIRCUMFERENCE_PARALLELOGRAM," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("PROGRAM_CIRCUMFERENCE_PARALLELOGRAM," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("PROGRAM_CIRCUMFERENCE_PARALLELOGRAM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("PROGRAM_CIRCUMFERENCE_PARALLELOGRAM," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

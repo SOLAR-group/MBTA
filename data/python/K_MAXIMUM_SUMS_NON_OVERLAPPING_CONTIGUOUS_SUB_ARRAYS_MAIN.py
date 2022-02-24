@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([37, 75, 63, 69, 54, 22, 7, 6, 29, 97, 4, 23, 4, 30, 68, 28, 54, 68, 89, 17, 54, 76, 92, 28, 40, 95, 83, 61, 68, 57],16,24,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

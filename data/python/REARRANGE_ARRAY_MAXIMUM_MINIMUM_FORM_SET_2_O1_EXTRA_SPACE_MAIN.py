@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([19, 31, 26, 42, 41, 23, 47, 13, 89, 66, 66, 16, 73, 28, 77, 35, 41, 77, 31, 85, 32, 54, 98, 72, 59],20,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("REARRANGE_ARRAY_MAXIMUM_MINIMUM_FORM_SET_2_O1_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("REARRANGE_ARRAY_MAXIMUM_MINIMUM_FORM_SET_2_O1_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("REARRANGE_ARRAY_MAXIMUM_MINIMUM_FORM_SET_2_O1_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("REARRANGE_ARRAY_MAXIMUM_MINIMUM_FORM_SET_2_O1_EXTRA_SPACE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

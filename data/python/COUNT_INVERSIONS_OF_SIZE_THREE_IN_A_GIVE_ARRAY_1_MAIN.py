@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([74, 71, 28, 45, 14, 31, 17, 10, 82, 27, 45, 73, 93, 87, 57, 58],10,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("COUNT_INVERSIONS_OF_SIZE_THREE_IN_A_GIVE_ARRAY_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("COUNT_INVERSIONS_OF_SIZE_THREE_IN_A_GIVE_ARRAY_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("COUNT_INVERSIONS_OF_SIZE_THREE_IN_A_GIVE_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("COUNT_INVERSIONS_OF_SIZE_THREE_IN_A_GIVE_ARRAY_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

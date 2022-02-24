@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([75],0,[29],0,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("PROGRAM_WORST_FIT_ALGORITHM_MEMORY_MANAGEMENT," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("PROGRAM_WORST_FIT_ALGORITHM_MEMORY_MANAGEMENT," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("PROGRAM_WORST_FIT_ALGORITHM_MEMORY_MANAGEMENT," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("PROGRAM_WORST_FIT_ALGORITHM_MEMORY_MANAGEMENT," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

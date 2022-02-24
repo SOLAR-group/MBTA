@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([46, 87, 98],2,[67, 31, 54],2,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("LONGEST_COMMON_INCREASING_SUBSEQUENCE_LCS_LIS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("LONGEST_COMMON_INCREASING_SUBSEQUENCE_LCS_LIS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("LONGEST_COMMON_INCREASING_SUBSEQUENCE_LCS_LIS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("LONGEST_COMMON_INCREASING_SUBSEQUENCE_LCS_LIS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

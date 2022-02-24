@@ -15,11 +15,9 @@ if __name__ == '__main__':
           83, 57, 26, 89, 45, 60, 55, 60, 76, 76, 6, 40, 57, 38, 44, 7, 98, 64, 65, 88, 73, 88, 99], 26,)
     ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("LARGEST_SUBARRAY_WITH_EQUAL_NUMBER_OF_0S_AND_1S," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("LARGEST_SUBARRAY_WITH_EQUAL_NUMBER_OF_0S_AND_1S," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("LARGEST_SUBARRAY_WITH_EQUAL_NUMBER_OF_0S_AND_1S," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("LARGEST_SUBARRAY_WITH_EQUAL_NUMBER_OF_0S_AND_1S," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

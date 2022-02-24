@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([4, 21, 34, 35, 71, 10, 88, 44, 82, 13, 79, 92, 35, 73, 28, 91, 33, 9, 12, 76, 40, 91, 4, 22, 90, 53, 98, 7, 30],17,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("ELEMENTS_TO_BE_ADDED_SO_THAT_ALL_ELEMENTS_OF_A_RANGE_ARE_PRESENT_IN_ARRAY_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("ELEMENTS_TO_BE_ADDED_SO_THAT_ALL_ELEMENTS_OF_A_RANGE_ARE_PRESENT_IN_ARRAY_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("ELEMENTS_TO_BE_ADDED_SO_THAT_ALL_ELEMENTS_OF_A_RANGE_ARE_PRESENT_IN_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("ELEMENTS_TO_BE_ADDED_SO_THAT_ALL_ELEMENTS_OF_A_RANGE_ARE_PRESENT_IN_ARRAY_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

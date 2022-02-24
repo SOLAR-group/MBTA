@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([81, 40, 29, 74, 13, 67, 10, 25, 24, 81, 90],[51, 45, 23, 7, 53, 14, 49, 58, 25, 75, 74],8,10,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_COST_CUT_BOARD_SQUARES," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_COST_CUT_BOARD_SQUARES," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_COST_CUT_BOARD_SQUARES," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_COST_CUT_BOARD_SQUARES," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

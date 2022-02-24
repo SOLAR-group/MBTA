@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([44, 53, 71, 79, 34, 46, 68],4,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("SORT_ARRAY_WAVE_FORM_2_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("SORT_ARRAY_WAVE_FORM_2_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("SORT_ARRAY_WAVE_FORM_2_1," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("SORT_ARRAY_WAVE_FORM_2_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

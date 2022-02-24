@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([76, 65, 96, 76, 1, 91, 22, 29, 95, 21, 73, 68, 30, 52, 73, 86, 52, 66, 67, 37, 76, 53, 68, 6, 95, 81, 98, 42, 63, 38, 92, 78, 59, 86, 10, 38, 18, 15, 52, 62, 16, 66],23,35,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_LENGTH_SUBARRAY_SUM_GREATER_GIVEN_VALUE_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_LENGTH_SUBARRAY_SUM_GREATER_GIVEN_VALUE_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_LENGTH_SUBARRAY_SUM_GREATER_GIVEN_VALUE_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_LENGTH_SUBARRAY_SUM_GREATER_GIVEN_VALUE_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

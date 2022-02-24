@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([13, 37, 2, 83, 4, 55, 76, 94, 74, 33, 99, 9, 62, 32, 45, 31, 40, 67, 47, 29, 70, 42, 93, 66, 78, 57, 27, 50, 17, 32, 18, 96, 52, 50, 99, 60, 4, 68, 34, 24, 26, 41, 23, 72, 93, 93, 39, 3],43,[53, 65, 91, 70, 65, 77, 70, 52, 89, 39, 22, 76, 95, 98, 85, 11, 27, 43, 39, 56, 44, 53, 63, 86, 32, 71, 5, 71, 85, 80, 41, 27, 52, 66, 4, 64, 99, 99, 92, 82, 17, 48, 41, 18, 79, 22, 62, 40],37,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("PROGRAM_BEST_FIT_ALGORITHM_MEMORY_MANAGEMENT," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("PROGRAM_BEST_FIT_ALGORITHM_MEMORY_MANAGEMENT," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("PROGRAM_BEST_FIT_ALGORITHM_MEMORY_MANAGEMENT," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("PROGRAM_BEST_FIT_ALGORITHM_MEMORY_MANAGEMENT," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

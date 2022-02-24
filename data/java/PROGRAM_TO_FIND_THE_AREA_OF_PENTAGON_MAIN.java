@@ -12,17 +12,12 @@ public static void main(String args[]) throws IOException {
     param0.add(3916.454769669618F);
     param0.add(-669.068424712943F);
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(Math.abs(1 - (0.0000001 + Math.abs(f_gold(param0.get(i))) )/ (Math.abs(f_filled(param0.get(i))) + 0.0000001)) < 0.001F)
-	        {
-                builder.append("PROGRAM_TO_FIND_THE_AREA_OF_PENTAGON," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("PROGRAM_TO_FIND_THE_AREA_OF_PENTAGON," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("PROGRAM_TO_FIND_THE_AREA_OF_PENTAGON," + args[1] + "," + i + "," + f_gold(param0.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("PROGRAM_TO_FIND_THE_AREA_OF_PENTAGON," + args[1] + "," + i + ",EXCEPTION\n");
         }

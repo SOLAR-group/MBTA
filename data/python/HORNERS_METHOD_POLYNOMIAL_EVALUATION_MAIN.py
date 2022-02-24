@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([86, 62, 30, 27, 98, 75, 93, 37, 70, 16, 20, 74, 46, 74, 25, 59, 86, 32, 17, 90, 80, 10, 17],12,12,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("HORNERS_METHOD_POLYNOMIAL_EVALUATION," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("HORNERS_METHOD_POLYNOMIAL_EVALUATION," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("HORNERS_METHOD_POLYNOMIAL_EVALUATION," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("HORNERS_METHOD_POLYNOMIAL_EVALUATION," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

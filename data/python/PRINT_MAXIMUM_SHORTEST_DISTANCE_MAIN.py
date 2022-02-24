@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([2, 60, 66, 39, 18, 60, 37, 75, 3, 64, 24, 16, 72, 95, 96, 44, 23, 58, 58, 33, 24, 96],21,17,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("PRINT_MAXIMUM_SHORTEST_DISTANCE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("PRINT_MAXIMUM_SHORTEST_DISTANCE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("PRINT_MAXIMUM_SHORTEST_DISTANCE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("PRINT_MAXIMUM_SHORTEST_DISTANCE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

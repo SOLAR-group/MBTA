@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([15, 41, 32, 19, 68, 36, 61, 59, 5, 91, 53, 95, 10, 64, 15, 32, 14, 64, 48, 70, 85, 19, 83, 2, 33, 58, 93, 88, 21, 88, 45, 45, 18, 8],24,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FIND_MINIMUM_DIFFERENCE_PAIR," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_MINIMUM_DIFFERENCE_PAIR," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_MINIMUM_DIFFERENCE_PAIR," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FIND_MINIMUM_DIFFERENCE_PAIR," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

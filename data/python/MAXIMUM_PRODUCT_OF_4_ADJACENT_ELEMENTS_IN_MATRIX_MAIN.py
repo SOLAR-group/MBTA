@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([[76, 57, 99, 99, 95, 61, 64, 17, 58, 47], [52, 18, 37, 70, 17, 3, 33, 84, 80, 7], [2, 34, 4, 49, 17, 71, 12, 76, 74, 44], [89, 49, 69, 17, 38, 56, 61, 75, 86, 84], [32, 56, 87, 23, 66, 67, 97, 5, 23, 51], [25, 24, 30, 51, 30, 72, 46, 57, 29, 85], [80, 62, 87, 29, 37, 90, 88, 40, 55, 26], [27, 75, 51, 91, 22, 65, 38, 91, 1, 15], [11, 56, 38, 93, 54, 94, 23, 90, 37, 51], [61, 82, 79, 22, 66, 55, 67, 26, 93, 93]],6,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_PRODUCT_OF_4_ADJACENT_ELEMENTS_IN_MATRIX," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_PRODUCT_OF_4_ADJACENT_ELEMENTS_IN_MATRIX," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_PRODUCT_OF_4_ADJACENT_ELEMENTS_IN_MATRIX," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_PRODUCT_OF_4_ADJACENT_ELEMENTS_IN_MATRIX," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

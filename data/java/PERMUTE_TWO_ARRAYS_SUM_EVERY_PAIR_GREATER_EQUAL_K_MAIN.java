@@ -45,17 +45,12 @@ public static void main(String args[]) throws IOException {
     param3.add(30);
     param3.add(8);
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i),param1.get(i),param2.get(i),param3.get(i)) == f_gold(param0.get(i),param1.get(i),param2.get(i),param3.get(i)))
-	        {
-                builder.append("PERMUTE_TWO_ARRAYS_SUM_EVERY_PAIR_GREATER_EQUAL_K," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("PERMUTE_TWO_ARRAYS_SUM_EVERY_PAIR_GREATER_EQUAL_K," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("PERMUTE_TWO_ARRAYS_SUM_EVERY_PAIR_GREATER_EQUAL_K," + args[1] + "," + i + "," + f_gold(param0.get(i),param1.get(i),param2.get(i),param3.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("PERMUTE_TWO_ARRAYS_SUM_EVERY_PAIR_GREATER_EQUAL_K," + args[1] + "," + i + ",EXCEPTION\n");
         }

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (65,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("AREA_SQUARE_CIRCUMSCRIBED_CIRCLE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("AREA_SQUARE_CIRCUMSCRIBED_CIRCLE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("AREA_SQUARE_CIRCUMSCRIBED_CIRCLE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("AREA_SQUARE_CIRCUMSCRIBED_CIRCLE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

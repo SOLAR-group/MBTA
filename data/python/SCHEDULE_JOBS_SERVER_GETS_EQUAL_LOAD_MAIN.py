@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([72, 97, 79, 21, 83, 2, 31, 59, 6, 11, 79, 97],[27, 71, 87, 36, 73, 37, 80, 34, 57, 17, 88, 52],9,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("SCHEDULE_JOBS_SERVER_GETS_EQUAL_LOAD," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("SCHEDULE_JOBS_SERVER_GETS_EQUAL_LOAD," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("SCHEDULE_JOBS_SERVER_GETS_EQUAL_LOAD," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("SCHEDULE_JOBS_SERVER_GETS_EQUAL_LOAD," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

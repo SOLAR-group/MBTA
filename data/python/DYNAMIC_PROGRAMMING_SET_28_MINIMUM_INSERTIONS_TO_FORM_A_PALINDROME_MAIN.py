@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (['X', 'B', 'E', 'v', 'K', 't', 'k', 'K', 'Q', 's', 'V', 'N', 'l', 'k', 'T', 'N', 'J', 'z', 'f', 'p', 'J', 'g', 'S', 'P', 'M', 'b', 'H', 'L', 'v', 'E', 'A', 'n', 'D', 'U', 'c', 's', 'M', 'Q', 'P', 'g', 'g', ' '],26,27,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("DYNAMIC_PROGRAMMING_SET_28_MINIMUM_INSERTIONS_TO_FORM_A_PALINDROME," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("DYNAMIC_PROGRAMMING_SET_28_MINIMUM_INSERTIONS_TO_FORM_A_PALINDROME," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("DYNAMIC_PROGRAMMING_SET_28_MINIMUM_INSERTIONS_TO_FORM_A_PALINDROME," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("DYNAMIC_PROGRAMMING_SET_28_MINIMUM_INSERTIONS_TO_FORM_A_PALINDROME," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

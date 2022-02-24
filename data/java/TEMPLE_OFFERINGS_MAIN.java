@@ -23,17 +23,12 @@ public static void main(String args[]) throws IOException {
     param1.add(new int[]{0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1});
     param1.add(new int[]{96,15,9,9,40,34,17,4,51,49,34,66,97,28,64,65,92,56,74,48,43,17,82,8,21,39,83,35,42,37,64,34,42,59,45,61,55,93,94,29,20,96,77,66});
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
-	        {
-                builder.append("TEMPLE_OFFERINGS," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("TEMPLE_OFFERINGS," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("TEMPLE_OFFERINGS," + args[1] + "," + i + "," + f_gold(param0.get(i),param1.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("TEMPLE_OFFERINGS," + args[1] + "," + i + ",EXCEPTION\n");
         }

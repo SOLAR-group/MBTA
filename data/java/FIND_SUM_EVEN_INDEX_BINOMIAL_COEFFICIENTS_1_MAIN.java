@@ -12,17 +12,12 @@ public static void main(String args[]) throws IOException {
     param0.add(13);
     param0.add(19);
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
-	        {
-                builder.append("FIND_SUM_EVEN_INDEX_BINOMIAL_COEFFICIENTS_1," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("FIND_SUM_EVEN_INDEX_BINOMIAL_COEFFICIENTS_1," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("FIND_SUM_EVEN_INDEX_BINOMIAL_COEFFICIENTS_1," + args[1] + "," + i + "," + f_gold(param0.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("FIND_SUM_EVEN_INDEX_BINOMIAL_COEFFICIENTS_1," + args[1] + "," + i + ",EXCEPTION\n");
         }

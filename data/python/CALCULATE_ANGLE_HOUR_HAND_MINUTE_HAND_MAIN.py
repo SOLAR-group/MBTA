@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (-2829.678131972794,-9371.556600288217,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("CALCULATE_ANGLE_HOUR_HAND_MINUTE_HAND," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("CALCULATE_ANGLE_HOUR_HAND_MINUTE_HAND," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("CALCULATE_ANGLE_HOUR_HAND_MINUTE_HAND," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("CALCULATE_ANGLE_HOUR_HAND_MINUTE_HAND," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

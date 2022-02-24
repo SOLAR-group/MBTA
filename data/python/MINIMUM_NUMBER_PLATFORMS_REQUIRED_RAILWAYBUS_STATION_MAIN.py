@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([37, 84, 20, 34, 56, 1, 87, 72],[68, 62, 84, 54, 15, 29, 70, 96],6,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_NUMBER_PLATFORMS_REQUIRED_RAILWAYBUS_STATION," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_NUMBER_PLATFORMS_REQUIRED_RAILWAYBUS_STATION," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_NUMBER_PLATFORMS_REQUIRED_RAILWAYBUS_STATION," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_NUMBER_PLATFORMS_REQUIRED_RAILWAYBUS_STATION," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

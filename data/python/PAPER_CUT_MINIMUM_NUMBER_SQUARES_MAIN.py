@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (97,41,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("PAPER_CUT_MINIMUM_NUMBER_SQUARES," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("PAPER_CUT_MINIMUM_NUMBER_SQUARES," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("PAPER_CUT_MINIMUM_NUMBER_SQUARES," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("PAPER_CUT_MINIMUM_NUMBER_SQUARES," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

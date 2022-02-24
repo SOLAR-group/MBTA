@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([83, 86, 57, 18, 98, 52, 1, 37, 11, 49, 10, 67, 2, 60, 30, 42, 8, 97, 25, 55, 5, 75, 9, 67],16,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_POSSIBLE_DIFFERENCE_TWO_SUBSETS_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_POSSIBLE_DIFFERENCE_TWO_SUBSETS_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_POSSIBLE_DIFFERENCE_TWO_SUBSETS_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_POSSIBLE_DIFFERENCE_TWO_SUBSETS_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

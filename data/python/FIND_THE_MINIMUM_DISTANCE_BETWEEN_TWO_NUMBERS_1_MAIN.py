@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([32, 65, 10, 72, 17, 58, 79, 28, 67, 36, 18, 35],7,10,7,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FIND_THE_MINIMUM_DISTANCE_BETWEEN_TWO_NUMBERS_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_THE_MINIMUM_DISTANCE_BETWEEN_TWO_NUMBERS_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_THE_MINIMUM_DISTANCE_BETWEEN_TWO_NUMBERS_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FIND_THE_MINIMUM_DISTANCE_BETWEEN_TWO_NUMBERS_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

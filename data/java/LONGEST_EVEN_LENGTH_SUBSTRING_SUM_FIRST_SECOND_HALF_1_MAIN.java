@@ -12,17 +12,12 @@ public static void main(String args[]) throws IOException {
     param0.add("11100010001");
     param0.add("O HgwJyOVfnV");
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i)) == f_gold(param0.get(i)))
-	        {
-                builder.append("LONGEST_EVEN_LENGTH_SUBSTRING_SUM_FIRST_SECOND_HALF_1," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("LONGEST_EVEN_LENGTH_SUBSTRING_SUM_FIRST_SECOND_HALF_1," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("LONGEST_EVEN_LENGTH_SUBSTRING_SUM_FIRST_SECOND_HALF_1," + args[1] + "," + i + "," + f_gold(param0.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("LONGEST_EVEN_LENGTH_SUBSTRING_SUM_FIRST_SECOND_HALF_1," + args[1] + "," + i + ",EXCEPTION\n");
         }

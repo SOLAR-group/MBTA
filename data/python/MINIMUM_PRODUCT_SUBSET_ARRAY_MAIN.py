@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([74, 74, 8, 74, 85, 41, 31, 3, 84, 46, 73, 39, 64, 72, 28, 83, 98, 27, 64, 7, 95, 37, 10, 38, 77, 32, 69, 72, 62, 96, 5, 81, 34, 96, 80, 25, 38],33,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_PRODUCT_SUBSET_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_PRODUCT_SUBSET_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_PRODUCT_SUBSET_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_PRODUCT_SUBSET_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

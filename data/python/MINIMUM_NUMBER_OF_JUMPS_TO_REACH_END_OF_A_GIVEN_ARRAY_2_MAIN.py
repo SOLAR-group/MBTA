@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([98, 46, 12, 55, 57, 11, 25, 64, 92, 35, 90, 72, 95, 30, 75, 67, 64, 12, 31, 84, 70, 96, 71, 80, 62, 34, 70, 10, 54],25,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_NUMBER_OF_JUMPS_TO_REACH_END_OF_A_GIVEN_ARRAY_2," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_NUMBER_OF_JUMPS_TO_REACH_END_OF_A_GIVEN_ARRAY_2," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_NUMBER_OF_JUMPS_TO_REACH_END_OF_A_GIVEN_ARRAY_2," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_NUMBER_OF_JUMPS_TO_REACH_END_OF_A_GIVEN_ARRAY_2," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

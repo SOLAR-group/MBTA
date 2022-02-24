@@ -16,11 +16,9 @@ if __name__ == '__main__':
         ([91, 49, 94, 81, 64, 5, 13, 70, 82, 9, 80, 82], 9,)
     ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("COUNT_SUBARRAYS_TOTAL_DISTINCT_ELEMENTS_ORIGINAL_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("COUNT_SUBARRAYS_TOTAL_DISTINCT_ELEMENTS_ORIGINAL_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("COUNT_SUBARRAYS_TOTAL_DISTINCT_ELEMENTS_ORIGINAL_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("COUNT_SUBARRAYS_TOTAL_DISTINCT_ELEMENTS_ORIGINAL_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

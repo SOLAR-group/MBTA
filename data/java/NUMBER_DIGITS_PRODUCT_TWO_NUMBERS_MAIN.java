@@ -23,17 +23,12 @@ public static void main(String args[]) throws IOException {
     param1.add(55);
     param1.add(46);
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        if(f_filled(param0.get(i),param1.get(i)) == f_gold(param0.get(i),param1.get(i)))
-	        {
-                builder.append("NUMBER_DIGITS_PRODUCT_TWO_NUMBERS," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("NUMBER_DIGITS_PRODUCT_TWO_NUMBERS," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("NUMBER_DIGITS_PRODUCT_TWO_NUMBERS," + args[1] + "," + i + "," + f_gold(param0.get(i),param1.get(i)) + "\n");
         } catch (Exception e) {
             builder.append("NUMBER_DIGITS_PRODUCT_TWO_NUMBERS," + args[1] + "," + i + ",EXCEPTION\n");
         }

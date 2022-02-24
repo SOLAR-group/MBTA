@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([16, 57, 65, 61, 17, 63, 7, 35, 69, 91, 30, 44, 99, 80, 6, 80, 56, 8, 84, 95, 20, 73, 30, 62, 77, 26, 66, 61, 61, 45],28,22,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FIND_THE_MAXIMUM_ELEMENT_IN_AN_ARRAY_WHICH_IS_FIRST_INCREASING_AND_THEN_DECREASING," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_THE_MAXIMUM_ELEMENT_IN_AN_ARRAY_WHICH_IS_FIRST_INCREASING_AND_THEN_DECREASING," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_THE_MAXIMUM_ELEMENT_IN_AN_ARRAY_WHICH_IS_FIRST_INCREASING_AND_THEN_DECREASING," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FIND_THE_MAXIMUM_ELEMENT_IN_AN_ARRAY_WHICH_IS_FIRST_INCREASING_AND_THEN_DECREASING," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

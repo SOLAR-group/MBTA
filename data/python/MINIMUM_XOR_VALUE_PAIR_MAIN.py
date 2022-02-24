@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([50, 48, 94, 64, 60, 48, 79, 75, 77, 62, 33, 42, 22, 78, 32, 99, 27, 23, 76, 51, 34, 54, 70, 12, 19, 17, 13, 82, 96, 70, 4, 12, 5, 11, 23, 23, 18, 93, 38, 69],30,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_XOR_VALUE_PAIR," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_XOR_VALUE_PAIR," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_XOR_VALUE_PAIR," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_XOR_VALUE_PAIR," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([4, 39, 50, 37, 71, 66, 55, 34, 1, 41, 34, 99, 69, 31],11,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("LONGEST_SUBARRAY_COUNT_1S_ONE_COUNT_0S," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("LONGEST_SUBARRAY_COUNT_1S_ONE_COUNT_0S," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("LONGEST_SUBARRAY_COUNT_1S_ONE_COUNT_0S," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("LONGEST_SUBARRAY_COUNT_1S_ONE_COUNT_0S," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

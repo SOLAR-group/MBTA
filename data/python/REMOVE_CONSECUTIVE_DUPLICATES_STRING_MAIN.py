@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([' ', 'z', 'f', 'F', 'V', ' ', 'C', 'S', 'L', 'f', 'n', 'S', 's', 'd', 'N', 'A', 'r', 's', ' ', 'u', 'k', 'l', 'b', 'f', 'p', 'O', 't'],)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("REMOVE_CONSECUTIVE_DUPLICATES_STRING," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("REMOVE_CONSECUTIVE_DUPLICATES_STRING," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("REMOVE_CONSECUTIVE_DUPLICATES_STRING," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("REMOVE_CONSECUTIVE_DUPLICATES_STRING," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

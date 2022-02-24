@@ -21,11 +21,9 @@ if __name__ == '__main__':
           63, 20, 27, 22, 58, 3, 11, 75, 77, 64, 46, 1, 67, 79, 6, 46, 57, 79, 49, 83, 21, 36, 44], 46,)
     ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("COUNT_MINIMUM_NUMBER_SUBSETS_SUBSEQUENCES_CONSECUTIVE_NUMBERS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("COUNT_MINIMUM_NUMBER_SUBSETS_SUBSEQUENCES_CONSECUTIVE_NUMBERS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("COUNT_MINIMUM_NUMBER_SUBSETS_SUBSEQUENCES_CONSECUTIVE_NUMBERS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("COUNT_MINIMUM_NUMBER_SUBSETS_SUBSEQUENCES_CONSECUTIVE_NUMBERS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

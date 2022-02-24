@@ -31,6 +31,9 @@ class RemoveMainVisitor(ClassVisitor):
             with source_path.open("r+") as file_reader_writer:
                 content = file_reader_writer.readlines()
                 file_reader_writer.seek(0, 0)
+                inject_imports = ["import sys\n"]
+                if not inject_imports == content[:1]:
+                    file_reader_writer.write("".join(inject_imports))
                 copy = True
                 for line in content:
                     if copy:

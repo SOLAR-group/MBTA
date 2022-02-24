@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([80, 52, 9, 56, 68, 69, 48, 40, 64, 73, 44, 4, 97, 20, 25, 66, 46, 64, 72, 79, 24],15,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("SEGREGATE_EVEN_ODD_NUMBERS_SET_3," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("SEGREGATE_EVEN_ODD_NUMBERS_SET_3," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("SEGREGATE_EVEN_ODD_NUMBERS_SET_3," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("SEGREGATE_EVEN_ODD_NUMBERS_SET_3," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

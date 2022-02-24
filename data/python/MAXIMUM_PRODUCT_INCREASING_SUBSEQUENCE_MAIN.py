@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([47, 57, 72, 40, 53, 46, 62, 51, 42, 89, 9, 91, 58, 67, 20, 91, 63, 50, 32, 6, 63, 49, 3, 89, 87, 54, 65, 72, 72, 62, 31, 6, 48, 87, 17, 95, 59, 57],30,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_PRODUCT_INCREASING_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_PRODUCT_INCREASING_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_PRODUCT_INCREASING_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_PRODUCT_INCREASING_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

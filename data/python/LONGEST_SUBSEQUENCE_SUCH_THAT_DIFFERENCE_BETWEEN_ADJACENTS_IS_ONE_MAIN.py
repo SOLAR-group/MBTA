@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([5, 35, 75, 21, 82, 32, 28, 53, 20, 27, 42, 92, 32, 70, 81, 75, 72, 66, 97, 60, 11, 83, 14, 30, 5, 68, 17, 27, 62, 86, 26, 20, 97, 91, 44, 69],20,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("LONGEST_SUBSEQUENCE_SUCH_THAT_DIFFERENCE_BETWEEN_ADJACENTS_IS_ONE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("LONGEST_SUBSEQUENCE_SUCH_THAT_DIFFERENCE_BETWEEN_ADJACENTS_IS_ONE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("LONGEST_SUBSEQUENCE_SUCH_THAT_DIFFERENCE_BETWEEN_ADJACENTS_IS_ONE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("LONGEST_SUBSEQUENCE_SUCH_THAT_DIFFERENCE_BETWEEN_ADJACENTS_IS_ONE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

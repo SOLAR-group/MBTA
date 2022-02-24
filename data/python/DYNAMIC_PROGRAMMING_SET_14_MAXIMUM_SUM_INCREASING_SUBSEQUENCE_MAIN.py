@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([25, 46, 41, 61, 93, 29, 65, 24, 10, 89, 22, 51, 18, 65, 70, 59, 87, 82, 97, 99, 15, 64, 20, 97, 12, 23, 76],20,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("DYNAMIC_PROGRAMMING_SET_14_MAXIMUM_SUM_INCREASING_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("DYNAMIC_PROGRAMMING_SET_14_MAXIMUM_SUM_INCREASING_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("DYNAMIC_PROGRAMMING_SET_14_MAXIMUM_SUM_INCREASING_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("DYNAMIC_PROGRAMMING_SET_14_MAXIMUM_SUM_INCREASING_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

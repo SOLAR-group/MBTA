@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ('iJfadiVaQqv',)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("LONGEST_REPEATING_AND_NON_OVERLAPPING_SUBSTRING," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("LONGEST_REPEATING_AND_NON_OVERLAPPING_SUBSTRING," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("LONGEST_REPEATING_AND_NON_OVERLAPPING_SUBSTRING," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("LONGEST_REPEATING_AND_NON_OVERLAPPING_SUBSTRING," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

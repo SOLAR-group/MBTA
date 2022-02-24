@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([[93, 92, 85, 87, 63], [1, 60, 73, 25, 93], [2, 98, 22, 39, 4], [98, 55, 51, 49, 81], [29, 53, 81, 83, 92]],2,3,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("PRINT_MATRIX_SPIRAL_FORM_STARTING_POINT," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("PRINT_MATRIX_SPIRAL_FORM_STARTING_POINT," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("PRINT_MATRIX_SPIRAL_FORM_STARTING_POINT," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("PRINT_MATRIX_SPIRAL_FORM_STARTING_POINT," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([17, 33, 36, 34, 32, 10, 37, 48, 47, 32, 21, 18, 75, 8, 18, 52, 21, 73, 25, 25, 80, 32, 10, 24, 1, 89, 7, 42, 86, 85, 73, 12, 20, 20, 1, 74, 77, 4, 24, 74, 8],20,28,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FIND_MAXIMUM_AVERAGE_SUBARRAY_OF_K_LENGTH," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_MAXIMUM_AVERAGE_SUBARRAY_OF_K_LENGTH," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_MAXIMUM_AVERAGE_SUBARRAY_OF_K_LENGTH," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FIND_MAXIMUM_AVERAGE_SUBARRAY_OF_K_LENGTH," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ('Ks','KsFLmngGGOmHKs',)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("PROGRAM_FIND_STRING_START_END_GEEKS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("PROGRAM_FIND_STRING_START_END_GEEKS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("PROGRAM_FIND_STRING_START_END_GEEKS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("PROGRAM_FIND_STRING_START_END_GEEKS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

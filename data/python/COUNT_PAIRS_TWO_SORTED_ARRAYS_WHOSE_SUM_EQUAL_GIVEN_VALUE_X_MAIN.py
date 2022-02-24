@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([68, 75, 51, 45, 73, 95, 48, 53, 70, 41, 65, 47, 46, 43, 79, 29, 50],[4, 6, 76, 65, 16, 13, 85, 43, 31, 14, 81, 90, 24, 87, 40, 25, 88],10,10,9,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("COUNT_PAIRS_TWO_SORTED_ARRAYS_WHOSE_SUM_EQUAL_GIVEN_VALUE_X," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("COUNT_PAIRS_TWO_SORTED_ARRAYS_WHOSE_SUM_EQUAL_GIVEN_VALUE_X," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("COUNT_PAIRS_TWO_SORTED_ARRAYS_WHOSE_SUM_EQUAL_GIVEN_VALUE_X," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("COUNT_PAIRS_TWO_SORTED_ARRAYS_WHOSE_SUM_EQUAL_GIVEN_VALUE_X," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

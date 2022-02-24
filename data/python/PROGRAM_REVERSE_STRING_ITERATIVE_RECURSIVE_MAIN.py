@@ -24,13 +24,10 @@ if __name__ == '__main__':
     (['x', 'm', 'z', 'C', 'Y', 'W', 'Q', 'B', 'B', 'h', 'w', 'C', 'e', 'P', 'g', 'P', 'J', 'O', 'A', 'T', 'b', 'y', 'i', ' ', 'A', 'a', 'w'],)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (['D', 'I', 'u', 'K', 'e', 's', 'n', 'z', 'd', 'y', 'S', 'P', 'y', 'r'],['N', 'h', 'M', 'N', 'n', 'F', 'Y', 'L', 'G', 'w', 'o', 'G', 'y', 'q'],7,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

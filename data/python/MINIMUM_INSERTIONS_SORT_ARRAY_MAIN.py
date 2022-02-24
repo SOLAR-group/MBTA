@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([36, 62, 58, 24, 99, 12, 46, 3, 4, 40, 54, 97, 48, 94, 98, 7, 17, 5, 3, 36, 3],16,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_INSERTIONS_SORT_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_INSERTIONS_SORT_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_INSERTIONS_SORT_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_INSERTIONS_SORT_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

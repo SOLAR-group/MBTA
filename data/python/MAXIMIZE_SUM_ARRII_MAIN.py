@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([84, 32, 75, 21, 62, 49, 88, 49, 47, 20, 49, 18, 71, 34, 88, 44, 84],8,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMIZE_SUM_ARRII," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMIZE_SUM_ARRII," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMIZE_SUM_ARRII," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMIZE_SUM_ARRII," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

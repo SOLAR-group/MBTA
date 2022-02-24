@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (97,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("SQUARED_TRIANGULAR_NUMBER_SUM_CUBES," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("SQUARED_TRIANGULAR_NUMBER_SUM_CUBES," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("SQUARED_TRIANGULAR_NUMBER_SUM_CUBES," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("SQUARED_TRIANGULAR_NUMBER_SUM_CUBES," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

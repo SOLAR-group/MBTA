@@ -45,19 +45,13 @@ public static void main(String args[]) throws IOException {
     filled_function_param1.add(14);
     filled_function_param1.add(13);
     StringBuilder builder = new StringBuilder();
-    builder.append("class,mutant,test_index,result");
+    builder.append("class,mutant,test_index,result\n");
     FileWriter writer = new FileWriter(args[0]);
     for(int i = 0; i < param0.size(); ++i)
     {
         try {
-	        f_filled(filled_function_param0.get(i),filled_function_param1.get(i));
 	        f_gold(param0.get(i),param1.get(i));
-	        if(Arrays.equals(param0.get(i), filled_function_param0.get(i)) && param1.get(i) == filled_function_param1.get(i))
-	        {
-                builder.append("SORT_EVEN_NUMBERS_ASCENDING_ORDER_SORT_ODD_NUMBERS_DESCENDING_ORDER_1," + args[1] + "," + i + ",SUCCESS\n");
-            } else {
-                builder.append("SORT_EVEN_NUMBERS_ASCENDING_ORDER_SORT_ODD_NUMBERS_DESCENDING_ORDER_1," + args[1] + "," + i + ",FAILURE\n");
-            }
+            builder.append("SORT_EVEN_NUMBERS_ASCENDING_ORDER_SORT_ODD_NUMBERS_DESCENDING_ORDER_1," + args[1] + "," + i + "," + Arrays.toString(param0.get(i)).replace(",", ";") + ";" + param1.get(i) + "\n");
         } catch (Exception e) {
             builder.append("SORT_EVEN_NUMBERS_ASCENDING_ORDER_SORT_ODD_NUMBERS_DESCENDING_ORDER_1," + args[1] + "," + i + ",EXCEPTION\n");
         }

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([66, 80, 79, 72, 1, 67, 20, 67, 32, 40, 22, 64, 58, 67, 10, 21, 37, 49],15,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("LENGTH_LONGEST_STRICT_BITONIC_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("LENGTH_LONGEST_STRICT_BITONIC_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("LENGTH_LONGEST_STRICT_BITONIC_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("LENGTH_LONGEST_STRICT_BITONIC_SUBSEQUENCE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

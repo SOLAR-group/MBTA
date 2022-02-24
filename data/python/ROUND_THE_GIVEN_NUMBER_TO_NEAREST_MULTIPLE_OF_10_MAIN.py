@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (2,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("ROUND_THE_GIVEN_NUMBER_TO_NEAREST_MULTIPLE_OF_10," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("ROUND_THE_GIVEN_NUMBER_TO_NEAREST_MULTIPLE_OF_10," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("ROUND_THE_GIVEN_NUMBER_TO_NEAREST_MULTIPLE_OF_10," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("ROUND_THE_GIVEN_NUMBER_TO_NEAREST_MULTIPLE_OF_10," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

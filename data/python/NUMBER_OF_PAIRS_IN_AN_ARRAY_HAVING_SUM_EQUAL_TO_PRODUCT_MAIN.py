@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([22, 15, 28, 29, 32, 16, 33, 83],7,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("NUMBER_OF_PAIRS_IN_AN_ARRAY_HAVING_SUM_EQUAL_TO_PRODUCT," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("NUMBER_OF_PAIRS_IN_AN_ARRAY_HAVING_SUM_EQUAL_TO_PRODUCT," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("NUMBER_OF_PAIRS_IN_AN_ARRAY_HAVING_SUM_EQUAL_TO_PRODUCT," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("NUMBER_OF_PAIRS_IN_AN_ARRAY_HAVING_SUM_EQUAL_TO_PRODUCT," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

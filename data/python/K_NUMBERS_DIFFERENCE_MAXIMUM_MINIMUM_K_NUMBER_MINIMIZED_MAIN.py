@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([31, 15, 19, 41, 73, 29, 67, 36, 87, 74, 95, 27, 36, 83, 37, 33, 30, 86, 94, 93, 9, 42, 3, 95, 3, 69, 67, 63, 16, 53, 35, 52, 2, 57, 57, 25, 21, 7, 72, 52, 78, 40],36,37,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("K_NUMBERS_DIFFERENCE_MAXIMUM_MINIMUM_K_NUMBER_MINIMIZED," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("K_NUMBERS_DIFFERENCE_MAXIMUM_MINIMUM_K_NUMBER_MINIMIZED," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("K_NUMBERS_DIFFERENCE_MAXIMUM_MINIMUM_K_NUMBER_MINIMIZED," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("K_NUMBERS_DIFFERENCE_MAXIMUM_MINIMUM_K_NUMBER_MINIMIZED," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

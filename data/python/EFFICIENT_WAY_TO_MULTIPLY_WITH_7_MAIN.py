@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (19,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("EFFICIENT_WAY_TO_MULTIPLY_WITH_7," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("EFFICIENT_WAY_TO_MULTIPLY_WITH_7," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("EFFICIENT_WAY_TO_MULTIPLY_WITH_7," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("EFFICIENT_WAY_TO_MULTIPLY_WITH_7," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

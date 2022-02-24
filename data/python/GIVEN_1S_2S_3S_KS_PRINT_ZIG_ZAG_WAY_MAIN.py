@@ -24,13 +24,10 @@ if __name__ == '__main__':
     (13,19,[60, 96, 34, 69, 96, 9, 58, 59, 59, 68, 14, 53, 68, 89, 2, 5, 42, 31, 1, 33, 62, 1, 91, 85, 70, 68, 18],)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("GIVEN_1S_2S_3S_KS_PRINT_ZIG_ZAG_WAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("GIVEN_1S_2S_3S_KS_PRINT_ZIG_ZAG_WAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("GIVEN_1S_2S_3S_KS_PRINT_ZIG_ZAG_WAY," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("GIVEN_1S_2S_3S_KS_PRINT_ZIG_ZAG_WAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

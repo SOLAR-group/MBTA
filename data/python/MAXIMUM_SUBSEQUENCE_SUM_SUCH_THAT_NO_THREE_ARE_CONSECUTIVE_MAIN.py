@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([4, 32, 63, 23, 44, 57, 59, 69, 88, 61, 66, 61, 65, 33, 79, 58, 71, 2, 80, 41, 83, 12, 20, 9, 7, 40, 36, 97, 10, 98, 66, 78, 71, 37, 53],26,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_SUBSEQUENCE_SUM_SUCH_THAT_NO_THREE_ARE_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_SUBSEQUENCE_SUM_SUCH_THAT_NO_THREE_ARE_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_SUBSEQUENCE_SUM_SUCH_THAT_NO_THREE_ARE_CONSECUTIVE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_SUBSEQUENCE_SUM_SUCH_THAT_NO_THREE_ARE_CONSECUTIVE," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

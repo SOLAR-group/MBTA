@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([69, 99, 25, 52, 41, 51, 7, 33, 42, 91, 85, 57, 91, 89, 86, 11, 70, 67, 30, 92, 81, 23, 51, 98, 85, 5, 50, 44],21,27,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("GIVEN_A_SORTED_AND_ROTATED_ARRAY_FIND_IF_THERE_IS_A_PAIR_WITH_A_GIVEN_SUM," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("GIVEN_A_SORTED_AND_ROTATED_ARRAY_FIND_IF_THERE_IS_A_PAIR_WITH_A_GIVEN_SUM," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("GIVEN_A_SORTED_AND_ROTATED_ARRAY_FIND_IF_THERE_IS_A_PAIR_WITH_A_GIVEN_SUM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("GIVEN_A_SORTED_AND_ROTATED_ARRAY_FIND_IF_THERE_IS_A_PAIR_WITH_A_GIVEN_SUM," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

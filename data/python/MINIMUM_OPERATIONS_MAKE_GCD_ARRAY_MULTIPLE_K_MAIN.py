@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([42, 69, 93, 82, 8, 23, 73, 1, 77, 39, 49, 4, 95, 85],12,13,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMUM_OPERATIONS_MAKE_GCD_ARRAY_MULTIPLE_K," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMUM_OPERATIONS_MAKE_GCD_ARRAY_MULTIPLE_K," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMUM_OPERATIONS_MAKE_GCD_ARRAY_MULTIPLE_K," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMUM_OPERATIONS_MAKE_GCD_ARRAY_MULTIPLE_K," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

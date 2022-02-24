@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([70, 54, 71, 85, 51, 28, 64, 85, 21, 88, 27, 27, 77, 50, 29, 39, 57, 92, 37, 93, 64, 48, 22, 30, 28, 23, 97, 4, 3, 61, 96],18,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FIND_MAXIMUM_HEIGHT_PYRAMID_FROM_THE_GIVEN_ARRAY_OF_OBJECTS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_MAXIMUM_HEIGHT_PYRAMID_FROM_THE_GIVEN_ARRAY_OF_OBJECTS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_MAXIMUM_HEIGHT_PYRAMID_FROM_THE_GIVEN_ARRAY_OF_OBJECTS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FIND_MAXIMUM_HEIGHT_PYRAMID_FROM_THE_GIVEN_ARRAY_OF_OBJECTS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

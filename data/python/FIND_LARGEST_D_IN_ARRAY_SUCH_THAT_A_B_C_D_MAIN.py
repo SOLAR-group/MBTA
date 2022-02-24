@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([55, 74, 18, 4, 68, 66, 33, 61, 66, 92, 21, 9, 49, 14, 99, 87, 74, 6, 11, 25, 5, 58, 56, 20],23,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FIND_LARGEST_D_IN_ARRAY_SUCH_THAT_A_B_C_D," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_LARGEST_D_IN_ARRAY_SUCH_THAT_A_B_C_D," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_LARGEST_D_IN_ARRAY_SUCH_THAT_A_B_C_D," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FIND_LARGEST_D_IN_ARRAY_SUCH_THAT_A_B_C_D," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

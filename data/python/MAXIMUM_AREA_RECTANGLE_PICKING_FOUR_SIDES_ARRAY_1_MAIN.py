@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([6, 30, 47, 97, 20, 16, 68, 34, 1, 77, 48, 8, 22, 68],8,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_AREA_RECTANGLE_PICKING_FOUR_SIDES_ARRAY_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_AREA_RECTANGLE_PICKING_FOUR_SIDES_ARRAY_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_AREA_RECTANGLE_PICKING_FOUR_SIDES_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_AREA_RECTANGLE_PICKING_FOUR_SIDES_ARRAY_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

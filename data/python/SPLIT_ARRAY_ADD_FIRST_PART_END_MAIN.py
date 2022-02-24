@@ -24,13 +24,10 @@ if __name__ == '__main__':
     ([80, 14, 35, 25, 60, 86, 45, 95, 32, 29, 94, 6, 63, 66, 38],9,7,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            f_filled(*(filled_function_param[i]))
             f_gold(*parameters_set)
-            if parameters_set == filled_function_param[i]:
-                print("SPLIT_ARRAY_ADD_FIRST_PART_END," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("SPLIT_ARRAY_ADD_FIRST_PART_END," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("SPLIT_ARRAY_ADD_FIRST_PART_END," + sys.argv[1] + "," + str(i) + "," + ','.join(str(e) for e in parameters_set).replace(',', ';'))
         except:
             print("SPLIT_ARRAY_ADD_FIRST_PART_END," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

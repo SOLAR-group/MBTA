@@ -12,11 +12,9 @@ if __name__ == '__main__':
     (["g","h","ok","h","ok","sqozuC","ut","ZwRcG","ok","MR","jHrWyy","qaJlrokgRHuZH","LjPNzDUKszYmCq","g","ZGjLfMnyAGL","kEZoSxOMEWSFpw","IFtqNaDVnG","iJoJXl","vjrQMyWor","FTEHZqbHGlmHph","QeSdzm","nPostKHkigyJt","mOSekk"],15,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("COUNT_WORDS_APPEAR_EXACTLY_TWO_TIMES_ARRAY_WORDS," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("COUNT_WORDS_APPEAR_EXACTLY_TWO_TIMES_ARRAY_WORDS," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("COUNT_WORDS_APPEAR_EXACTLY_TWO_TIMES_ARRAY_WORDS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("COUNT_WORDS_APPEAR_EXACTLY_TWO_TIMES_ARRAY_WORDS," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([64, 13, 18, 3, 22, 29, 51, 45, 21, 13, 47, 15, 17, 34, 60, 99, 30, 54, 16, 47, 13, 49, 60, 66, 28, 57, 85, 66, 65, 7, 62, 29, 9],21,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_EQULIBRIUM_SUM_ARRAY," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_EQULIBRIUM_SUM_ARRAY," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_EQULIBRIUM_SUM_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_EQULIBRIUM_SUM_ARRAY," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

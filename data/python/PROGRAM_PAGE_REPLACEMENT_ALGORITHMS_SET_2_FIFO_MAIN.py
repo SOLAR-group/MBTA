@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([4, 90, 28, 71, 69, 45, 92, 63, 72, 76, 47, 85, 36, 59, 88, 46, 28, 19, 50, 31, 63, 13],15,12,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("PROGRAM_PAGE_REPLACEMENT_ALGORITHMS_SET_2_FIFO," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("PROGRAM_PAGE_REPLACEMENT_ALGORITHMS_SET_2_FIFO," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("PROGRAM_PAGE_REPLACEMENT_ALGORITHMS_SET_2_FIFO," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("PROGRAM_PAGE_REPLACEMENT_ALGORITHMS_SET_2_FIFO," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

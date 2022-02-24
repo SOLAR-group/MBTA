@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([78, 39, 2, 76, 20, 21, 3, 21, 32, 80, 28, 89, 51, 2, 88, 19, 99, 71, 68, 38, 8, 76, 48, 81, 90, 71, 31],14,24,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MAXIMUM_PROFIT_BY_BUYING_AND_SELLING_A_SHARE_AT_MOST_K_TIMES_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MAXIMUM_PROFIT_BY_BUYING_AND_SELLING_A_SHARE_AT_MOST_K_TIMES_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MAXIMUM_PROFIT_BY_BUYING_AND_SELLING_A_SHARE_AT_MOST_K_TIMES_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MAXIMUM_PROFIT_BY_BUYING_AND_SELLING_A_SHARE_AT_MOST_K_TIMES_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

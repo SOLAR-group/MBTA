@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([95, 73, 74, 14, 73, 74, 19, 93, 34, 53, 85, 75, 80, 15, 36, 57, 15, 98, 51, 37, 8, 9, 62, 71, 28, 24, 37, 53, 84, 76, 22, 48, 15, 19, 43, 88, 58, 38, 63, 68, 27, 22, 37, 76, 59, 66, 22],34,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("C_PROGRAM_FIND_LARGEST_ELEMENT_ARRAY_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("C_PROGRAM_FIND_LARGEST_ELEMENT_ARRAY_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("C_PROGRAM_FIND_LARGEST_ELEMENT_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("C_PROGRAM_FIND_LARGEST_ELEMENT_ARRAY_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([60, 66, 84, 99, 85, 89, 28, 97, 85, 71, 53, 93, 23, 9, 45, 26, 49, 95, 64, 33, 70, 34, 10, 1, 68, 39, 53, 12],[37, 33, 33, 77, 78, 34, 28, 1, 63, 15, 51, 50, 90, 22, 71, 23, 68, 55, 2, 22, 31, 54, 76, 36, 2, 27, 96, 89],15,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("MINIMIZE_SUM_PRODUCT_TWO_ARRAYS_PERMUTATIONS_ALLOWED," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("MINIMIZE_SUM_PRODUCT_TWO_ARRAYS_PERMUTATIONS_ALLOWED," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("MINIMIZE_SUM_PRODUCT_TWO_ARRAYS_PERMUTATIONS_ALLOWED," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("MINIMIZE_SUM_PRODUCT_TWO_ARRAYS_PERMUTATIONS_ALLOWED," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

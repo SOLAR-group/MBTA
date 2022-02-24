@@ -12,11 +12,9 @@ if __name__ == '__main__':
     ([10, 42, 50, 5, 74, 81, 30, 76, 6, 34, 86, 4, 77, 71, 96, 22, 34, 50, 35, 16, 60, 11, 21, 38],13,)
         ]
     n_success = 0
+    print("class,mutant,test_index,result\n")
     for i, parameters_set in enumerate(param):
         try:
-            if f_filled(*parameters_set) == f_gold(*parameters_set):
-                print("FIND_REPETITIVE_ELEMENT_1_N_1," + sys.argv[1] + "," + str(i) + ",SUCCESS")
-            else:
-                print("FIND_REPETITIVE_ELEMENT_1_N_1," + sys.argv[1] + "," + str(i) + ",FAILURE")
+            print("FIND_REPETITIVE_ELEMENT_1_N_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
         except:
             print("FIND_REPETITIVE_ELEMENT_1_N_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")
