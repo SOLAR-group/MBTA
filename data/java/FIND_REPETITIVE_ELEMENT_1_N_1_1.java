@@ -25,5 +25,42 @@ static int f_gold ( int arr [ ] , int n ) {
 
 
 //TOFILL
-
+public static void main(String args[]) throws IOException {
+    int n_success = 0;
+    List<int [ ]> param0 = new ArrayList<>();
+    param0.add(new int[]{9,10,14,17,30,37,39,42,49,56,68,74,85,85,92});
+    param0.add(new int[]{62,-18,78,-32,38,90});
+    param0.add(new int[]{0,0,0,0,1,1,1,1,1,1});
+    param0.add(new int[]{56,1,96,81,49,18,39,87,97});
+    param0.add(new int[]{-98,-94,-80,-76,-60,-56,-56,-54,-48,-28,-14,-10,26,30,40,58,64,74,78,82,86,92,96,98});
+    param0.add(new int[]{1,1,1,0,1,1,0,1,0,1,0,0,1,0,0,0,0,1,0,1,1,1,0});
+    param0.add(new int[]{5,7,19,20,22,29,33,35,35,36,37,40,44,49,50,53,60,60,61,62,68,68,69,72,72,81,81,83,85,85,90,91,92,97,98});
+    param0.add(new int[]{14});
+    param0.add(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1});
+    param0.add(new int[]{29,29,14,91,42,70,79,75,9,86,48,47,37,48,69,81,49,37,33,23,42,45,10,33,47,39,96,45,94,48,44,4,6,73,91});
+    List<Integer> param1 = new ArrayList<>();
+    param1.add(10);
+    param1.add(4);
+    param1.add(7);
+    param1.add(5);
+    param1.add(16);
+    param1.add(11);
+    param1.add(26);
+    param1.add(0);
+    param1.add(18);
+    param1.add(33);
+    StringBuilder builder = new StringBuilder();
+    builder.append("class,mutant,test_index,result\n");
+    FileWriter writer = new FileWriter(args[0]);
+    for(int i = 0; i < param0.size(); ++i)
+    {
+        try {
+            builder.append("FIND_REPETITIVE_ELEMENT_1_N_1_1," + args[1] + "," + i + "," + f_gold(param0.get(i),param1.get(i)) + "\n");
+        } catch (Exception e) {
+            builder.append("FIND_REPETITIVE_ELEMENT_1_N_1_1," + args[1] + "," + i + ",EXCEPTION\n");
+        }
+    }
+    writer.write(builder.toString());
+    writer.close();
+}
 }
