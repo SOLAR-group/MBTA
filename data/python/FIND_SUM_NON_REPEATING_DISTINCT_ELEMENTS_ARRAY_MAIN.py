@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([70, 21, 44, 82, 62, 41, 86],3,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_SUM_NON_REPEATING_DISTINCT_ELEMENTS_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

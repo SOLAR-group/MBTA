@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([71, 94, 91, 19, 85, 5, 87, 96, 66, 17, 95, 5, 32, 17, 93, 48, 46, 24],12,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_SUBARRAYS_WITH_SAME_EVEN_AND_ODD_ELEMENTS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

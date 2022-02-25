@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([95, 38, 91, 75, 43, 95, 23, 36, 51, 4, 38, 53, 52, 58, 55, 3, 19, 22, 84, 9],14,19,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMUM_NUMBER_CHOCOLATES_DISTRIBUTED_EQUALLY_AMONG_K_STUDENTS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

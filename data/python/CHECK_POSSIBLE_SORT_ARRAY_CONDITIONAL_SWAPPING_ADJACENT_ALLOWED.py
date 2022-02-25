@@ -30,7 +30,7 @@ if __name__ == '__main__':
     ([63, 31, 14, 19, 77, 64, 62, 23, 22, 19, 39, 9, 79, 1, 87, 29, 58, 3, 3, 39, 1, 39, 35, 64, 64],13,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CHECK_POSSIBLE_SORT_ARRAY_CONDITIONAL_SWAPPING_ADJACENT_ALLOWED," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

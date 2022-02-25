@@ -26,7 +26,7 @@ if __name__ == '__main__':
     ([5, 54, 49, 80, 56, 62, 31, 49, 60, 19, 45, 94, 33, 46, 32],8,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMUM_HEIGHT_OF_TRIANGULAR_ARRANGEMENT_OF_ARRAY_VALUES_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

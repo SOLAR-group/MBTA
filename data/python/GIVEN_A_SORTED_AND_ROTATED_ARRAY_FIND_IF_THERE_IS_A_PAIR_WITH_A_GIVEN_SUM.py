@@ -36,7 +36,7 @@ if __name__ == '__main__':
     ([69, 99, 25, 52, 41, 51, 7, 33, 42, 91, 85, 57, 91, 89, 86, 11, 70, 67, 30, 92, 81, 23, 51, 98, 85, 5, 50, 44],21,27,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("GIVEN_A_SORTED_AND_ROTATED_ARRAY_FIND_IF_THERE_IS_A_PAIR_WITH_A_GIVEN_SUM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

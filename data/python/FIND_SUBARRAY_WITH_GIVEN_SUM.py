@@ -11,14 +11,14 @@ def f_gold ( arr , n , sum ) :
         j = i + 1
         while j <= n :
             if curr_sum == sum :
-                print ( "Sum found between" )
-                print ( "indexes %d and %d" % ( i , j - 1 ) )
+                
+                
                 return 1
             if curr_sum > sum or j == n :
                 break
             curr_sum = curr_sum + arr [ j ]
             j += 1
-    print ( "No subarray found" )
+    
     return 0
 
 
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     ([38, 24, 12],1,1,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_SUBARRAY_WITH_GIVEN_SUM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

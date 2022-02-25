@@ -30,7 +30,7 @@ if __name__ == '__main__':
     (6,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("BELL_NUMBERS_NUMBER_OF_WAYS_TO_PARTITION_A_SET," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

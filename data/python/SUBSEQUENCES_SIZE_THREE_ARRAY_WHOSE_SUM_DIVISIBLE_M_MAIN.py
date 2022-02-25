@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([77, 68, 45, 6, 27, 19, 29, 95, 21, 2, 39, 48, 72, 67, 49, 45, 1, 16, 56, 78, 25, 22, 27, 40, 31, 34, 26, 35, 12],25,25,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("SUBSEQUENCES_SIZE_THREE_ARRAY_WHOSE_SUM_DIVISIBLE_M," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

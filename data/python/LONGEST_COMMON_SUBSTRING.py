@@ -35,7 +35,7 @@ if __name__ == '__main__':
     (['B', 'o', 'R', 'k', 'Y', 'M', 'g', 'b', 'h', 'A', 'i', 'X', 'p', 'i', 'j', 'f', 'V', 'n', 'd', 'P', 'T', 'U', 'f', 'G', 'M', 'W', 'g', 'a', 'C', 'E', 'v', 'C', ' '],['F', 'h', 'G', 'H', 'Q', 'Q', 'K', 'g', 'k', 'u', 'l', 'c', 'c', 'o', 'n', 'G', 'i', 'Z', 'd', 'b', 'c', 'b', 'v', 't', 'S', 't', 'P', 'A', 'K', 'g', 'G', 'i', 'm'],19,32,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("LONGEST_COMMON_SUBSTRING," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

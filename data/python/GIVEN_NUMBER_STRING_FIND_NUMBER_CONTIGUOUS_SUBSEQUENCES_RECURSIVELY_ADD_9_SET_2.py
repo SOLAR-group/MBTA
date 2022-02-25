@@ -40,7 +40,7 @@ if __name__ == '__main__':
     (['l', 'X', 'i', 'J', 'e', 'm', 'L', 'g', 'L', 'p', 'b', 'y', 'E', 'g'],)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("GIVEN_NUMBER_STRING_FIND_NUMBER_CONTIGUOUS_SUBSEQUENCES_RECURSIVELY_ADD_9_SET_2," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

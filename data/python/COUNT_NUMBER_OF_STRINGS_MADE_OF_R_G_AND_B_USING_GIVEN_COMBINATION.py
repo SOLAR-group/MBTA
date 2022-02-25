@@ -34,7 +34,7 @@ if __name__ == '__main__':
     (67,99,53,70,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_NUMBER_OF_STRINGS_MADE_OF_R_G_AND_B_USING_GIVEN_COMBINATION," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

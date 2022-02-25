@@ -29,7 +29,7 @@ if __name__ == '__main__':
     ([56, 51, 63, 30, 10, 88, 23, 1, 48, 4, 28, 44],10,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("PROGRAM_CHECK_ARRAY_SORTED_NOT_ITERATIVE_RECURSIVE_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

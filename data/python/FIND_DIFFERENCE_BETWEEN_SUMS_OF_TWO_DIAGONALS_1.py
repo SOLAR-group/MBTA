@@ -29,7 +29,7 @@ if __name__ == '__main__':
     ([[96, 94, 33, 75, 69, 69, 91, 26], [10, 49, 56, 26, 54, 98, 70, 59], [12, 39, 29, 62, 49, 76, 43, 55], [98, 30, 1, 23, 4, 81, 78, 3], [82, 14, 46, 85, 89, 5, 11, 64], [46, 39, 97, 97, 4, 83, 99, 8], [48, 50, 62, 64, 94, 79, 84, 12], [49, 69, 81, 46, 89, 69, 43, 5]],7,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_DIFFERENCE_BETWEEN_SUMS_OF_TWO_DIAGONALS_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

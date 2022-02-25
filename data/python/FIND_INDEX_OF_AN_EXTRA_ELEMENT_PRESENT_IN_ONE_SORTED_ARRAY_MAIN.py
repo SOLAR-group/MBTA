@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([74, 75, 52, 58, 34, 53, 51, 45, 34, 28, 53, 94, 10, 20, 23, 12, 95, 78, 48, 11],[62, 56, 17, 1, 11, 30, 59, 18, 99, 21, 86, 49, 24, 85, 25, 56, 21, 66, 23, 96],17,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_INDEX_OF_AN_EXTRA_ELEMENT_PRESENT_IN_ONE_SORTED_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

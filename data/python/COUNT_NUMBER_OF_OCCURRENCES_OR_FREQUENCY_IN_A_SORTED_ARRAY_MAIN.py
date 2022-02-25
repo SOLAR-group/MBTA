@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([11, 50, 1, 93, 12, 7, 55, 35, 36, 62, 61, 71, 16],11,8,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_NUMBER_OF_OCCURRENCES_OR_FREQUENCY_IN_A_SORTED_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

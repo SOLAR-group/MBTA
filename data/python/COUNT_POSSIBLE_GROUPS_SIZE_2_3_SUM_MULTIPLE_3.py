@@ -34,7 +34,7 @@ if __name__ == '__main__':
     ([53, 32, 54, 84, 79, 37, 44, 30, 92, 53, 89, 95],8,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_POSSIBLE_GROUPS_SIZE_2_3_SUM_MULTIPLE_3," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

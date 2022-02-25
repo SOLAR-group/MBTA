@@ -27,7 +27,7 @@ if __name__ == '__main__':
     (-8233.422168737996,-5956.055383069726,-5624.546627814419,-4024.7562734644903,-3480.155957748129,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_MIRROR_IMAGE_POINT_2_D_PLANE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

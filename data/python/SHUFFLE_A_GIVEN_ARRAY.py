@@ -29,7 +29,7 @@ if __name__ == '__main__':
     ([23, 40, 62, 21, 87, 54, 76, 72, 76, 60, 89, 74, 13, 75, 91, 53, 96, 94, 12, 36, 60, 62, 55, 82, 27, 80, 97, 42, 25, 98, 9, 8, 45, 47, 55, 67, 91, 25],32,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("SHUFFLE_A_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

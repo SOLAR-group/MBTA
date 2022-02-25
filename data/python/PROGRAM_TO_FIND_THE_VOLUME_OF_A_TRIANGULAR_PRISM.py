@@ -24,7 +24,7 @@ if __name__ == '__main__':
     (-7550.426360065503,-2693.2262997056355,-9110.64755244532,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("PROGRAM_TO_FIND_THE_VOLUME_OF_A_TRIANGULAR_PRISM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

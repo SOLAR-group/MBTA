@@ -29,9 +29,9 @@ def f_gold ( arr , n ) :
             arr [ i ] = 0 ;
         else :
             arr [ i ] = 1 ;
-    print ( ending_index - max_len + 1 , end = " " ) ;
-    print ( "to" , end = " " ) ;
-    print ( ending_index ) ;
+    
+    
+    
     return max_len ;
 
 
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     ([2, 25, 45, 98, 71, 8, 58, 94, 53],8,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("LARGEST_SUBARRAY_WITH_EQUAL_NUMBER_OF_0S_AND_1S_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

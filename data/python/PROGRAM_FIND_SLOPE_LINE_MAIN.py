@@ -12,7 +12,7 @@ if __name__ == '__main__':
     (-4748.744241168378,-675.557388148954,-5998.241086029875,-4236.658178504375,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("PROGRAM_FIND_SLOPE_LINE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

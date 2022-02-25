@@ -31,7 +31,7 @@ if __name__ == '__main__':
     (' pvFHANc','xBIDFbiGb',)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CHECK_STRING_CAN_OBTAINED_ROTATING_ANOTHER_STRING_2_PLACES," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -6,8 +6,7 @@ import sys
 # LICENSE file in the root directory of this source tree.
 #
 def f_gold ( h , m ) :
-    if ( h < 0 or m < 0 or h > 12 or m > 60 ) :
-        print ( 'Wrong input' )
+
     if ( h == 12 ) :
         h = 0
     if ( m == 60 ) :
@@ -34,7 +33,7 @@ if __name__ == '__main__':
     (-2829.678131972794,-9371.556600288217,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CALCULATE_ANGLE_HOUR_HAND_MINUTE_HAND," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

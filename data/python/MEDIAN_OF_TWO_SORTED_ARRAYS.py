@@ -47,7 +47,7 @@ if __name__ == '__main__':
     ([61, 69, 66, 3],[39, 84, 97, 15],3,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MEDIAN_OF_TWO_SORTED_ARRAYS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

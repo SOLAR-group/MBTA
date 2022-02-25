@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([57, 76, 2, 30, 24, 12, 49, 12, 5, 75, 55, 17, 62, 87, 21, 91, 88, 10, 20, 49, 46, 79, 51, 33, 94, 59, 48, 97, 70, 49],25,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_THE_MAXIMUM_SUBARRAY_XOR_IN_A_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

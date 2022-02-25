@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([17, 50, 65, 4, 19, 10, 45, 70, 76, 81, 28, 97, 55, 70, 38, 2, 40, 67, 36, 33, 6, 85, 25],[78, 92, 65, 23, 7, 94, 18, 4, 2, 53, 31, 58, 98, 18, 46, 16, 17, 92, 80, 92, 43, 70, 50],16,22,22,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_PAIRS_TWO_SORTED_ARRAYS_WHOSE_SUM_EQUAL_GIVEN_VALUE_X_2," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

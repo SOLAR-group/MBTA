@@ -24,7 +24,7 @@ if __name__ == '__main__':
     ([44, 7, 44, 68, 34, 66, 69, 55, 10, 96, 42, 41, 77, 69, 10, 10, 91, 60, 51],13,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             f_gold(*parameters_set)

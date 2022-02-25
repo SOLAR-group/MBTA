@@ -11,7 +11,7 @@ def f_gold ( arr , n , x ) :
         if ( arr [ i ] == x ) :
             return i
         i = i + abs ( arr [ i ] - x )
-    print ( "number is not present!" )
+    
     return - 1
 
 
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     ([94, 4, 34, 87, 32, 3, 92, 68, 57, 76, 24, 33, 3, 4, 30, 70, 49, 30, 72, 82, 16, 53, 6, 24, 92, 96, 89, 28, 21, 8, 36, 9, 40, 85, 51, 1, 63, 68, 74, 26, 40, 3, 9, 32, 67, 4, 6, 73],25,25,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("SEARCH_AN_ELEMENT_IN_AN_ARRAY_WHERE_DIFFERENCE_BETWEEN_ADJACENT_ELEMENTS_IS_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

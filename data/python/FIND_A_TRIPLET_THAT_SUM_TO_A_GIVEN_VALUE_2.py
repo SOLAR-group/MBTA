@@ -11,7 +11,7 @@ def f_gold ( A , arr_size , sum ) :
         curr_sum = sum - A [ i ]
         for j in range ( i + 1 , arr_size ) :
             if ( curr_sum - A [ j ] ) in s :
-                print ( "Triplet is" , A [ i ] , ", " , A [ j ] , ", " , curr_sum - A [ j ] )
+                
                 return True
             s.add ( A [ j ] )
     return False
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     ([72],0,0,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_A_TRIPLET_THAT_SUM_TO_A_GIVEN_VALUE_2," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

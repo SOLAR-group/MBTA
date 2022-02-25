@@ -29,7 +29,7 @@ if __name__ == '__main__':
     ([38, 74, 99, 75, 44, 75, 24, 70, 78, 74, 60, 59, 34, 27, 7, 23, 19, 95, 4, 35, 38, 22, 46, 1, 44, 20, 52, 1, 96, 57, 5, 76, 49, 1, 37, 35],31,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("HOW_TO_CHECK_IF_A_GIVEN_ARRAY_REPRESENTS_A_BINARY_HEAP_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

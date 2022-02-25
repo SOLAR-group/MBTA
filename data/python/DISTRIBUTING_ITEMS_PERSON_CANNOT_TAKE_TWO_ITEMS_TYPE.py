@@ -31,7 +31,7 @@ if __name__ == '__main__':
     ([83, 57, 2, 47, 70, 22, 49, 51, 25, 57, 32, 7, 8, 99, 6, 86, 24, 79, 42, 43, 1, 24, 68, 11, 24, 12, 43, 40, 14, 45, 11, 46, 12, 80, 66],21,33,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("DISTRIBUTING_ITEMS_PERSON_CANNOT_TAKE_TWO_ITEMS_TYPE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

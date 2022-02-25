@@ -29,7 +29,7 @@ if __name__ == '__main__':
     ([57, 74, 53, 52, 80, 31, 27, 53, 8, 57, 46, 73, 46, 56, 73, 84, 37, 7, 97],13,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMIZE_SUM_CONSECUTIVE_DIFFERENCES_CIRCULAR_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

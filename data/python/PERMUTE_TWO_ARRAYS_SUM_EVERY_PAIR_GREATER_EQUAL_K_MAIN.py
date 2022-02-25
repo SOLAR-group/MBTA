@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([75, 31, 58, 10, 92, 65, 45, 72, 53, 91, 39, 33, 10, 13, 67, 85],[41, 91, 78, 28, 40, 71, 74, 69, 71, 12, 7, 21, 92, 19, 39, 34],14,8,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("PERMUTE_TWO_ARRAYS_SUM_EVERY_PAIR_GREATER_EQUAL_K," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

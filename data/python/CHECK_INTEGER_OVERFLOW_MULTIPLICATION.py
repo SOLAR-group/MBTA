@@ -12,7 +12,7 @@ def f_gold ( a , b ) :
     if ( result >= 9223372036854775807 or result <= - 9223372036854775808 ) :
         result = 0
     if ( a == ( result // b ) ) :
-        print ( result // b )
+        
         return False
     else :
         return True
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     (88,41,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CHECK_INTEGER_OVERFLOW_MULTIPLICATION," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

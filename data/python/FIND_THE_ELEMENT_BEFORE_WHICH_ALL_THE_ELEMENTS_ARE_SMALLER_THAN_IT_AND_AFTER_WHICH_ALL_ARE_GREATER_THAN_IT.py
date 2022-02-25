@@ -33,7 +33,7 @@ if __name__ == '__main__':
     ([79, 81, 55, 6, 78, 93, 81, 33, 29, 1, 27, 49, 21, 58, 22, 65, 44, 95, 6, 51, 75, 42, 14, 55, 79, 82, 90, 8, 15, 15, 53, 98, 76, 43, 33],30,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_THE_ELEMENT_BEFORE_WHICH_ALL_THE_ELEMENTS_ARE_SMALLER_THAN_IT_AND_AFTER_WHICH_ALL_ARE_GREATER_THAN_IT," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

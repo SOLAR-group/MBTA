@@ -31,7 +31,7 @@ if __name__ == '__main__':
     ([8, 71, 75, 58, 97, 24, 56, 98, 71, 69, 32, 64, 54, 96, 69, 22, 7, 47, 45, 68, 17, 36, 90, 9, 71, 86, 16, 61, 53, 63, 9, 74, 38, 87, 14, 86, 42, 42, 14, 43, 58, 82, 72, 73, 32],25,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MINIMUM_SUM_TWO_NUMBERS_FORMED_DIGITS_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

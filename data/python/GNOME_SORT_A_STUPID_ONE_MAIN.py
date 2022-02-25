@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([3, 30, 84, 92, 29, 47, 36, 54, 93, 73, 53, 91, 81, 16, 51, 69, 82, 74, 80, 66, 77, 14, 85, 59, 86, 25, 85, 29, 19, 28, 13, 47, 61, 54, 13, 82, 52, 11, 10, 63, 52, 30, 35, 74],41,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("GNOME_SORT_A_STUPID_ONE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

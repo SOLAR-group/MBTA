@@ -12,7 +12,7 @@ if __name__ == '__main__':
         (19, 67,)
     ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("SEQUENCES_GIVEN_LENGTH_EVERY_ELEMENT_EQUAL_TWICE_PREVIOUS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

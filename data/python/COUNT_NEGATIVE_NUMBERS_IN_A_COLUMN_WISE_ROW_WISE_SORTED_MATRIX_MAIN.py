@@ -15,7 +15,7 @@ if __name__ == '__main__':
         param[i] = list(param[i])
         param[i][0] = [[e - 50 for e in sorted(l)] for l in p_set[0]]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_NEGATIVE_NUMBERS_IN_A_COLUMN_WISE_ROW_WISE_SORTED_MATRIX," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

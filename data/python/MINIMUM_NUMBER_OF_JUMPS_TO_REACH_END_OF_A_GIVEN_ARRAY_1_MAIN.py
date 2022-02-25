@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([78, 88, 1, 98, 26, 31, 56, 12, 71],8,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MINIMUM_NUMBER_OF_JUMPS_TO_REACH_END_OF_A_GIVEN_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

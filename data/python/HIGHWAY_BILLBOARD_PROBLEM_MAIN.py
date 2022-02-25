@@ -12,7 +12,7 @@ if __name__ == '__main__':
     (8,[95, 12, 65, 97, 92, 49, 94, 32, 37, 97, 9, 35],[25, 32, 14, 49, 90, 37, 92, 1, 8, 75, 50, 9],9,8,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("HIGHWAY_BILLBOARD_PROBLEM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

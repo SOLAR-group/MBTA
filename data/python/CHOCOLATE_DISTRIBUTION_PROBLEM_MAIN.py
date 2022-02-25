@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([25, 17, 58, 40, 53, 73, 23, 77, 38],8,6,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CHOCOLATE_DISTRIBUTION_PROBLEM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

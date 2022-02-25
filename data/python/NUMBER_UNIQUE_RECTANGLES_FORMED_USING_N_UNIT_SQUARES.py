@@ -32,7 +32,7 @@ if __name__ == '__main__':
     (58,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("NUMBER_UNIQUE_RECTANGLES_FORMED_USING_N_UNIT_SQUARES," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -27,7 +27,7 @@ if __name__ == '__main__':
     ([76, 59, 38, 83, 38, 93, 27, 11, 17, 80, 26, 28, 35, 53, 88, 10, 9, 75],12,13,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("SEARCH_INSERT_AND_DELETE_IN_AN_UNSORTED_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([71, 71, 27, 10, 97, 43, 55, 71, 6, 6, 77, 48, 77, 2, 83, 51, 61, 19, 2, 51, 26, 70, 20, 23, 54, 15, 6, 92, 35, 75, 8, 57, 50, 49, 88, 21, 36],24,22,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_ROTATION_COUNT_ROTATED_SORTED_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

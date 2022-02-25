@@ -43,7 +43,7 @@ if __name__ == '__main__':
     ([76, 62, 62, 61, 63, 15, 61, 74, 50, 86, 60, 35, 91, 32, 93, 14, 52, 18, 14, 39],18,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMUM_SUM_ALTERNATING_SUBSEQUENCE_SUM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

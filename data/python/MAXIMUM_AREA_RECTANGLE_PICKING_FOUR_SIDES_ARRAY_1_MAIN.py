@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([6, 30, 47, 97, 20, 16, 68, 34, 1, 77, 48, 8, 22, 68],8,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMUM_AREA_RECTANGLE_PICKING_FOUR_SIDES_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

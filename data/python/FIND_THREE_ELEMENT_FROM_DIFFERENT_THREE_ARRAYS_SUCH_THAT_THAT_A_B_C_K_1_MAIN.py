@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([28, 88, 75, 86, 51, 82, 2, 20, 22, 18, 96, 11],[62, 54, 79, 88, 27, 13, 48, 94, 86, 28, 86, 60],[49, 14, 18, 61, 94, 54, 12, 56, 97, 59, 85, 44],6,6,8,9,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_THREE_ELEMENT_FROM_DIFFERENT_THREE_ARRAYS_SUCH_THAT_THAT_A_B_C_K_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

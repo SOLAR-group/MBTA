@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([42, 71, 12, 33, 3, 58, 60, 60, 5, 52, 46, 53, 43, 50, 98, 53, 16, 82, 39, 93, 70, 13, 93, 69, 7, 92, 76, 11, 61, 48, 27, 28, 20, 76, 44, 24, 52, 56, 21, 82, 49, 5, 61, 76, 67],40,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MINIMUM_DIFFERENCE_BETWEEN_GROUPS_OF_SIZE_TWO," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

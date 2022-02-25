@@ -1,0 +1,11 @@
+class,mutant,test_index,result
+FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1,ORIGINAL,0,[v];[v];0
+FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1,ORIGINAL,1,[6; 8; 3; 3; 5; 2; 5; 6; 9; 9; 2; 6; 2; 1; 9; 3; 7];[8; 6; 0; 2; 8; 0; 8; 7; 0; 5; 4; 6; 2; 1; 9; 3; 7];11
+FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1,ORIGINAL,2,[0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1];[0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1];34
+FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1,ORIGINAL,3,[e; G; a; r; F; U; W; k; u; z; y; v; A; W; m; G; H; O; I; a; u; V; f; B; q; e; E; e; L; c;  ; w; K;  ; K; j; j; s; q; u; n; i; T; a; Y];[S; m; d; a; W; N; F; H; B; E; h; M; z; H; c; X; l; a; R; e; D; D; q; V; U; w; o; K; u; n; b; k; Y; M; L; H; L; X; H; r; D; i; T; a; Y];41
+FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1,ORIGINAL,4,[0; 0; 0; 0; 1; 1; 1; 2; 2; 2; 2; 2; 2; 3; 3; 3; 3; 4; 4; 4; 4; 5; 5; 6; 6; 6; 7; 7; 7; 7; 7; 7; 8; 8; 9; 9; 9; 9];[0; 0; 0; 0; 0; 1; 1; 1; 2; 2; 2; 3; 3; 4; 4; 4; 5; 5; 5; 5; 6; 6; 7; 7; 7; 7; 7; 8; 8; 8; 8; 9; 9; 8; 9; 9; 9; 9];33
+FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1,ORIGINAL,5,[1; 0; 0; 1; 0; 1; 1; 1; 0; 0; 0; 1; 0; 0; 0; 1; 1; 0; 0; 0; 0; 1; 1];[1; 1; 0; 0; 0; 1; 0; 1; 1; 0; 0; 0; 1; 0; 0; 1; 1; 0; 0; 0; 0; 1; 1];13
+FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1,ORIGINAL,6,[ ; B; D; D; D; E; E; E; G; H; J; K; K; K; L; N; O; S; V; W; Y; Z; b; c; d; d; f; f; f; f; f; f; i; k; k; o; t; u; v; x; x; z];[G; G; J; K; L; N; Q; R; R; S; U; W; X; Y; Y; a; b; b; b; c; d; e; e; f; f; h; j; j; k; k; l; m; m; n; o; s; t; t; w; z; x; z];40
+FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1,ORIGINAL,7,[4];[4];0
+FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1,ORIGINAL,8,[0; 0; 0; 0; 0; 0; 0; 0; 0; 1; 1; 1; 1; 1; 1; 1; 1];[0; 0; 0; 0; 0; 0; 0; 0; 1; 1; 1; 1; 1; 1; 1; 1; 1];12
+FUNCTION_COPY_STRING_ITERATIVE_RECURSIVE_1,ORIGINAL,9,[D; I; u; K; e; s; n; z; d; y; S; P; y; r];[N; h; M; N; n; F; Y; z; d; y; S; P; y; r];7

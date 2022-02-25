@@ -45,7 +45,7 @@ if __name__ == '__main__':
     (['D', 'C', 'P', 'H', 'G', 'o', 'u', 'P', 'T', 'G', 'E', 'U', 'n', 'E', 'U'],11,12,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("POLICEMEN_CATCH_THIEVES," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

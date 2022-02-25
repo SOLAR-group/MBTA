@@ -30,7 +30,7 @@ if __name__ == '__main__':
     ([42, 50, 76, 45, 6, 63, 46, 73, 65, 70, 87, 5, 41, 63, 96, 75, 38, 76, 27, 7, 71, 9, 65, 44, 76, 37, 94, 52, 55, 3, 38, 68, 45, 15, 35, 90, 36, 46, 13, 92, 32, 22, 49, 35, 83],35,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_SMALLEST_VALUE_REPRESENTED_SUM_SUBSET_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

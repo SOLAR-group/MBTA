@@ -12,7 +12,7 @@ if __name__ == '__main__':
     (['w', 't', 'U', 'R', 'a', 'c', 'G'],5,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_POSSIBLE_DECODINGS_GIVEN_DIGIT_SEQUENCE_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

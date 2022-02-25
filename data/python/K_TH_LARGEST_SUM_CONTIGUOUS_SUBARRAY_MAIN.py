@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([90, 77, 82, 38, 96, 62, 66, 4, 93, 30, 75, 22, 26, 61, 40, 11, 38, 55, 88, 24, 66, 47, 40, 71, 21, 5, 18, 31, 26, 56, 19, 47, 71, 34],28,32,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("K_TH_LARGEST_SUM_CONTIGUOUS_SUBARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

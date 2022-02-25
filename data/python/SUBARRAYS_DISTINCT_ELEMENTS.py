@@ -33,7 +33,7 @@ if __name__ == '__main__':
     ([19, 13, 61, 32, 92, 90, 12, 81, 52],5,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("SUBARRAYS_DISTINCT_ELEMENTS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

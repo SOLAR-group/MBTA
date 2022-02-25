@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([2, 5, 42, 28, 47, 26, 88, 16, 30, 30, 36, 49, 21, 95, 99, 21, 41, 52, 57, 39, 69, 2, 42, 22, 55, 92, 64, 27, 95, 71, 19, 38, 40, 65, 7, 21, 29, 38, 13, 11, 41, 54, 38, 40, 35, 51, 88],46,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CHECK_REVERSING_SUB_ARRAY_MAKE_ARRAY_SORTED_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -18,13 +18,13 @@ def f_gold ( blockSize , m , processSize , n ) :
         if wstIdx != - 1 :
             allocation [ i ] = wstIdx
             blockSize [ wstIdx ] -= processSize [ i ]
-    print ( "Process No.Process Size Block no." )
+    
     for i in range ( n ) :
-        print ( i + 1 , "         " , processSize [ i ] , end = "     " )
+        
         if allocation [ i ] != - 1 :
-            print ( allocation [ i ] + 1 )
+            continue
         else :
-            print ( "Not Allocated" )
+            continue
 
 
 #TOFILL
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     ([75],0,[29],0,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             f_gold(*parameters_set)

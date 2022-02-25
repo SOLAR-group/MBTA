@@ -45,7 +45,7 @@ if __name__ == '__main__':
     ('yjFqEEvgiNjEX',)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CHECK_LARGE_NUMBER_DIVISIBLE_13_NOT," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

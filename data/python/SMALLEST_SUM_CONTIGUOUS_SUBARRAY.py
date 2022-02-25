@@ -34,7 +34,7 @@ if __name__ == '__main__':
     ([85, 44, 1, 97, 50, 74, 62, 90, 3, 78, 8, 48, 96, 41, 36, 91, 57, 97, 85, 90, 78, 43, 28, 92, 85, 59, 29, 38, 34, 65, 20, 26, 27, 23, 71, 22, 47, 99, 68, 93, 67, 66, 69, 82, 98, 15, 44, 51, 65],45,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("SMALLEST_SUM_CONTIGUOUS_SUBARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

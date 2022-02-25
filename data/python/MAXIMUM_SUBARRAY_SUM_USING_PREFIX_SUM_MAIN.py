@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([58, 14, 79, 11, 31, 28, 61, 86, 25, 27, 75, 78, 32, 55, 86, 48, 15, 51, 6, 78, 23, 82, 16, 62, 35, 51, 91, 16, 79, 38, 97, 30, 23, 58, 95, 57, 82, 35, 57, 43, 22, 41, 58, 69, 25, 65, 13, 79],39,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMUM_SUBARRAY_SUM_USING_PREFIX_SUM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

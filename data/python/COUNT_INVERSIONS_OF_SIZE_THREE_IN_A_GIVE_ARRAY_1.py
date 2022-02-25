@@ -35,7 +35,7 @@ if __name__ == '__main__':
     ([74, 71, 28, 45, 14, 31, 17, 10, 82, 27, 45, 73, 93, 87, 57, 58],10,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_INVERSIONS_OF_SIZE_THREE_IN_A_GIVE_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

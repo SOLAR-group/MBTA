@@ -37,7 +37,7 @@ if __name__ == '__main__':
     ([81, 74, 32, 41, 85, 65, 81, 74, 40, 64, 97, 4, 61, 43, 54, 96, 62, 2, 97, 86, 80, 25, 9, 31, 16, 29, 4, 63, 76, 41, 5, 95],16,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FREQUENT_ELEMENT_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

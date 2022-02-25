@@ -17,7 +17,7 @@ def f_gold ( x ) :
 if __name__ == '__main__':
     TEST_MAIN_0
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             TEST_FOR_0

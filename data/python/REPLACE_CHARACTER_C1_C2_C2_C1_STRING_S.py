@@ -30,7 +30,7 @@ if __name__ == '__main__':
     ('ZNIFGshaWA','Q','x',)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("REPLACE_CHARACTER_C1_C2_C2_C1_STRING_S," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

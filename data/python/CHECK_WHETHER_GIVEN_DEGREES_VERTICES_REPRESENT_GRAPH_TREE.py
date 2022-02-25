@@ -28,7 +28,7 @@ if __name__ == '__main__':
     ([97, 73, 87, 45, 64, 30, 53, 50, 62, 42, 28, 58, 31, 90],10,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CHECK_WHETHER_GIVEN_DEGREES_VERTICES_REPRESENT_GRAPH_TREE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

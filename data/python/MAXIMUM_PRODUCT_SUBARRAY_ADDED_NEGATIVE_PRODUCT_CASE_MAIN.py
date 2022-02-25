@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([70, 92, 76, 56, 93, 55, 12, 80, 56, 36, 83, 14, 16, 12, 70, 55, 93, 28, 84, 28, 49, 66, 15, 49, 98],13,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMUM_PRODUCT_SUBARRAY_ADDED_NEGATIVE_PRODUCT_CASE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

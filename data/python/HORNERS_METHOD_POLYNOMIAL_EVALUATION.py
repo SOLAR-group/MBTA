@@ -27,7 +27,7 @@ if __name__ == '__main__':
     ([86, 62, 30, 27, 98, 75, 93, 37, 70, 16, 20, 74, 46, 74, 25, 59, 86, 32, 17, 90, 80, 10, 17],12,12,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("HORNERS_METHOD_POLYNOMIAL_EVALUATION," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

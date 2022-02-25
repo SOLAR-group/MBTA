@@ -30,7 +30,7 @@ if __name__ == '__main__':
     ([11, 4, 98, 38, 20, 41, 1, 8],7,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_THE_NUMBER_OCCURRING_ODD_NUMBER_OF_TIMES_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

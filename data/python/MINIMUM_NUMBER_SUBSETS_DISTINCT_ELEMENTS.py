@@ -34,7 +34,7 @@ if __name__ == '__main__':
     ([43, 41, 90, 5, 6, 17, 68, 68, 86, 89],7,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MINIMUM_NUMBER_SUBSETS_DISTINCT_ELEMENTS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

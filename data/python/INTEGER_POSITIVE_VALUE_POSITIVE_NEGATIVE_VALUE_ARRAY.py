@@ -44,7 +44,7 @@ if __name__ == '__main__':
           23, 74, 53, 80, 7, 57, 24, 66, 8, 15, 63, 18, 67, 96, 31, 63, 50], 30,)
     ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("INTEGER_POSITIVE_VALUE_POSITIVE_NEGATIVE_VALUE_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

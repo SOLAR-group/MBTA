@@ -34,7 +34,7 @@ if __name__ == '__main__':
     ([82, 62, 43, 39, 5, 90, 75, 50, 16, 83, 52, 69, 71, 3, 89, 10, 51, 69, 32, 96, 5, 43, 83, 12, 31, 81, 22, 59, 52, 47, 86, 49, 56, 90, 31, 59],28,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("NUMBER_VISIBLE_BOXES_PUTTING_ONE_INSIDE_ANOTHER," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([81, 69, 15, 52, 49, 54, 18, 92, 33, 21, 91, 21, 5, 25, 77, 92, 26, 58, 72, 55, 76, 18, 13, 59, 9, 12, 31, 24, 36, 33, 71, 87, 55, 19, 42, 25],35,19,33,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FLOOR_IN_A_SORTED_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

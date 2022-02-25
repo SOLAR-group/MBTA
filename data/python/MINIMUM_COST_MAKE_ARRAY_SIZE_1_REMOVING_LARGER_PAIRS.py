@@ -24,7 +24,7 @@ if __name__ == '__main__':
     ([65, 32, 66, 82, 86, 98, 15, 33, 57, 3, 73, 45, 90, 82, 33, 99, 44, 76, 50, 89, 5, 7, 64],22,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MINIMUM_COST_MAKE_ARRAY_SIZE_1_REMOVING_LARGER_PAIRS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

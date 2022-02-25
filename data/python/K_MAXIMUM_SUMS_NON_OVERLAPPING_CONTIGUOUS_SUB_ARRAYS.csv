@@ -1,0 +1,11 @@
+class,mutant,test_index,result
+K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS,ORIGINAL,0,[-inf; -inf; -inf; 46; 92];4;3
+K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS,ORIGINAL,1,[-inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; 88; -96; 44; 58; 46; -32; -80; 10];10;12
+K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS,ORIGINAL,2,[-inf; -inf; -inf; -inf; 0; 1; 1];5;4
+K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS,ORIGINAL,3,[-inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; 93; 82; 42; 71; 86; 63; 57; 9; 9; 6; 71; 68; 16; 13; 20; 38; 41; 28];29;28
+K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS,ORIGINAL,4,[-inf; 34];1;1
+K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS,ORIGINAL,5,[-inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; 1; 0];7;10
+K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS,ORIGINAL,6,[-inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; 89; 95];19;22
+K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS,ORIGINAL,7,[-inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; 20; -12; -92; -38; -58; 64];19;28
+K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS,ORIGINAL,8,[-inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1; 1];24;22
+K_MAXIMUM_SUMS_NON_OVERLAPPING_CONTIGUOUS_SUB_ARRAYS,ORIGINAL,9,[-inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; -inf; 40; 95; 83; 61; 68; 57];16;24

@@ -33,7 +33,7 @@ if __name__ == '__main__':
     ([22, 15, 28, 29, 32, 16, 33, 83],7,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("NUMBER_OF_PAIRS_IN_AN_ARRAY_HAVING_SUM_EQUAL_TO_PRODUCT," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

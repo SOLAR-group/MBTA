@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ('JqSh','iAfjQRwuVyost',)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MULTIPLY_LARGE_NUMBERS_REPRESENTED_AS_STRINGS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

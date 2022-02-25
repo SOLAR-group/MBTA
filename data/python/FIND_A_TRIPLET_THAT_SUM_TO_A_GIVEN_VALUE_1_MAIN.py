@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([72, 40, 92, 11, 98, 20, 4, 58, 49, 11, 58, 28, 16, 16, 44, 10, 50, 23, 83, 41, 41, 92, 1, 28, 26, 83, 6, 52, 48, 9, 77, 51],29,27,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_A_TRIPLET_THAT_SUM_TO_A_GIVEN_VALUE_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

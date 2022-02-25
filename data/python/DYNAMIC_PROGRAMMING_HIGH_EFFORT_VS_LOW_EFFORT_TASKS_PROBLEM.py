@@ -26,7 +26,7 @@ if __name__ == '__main__':
     ([85, 13, 35, 57, 8, 48, 65, 54, 88, 7, 66, 30, 47, 51],[1, 42, 42, 89, 3, 21, 49, 98, 4, 59, 26, 85, 53, 34],8,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("DYNAMIC_PROGRAMMING_HIGH_EFFORT_VS_LOW_EFFORT_TASKS_PROBLEM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

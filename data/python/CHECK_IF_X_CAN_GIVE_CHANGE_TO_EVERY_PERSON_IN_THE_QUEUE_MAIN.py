@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([46, 46, 93, 57, 82, 34, 83, 80, 77, 36, 80, 85, 69, 28, 9, 56, 49, 27, 83, 25, 1, 80, 99, 14, 69, 82, 79, 71, 74, 34],20,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CHECK_IF_X_CAN_GIVE_CHANGE_TO_EVERY_PERSON_IN_THE_QUEUE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([29, 83, 32, 75, 5, 22, 68, 64, 36, 18, 7, 63, 16, 42, 77, 61, 1, 26, 12, 41, 67, 85, 85, 35, 94, 18, 14, 65, 8, 55, 44, 34, 48, 23, 8, 27, 86, 2, 51, 91],28,24,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("K_TH_DISTINCT_OR_NON_REPEATING_ELEMENT_IN_AN_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

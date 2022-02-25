@@ -31,7 +31,7 @@ if __name__ == '__main__':
     (["g","h","ok","h","ok","sqozuC","ut","ZwRcG","ok","MR","jHrWyy","qaJlrokgRHuZH","LjPNzDUKszYmCq","g","ZGjLfMnyAGL","kEZoSxOMEWSFpw","IFtqNaDVnG","iJoJXl","vjrQMyWor","FTEHZqbHGlmHph","QeSdzm","nPostKHkigyJt","mOSekk"],15,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_WORDS_APPEAR_EXACTLY_TWO_TIMES_ARRAY_WORDS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

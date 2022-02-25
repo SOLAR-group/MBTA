@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([99, 17, 94, 43, 97, 17, 11, 58, 75, 94, 37, 22, 54, 31, 41, 4, 55, 69, 92, 80, 45, 97, 16, 33, 36, 17, 43, 82, 81, 64, 22, 65, 85, 44, 47, 14],23,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_INDEX_PAIRS_EQUAL_ELEMENTS_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

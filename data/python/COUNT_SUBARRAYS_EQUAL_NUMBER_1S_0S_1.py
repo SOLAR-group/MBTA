@@ -36,7 +36,7 @@ if __name__ == '__main__':
     ([4, 99, 97, 63, 65, 57, 69, 39, 29, 91, 68, 25, 84, 82, 84, 89, 59, 18, 77, 29, 57, 40, 78, 35, 23, 91, 26, 71, 19, 99, 12, 91, 49, 71, 49, 77, 67],31,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_SUBARRAYS_EQUAL_NUMBER_1S_0S_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

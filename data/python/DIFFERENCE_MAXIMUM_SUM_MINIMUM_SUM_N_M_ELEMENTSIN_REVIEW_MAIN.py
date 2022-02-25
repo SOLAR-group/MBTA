@@ -17,7 +17,7 @@ if __name__ == '__main__':
         ([32, 63, 87, 26, 77, 4, 87, 60, 21, 25, 30, 65, 38, 96, 11, 75], 12, 15,)
     ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("DIFFERENCE_MAXIMUM_SUM_MINIMUM_SUM_N_M_ELEMENTSIN_REVIEW," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

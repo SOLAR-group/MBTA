@@ -45,7 +45,7 @@ if __name__ == '__main__':
         ('Ktt', 'CTbbVX wGBkE',)
     ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("SUM_TWO_LARGE_NUMBERS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

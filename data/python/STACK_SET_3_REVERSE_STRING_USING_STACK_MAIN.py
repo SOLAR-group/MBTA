@@ -12,7 +12,7 @@ if __name__ == '__main__':
     (['J', 'y', 'F', 'z', 'V', 'E', 'm', 'G', 'x', 'Y', 'G', 'F', 'J', 's', 'm', 'e', 'd', 'S', 'T', 'H', 'L', 'V', 'j', 't', 'B', 'u'],)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("STACK_SET_3_REVERSE_STRING_USING_STACK," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

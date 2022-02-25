@@ -24,7 +24,7 @@ def f_gold ( string , l ) :
         elif string [ j ] == '*' :
             string [ j ] = string [ i ]
             continue
-        print ( "Not Possible" )
+        
         return ""
     return ''.join ( string )
 
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     (['E', 's', 'I', 'S', 'h', 'H', 'i', 'm', 'v', 'B'],6,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CONSTRUCT_LEXICOGRAPHICALLY_SMALLEST_PALINDROME," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

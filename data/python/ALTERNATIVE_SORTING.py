@@ -10,12 +10,13 @@ def f_gold ( arr , n ) :
     i = 0
     j = n - 1
     while ( i < j ) :
-        print ( arr [ j ] , end = " " )
+        
         j -= 1
-        print ( arr [ i ] , end = " " )
+        
         i += 1
     if ( n % 2 != 0 ) :
-        print ( arr [ i ] )
+        return
+        
 
 
 #TOFILL
@@ -45,7 +46,7 @@ if __name__ == '__main__':
     ([16, 13, 96, 14, 49, 26],4,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             f_gold(*parameters_set)

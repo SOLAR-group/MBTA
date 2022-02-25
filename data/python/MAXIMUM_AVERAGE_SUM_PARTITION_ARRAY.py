@@ -37,7 +37,7 @@ if __name__ == '__main__':
     ([26, 80, 12, 87, 90, 98, 46, 91, 38, 46, 20, 64, 53, 4, 60, 87, 44, 88, 22, 30],19,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMUM_AVERAGE_SUM_PARTITION_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

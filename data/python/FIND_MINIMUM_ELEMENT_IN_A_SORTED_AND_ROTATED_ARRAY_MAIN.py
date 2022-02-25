@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([3, 41, 40, 53, 82, 9, 90, 43, 90, 59, 37, 21, 92, 98, 36, 99, 35, 67, 24, 29, 40, 31, 46, 12, 29, 8, 93, 67, 44, 83, 71, 29, 22, 32, 33, 11, 44, 97, 84, 44, 8, 10, 31, 50, 22, 8],42,31,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_MINIMUM_ELEMENT_IN_A_SORTED_AND_ROTATED_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

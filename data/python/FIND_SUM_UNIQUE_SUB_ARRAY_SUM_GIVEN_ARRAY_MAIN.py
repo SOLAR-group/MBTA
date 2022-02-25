@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([91, 51, 15, 78, 55, 3, 10, 24, 42, 84, 66, 78, 10, 41, 21, 53, 69, 57, 20, 22, 50, 72, 8, 80, 12, 91, 29, 95, 38, 74, 95, 26, 10, 57, 51, 25, 49, 74, 15, 42, 99, 21, 27],36,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_SUM_UNIQUE_SUB_ARRAY_SUM_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

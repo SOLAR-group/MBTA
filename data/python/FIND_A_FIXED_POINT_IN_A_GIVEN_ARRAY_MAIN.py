@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([3, 76, 99, 1, 1, 29, 9, 12, 57, 12, 74, 22, 83, 77, 39, 84, 50, 60, 36, 90, 88, 62, 79, 58, 58, 40, 44, 99, 84, 63, 23, 21, 16, 98, 68, 8, 46],35,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_A_FIXED_POINT_IN_A_GIVEN_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([79, 13, 25, 22, 61, 1, 2, 73, 66, 94, 47, 9, 1, 99, 25, 39, 95, 46, 95, 20, 63, 15, 14, 36, 9, 91, 14],19,23,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMUM_SUM_PAIRS_SPECIFIC_DIFFERENCE_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

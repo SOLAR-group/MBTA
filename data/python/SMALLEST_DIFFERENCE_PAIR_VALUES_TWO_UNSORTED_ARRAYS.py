@@ -48,7 +48,7 @@ if __name__ == '__main__':
          99, 72, 29, 55, 88, 1, 88, 19, 7, 80, 79, 18, 28, 41, 48, 49, 67, 27, 24, 94, 86, 14, 45, 84, 37, 71, 92, 98, 16, 64, 67, 44, 29], 20, 25,)
     ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("SMALLEST_DIFFERENCE_PAIR_VALUES_TWO_UNSORTED_ARRAYS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

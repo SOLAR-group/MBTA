@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([37, 84, 97, 74, 12, 26, 47, 10, 14, 33],5,9,8,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("QUERIES_COUNTS_ARRAY_ELEMENTS_VALUES_GIVEN_RANGE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -31,7 +31,7 @@ if __name__ == '__main__':
     ([86, 62, 98, 97, 61, 31, 23, 56, 63, 72, 44, 74, 58, 97],12,13,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MINIMUM_COST_FOR_ACQUIRING_ALL_COINS_WITH_K_EXTRA_COINS_ALLOWED_WITH_EVERY_COIN," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

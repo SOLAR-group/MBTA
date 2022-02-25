@@ -43,7 +43,7 @@ if __name__ == '__main__':
     ('IbmRqJcU',21,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MINIMUM_SUM_SQUARES_CHARACTERS_COUNTS_GIVEN_STRING_REMOVING_K_CHARACTERS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

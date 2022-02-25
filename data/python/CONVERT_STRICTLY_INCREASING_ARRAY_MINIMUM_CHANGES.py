@@ -33,7 +33,7 @@ if __name__ == '__main__':
     ([2, 1, 19, 26, 65, 47, 3, 65, 9, 12, 84, 59, 74, 59, 30, 83, 73, 67, 13, 5, 64, 83, 81, 92, 80, 14, 58, 84, 92],16,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CONVERT_STRICTLY_INCREASING_ARRAY_MINIMUM_CHANGES," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

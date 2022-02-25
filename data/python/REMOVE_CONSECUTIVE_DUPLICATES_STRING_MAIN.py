@@ -24,7 +24,7 @@ if __name__ == '__main__':
     ([' ', 'z', 'f', 'F', 'V', ' ', 'C', 'S', 'L', 'f', 'n', 'S', 's', 'd', 'N', 'A', 'r', 's', ' ', 'u', 'k', 'l', 'b', 'f', 'p', 'O', 't'],)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             f_gold(*parameters_set)

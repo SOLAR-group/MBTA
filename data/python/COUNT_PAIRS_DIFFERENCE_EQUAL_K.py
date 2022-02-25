@@ -29,7 +29,7 @@ if __name__ == '__main__':
     ([99, 12, 90, 10, 86, 86, 81, 19, 1, 1, 98, 82, 34, 39, 34, 1, 54, 47, 39, 82, 21, 50, 82, 41, 98, 47, 88, 46, 72, 28, 28, 29, 60, 87, 92, 53, 93, 29, 74, 75, 11, 32, 48, 47, 85, 16, 20],24,45,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COUNT_PAIRS_DIFFERENCE_EQUAL_K," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

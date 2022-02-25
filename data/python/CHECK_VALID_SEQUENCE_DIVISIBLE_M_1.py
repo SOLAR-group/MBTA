@@ -35,7 +35,7 @@ if __name__ == '__main__':
     (8,5,8,6,[80, 95, 34, 51, 95, 68, 55, 65, 60],[[32, 76, 68, 57, 32, 74, 11, 94, 55], [53, 76, 86, 95, 82, 62, 51, 37, 84], [73, 35, 43, 64, 94, 53, 79, 61, 20], [25, 5, 34, 35, 84, 44, 76, 20, 21], [18, 60, 47, 2, 26, 24, 80, 29, 63], [76, 15, 47, 88, 50, 90, 57, 10, 14], [84, 17, 77, 25, 28, 1, 6, 19, 15], [22, 10, 30, 53, 32, 83, 28, 49, 62], [73, 75, 57, 84, 1, 93, 80, 44, 55]],)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CHECK_VALID_SEQUENCE_DIVISIBLE_M_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

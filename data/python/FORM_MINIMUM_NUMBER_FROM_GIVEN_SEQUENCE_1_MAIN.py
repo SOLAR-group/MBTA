@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ('XHkhZq',)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FORM_MINIMUM_NUMBER_FROM_GIVEN_SEQUENCE_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

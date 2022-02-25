@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([79, 91, 31, 16, 28, 45, 37, 43, 73, 73, 76, 28, 71, 60, 64, 60, 99, 36, 47, 38, 65, 34, 22, 94, 84, 51, 72, 45, 71, 2],[58, 94, 12, 27, 98, 38, 75, 20, 94, 43, 32, 90, 23, 41, 88, 2, 62, 96, 53, 57, 48, 79, 6, 16, 11, 46, 73, 57, 67, 7],18,18,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("REMOVE_MINIMUM_NUMBER_ELEMENTS_NO_COMMON_ELEMENT_EXIST_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -1,0 +1,11 @@
+class,mutant,test_index,result
+PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE,ORIGINAL,0,['p'; 'm'; 'l'; 'j'; 'e'; 'c'; 'S'; 'S'; 'O'; 'N'; 'I'; 'G'; ' ']
+PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE,ORIGINAL,1,['1'; '5'; '5'; '6'; '5'; '0'; '6'; '6'; '8'; '1'; '1'; '8'; '3'; '8'; '5'; '1'; '6'; '7'; '2'; '1'; '3'; '9'; '9'; '7'; '4'; '6']
+PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE,ORIGINAL,2,['1'; '1'; '1'; '1'; '1'; '1'; '1'; '1'; '1'; '1'; '0'; '0'; '0'; '0'; '0'; '0'; '0'; '0'; '0'; '0'; '0'; '0']
+PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE,ORIGINAL,3,['g'; 'z'; 'A'; 'S'; 'D'; 'A'; 'x'; 't'; 'S'; 'M'; ' '; 'B'; 'e'; 'p'; 'O'; 'm'; 'D'; 'b'; 'B'; 'H'; 'I'; 'L'; 'p'; 'G'; 'w'; 'r'; 'R'; 'V'; 'P'; 'o'; 'j']
+PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE,ORIGINAL,4,['9'; '9'; '9'; '9'; '8'; '8'; '8'; '7'; '6'; '6'; '6'; '6'; '5'; '5'; '5'; '5'; '5'; '4'; '4'; '4'; '4'; '4'; '3'; '3'; '3'; '3'; '2'; '2'; '2'; '2'; '2'; '2'; '2'; '1'; '1'; '1'; '1'; '1'; '0'; '0'; '0'; '0']
+PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE,ORIGINAL,5,['1'; '1']
+PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE,ORIGINAL,6,['z'; 'z'; 'z'; 'u'; 'u'; 'u'; 'p'; 'p'; 'p'; 'o'; 'm'; 'l'; 'j'; 'j'; 'h'; 'f'; 'e'; 'e'; 'c'; 'c'; 'b'; 'a'; 'Z'; 'X'; 'W'; 'W'; 'V'; 'U'; 'U'; 'T'; 'S'; 'R'; 'Q'; 'L'; 'K'; 'J'; 'E'; 'E']
+PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE,ORIGINAL,7,['3'; '5'; '9'; '9'; '8'; '8'; '1'; '9'; '7'; '3'; '7'; '4'; '5'; '2'; '7'; '4'; '5'; '6'; '4'; '0'; '7'; '7'; '8'; '5'; '9'; '9'; '5']
+PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE,ORIGINAL,8,['1'; '1'; '1'; '1'; '1'; '1'; '1'; '1'; '1'; '0'; '0'; '0'; '0'; '0'; '0'; '0'; '0'; '0'; '0'; '0']
+PROGRAM_REVERSE_STRING_ITERATIVE_RECURSIVE,ORIGINAL,9,['w'; 'a'; 'A'; ' '; 'i'; 'y'; 'b'; 'T'; 'A'; 'O'; 'J'; 'P'; 'g'; 'P'; 'e'; 'C'; 'w'; 'h'; 'B'; 'B'; 'Q'; 'W'; 'Y'; 'C'; 'z'; 'm'; 'x']

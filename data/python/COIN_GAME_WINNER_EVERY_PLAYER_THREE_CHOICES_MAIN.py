@@ -12,7 +12,7 @@ if __name__ == '__main__':
     (91,56,7,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("COIN_GAME_WINNER_EVERY_PLAYER_THREE_CHOICES," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -36,7 +36,7 @@ if __name__ == '__main__':
     ([[93, 9, 33, 88, 35, 75, 39, 77, 87, 25], [80, 56, 48, 85, 10, 41, 83, 99, 59, 28], [41, 66, 51, 62, 30, 40, 40, 69, 62, 15], [3, 24, 41, 63, 48, 61, 48, 47, 56, 76], [8, 78, 18, 84, 23, 69, 65, 46, 66, 80], [69, 22, 65, 12, 19, 22, 55, 62, 51, 48], [17, 13, 28, 67, 5, 60, 15, 81, 44, 46], [29, 68, 96, 49, 43, 68, 77, 20, 18, 64], [49, 42, 12, 89, 94, 79, 36, 8, 28, 86], [60, 49, 38, 80, 58, 5, 46, 98, 75, 2]],5,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMUM_WEIGHT_PATH_ENDING_ELEMENT_LAST_ROW_MATRIX," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

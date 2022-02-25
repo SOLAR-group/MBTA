@@ -12,7 +12,7 @@ if __name__ == '__main__':
     (90,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("HOW_TO_PRINT_MAXIMUM_NUMBER_OF_A_USING_GIVEN_FOUR_KEYS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -30,7 +30,7 @@ if __name__ == '__main__':
     ([52, 8, 31, 92, 20, 18, 34, 5, 15, 8, 73, 20, 40, 61, 80, 51, 95, 73, 38, 30, 21, 69, 52, 38, 68, 77],22,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_PAIR_WITH_GREATEST_PRODUCT_IN_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

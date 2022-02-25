@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([13, 46, 67, 90, 7, 88, 25, 31, 4, 91, 54, 68, 30, 70, 19, 26, 82, 12, 73, 42, 52, 41],19,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("REARRANGE_ARRAY_MAXIMUM_MINIMUM_FORM," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

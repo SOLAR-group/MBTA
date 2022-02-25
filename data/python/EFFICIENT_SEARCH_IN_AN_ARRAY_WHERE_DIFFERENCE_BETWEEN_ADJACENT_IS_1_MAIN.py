@@ -16,7 +16,7 @@ if __name__ == '__main__':
         ([5], 0, 0,)
     ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("EFFICIENT_SEARCH_IN_AN_ARRAY_WHERE_DIFFERENCE_BETWEEN_ADJACENT_IS_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -52,7 +52,7 @@ if __name__ == '__main__':
     (['n', 'T', 't', 'o', 'i', 'p', 'f', 'R', 'x', 'I', 'p', 'E', 'C', 'm', 'r', 'c', 'U', 'e', ' ', 'o', 'e', 'J', 'C', 'd', 'G', 'l'],['b', 'u', 'F', 'm', 's', 'x', 'T', 'm', 'x', 'o', 'i', 'U', 'd', 'N', 'h', 'z', 'I', 'u', 'g', 'J', 'u', 'f', 'e', 'Q', 'H', 'y'],16,21,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             f_gold(*parameters_set)

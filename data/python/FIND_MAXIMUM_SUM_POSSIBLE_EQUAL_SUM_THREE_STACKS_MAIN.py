@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([22, 31, 75, 48, 30, 39, 82, 93, 26, 87, 77, 87, 67, 88, 19, 51, 54, 48, 6, 37, 38, 27],[18, 20, 53, 87, 85, 63, 6, 81, 89, 82, 43, 76, 59, 60, 79, 96, 29, 65, 5, 56, 96, 95],[10, 76, 49, 36, 41, 18, 60, 44, 81, 34, 56, 7, 13, 83, 82, 16, 7, 38, 33, 55, 91, 54],19,16,17,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_MAXIMUM_SUM_POSSIBLE_EQUAL_SUM_THREE_STACKS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

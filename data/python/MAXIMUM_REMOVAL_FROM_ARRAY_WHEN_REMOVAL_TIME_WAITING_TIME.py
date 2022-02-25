@@ -31,7 +31,7 @@ if __name__ == '__main__':
     ([90, 63, 16, 40, 28, 97, 20, 63, 42, 31, 57, 84, 10, 12, 59, 69, 47, 7, 53, 67],10,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MAXIMUM_REMOVAL_FROM_ARRAY_WHEN_REMOVAL_TIME_WAITING_TIME," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

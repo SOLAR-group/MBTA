@@ -28,7 +28,7 @@ if __name__ == '__main__':
     ([12, 69, 57, 7, 52, 14, 15, 83, 67, 57, 15, 86, 81, 43, 1, 64, 45, 68, 30, 23, 14, 70, 13, 51, 23, 33, 98, 68, 24, 43, 12, 82, 46],[12, 48, 57, 40, 47, 36, 22, 50, 68, 98, 77, 78, 39, 55, 87, 75, 65, 27, 33, 27, 70, 34, 67, 71, 84, 33, 7, 61, 3, 9, 67, 92, 60],17,32,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_MAXIMUM_DOT_PRODUCT_TWO_ARRAYS_INSERTION_0S," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

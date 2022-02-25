@@ -27,7 +27,7 @@ if __name__ == '__main__':
     ([61, 17, 28, 18, 52, 58, 41, 75, 98, 79, 1, 97, 73, 17, 79, 4, 46, 70, 6, 83, 23, 94, 1],19,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIND_MAXIMUM_PRODUCT_OF_A_TRIPLET_IN_ARRAY_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -33,7 +33,7 @@ if __name__ == '__main__':
     ([26, 5, 60, 53, 35],[41, 80, 35, 14, 47],3,2,3,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("K_TH_MISSING_ELEMENT_INCREASING_SEQUENCE_NOT_PRESENT_GIVEN_SEQUENCE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -46,7 +46,7 @@ if __name__ == '__main__':
     ([5, 8, 53, 60, 85, 94, 77, 53, 81, 54, 67, 48, 56, 49, 16, 1, 85, 6, 55, 98, 62, 36, 4, 7, 64],[69, 37, 32, 5, 84, 14, 25, 9, 86, 85, 30, 82, 99, 92, 32, 43, 79, 58, 75, 90, 49, 54, 95, 76, 80],12,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("STACK_PERMUTATIONS_CHECK_IF_AN_ARRAY_IS_STACK_PERMUTATION_OF_OTHER," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

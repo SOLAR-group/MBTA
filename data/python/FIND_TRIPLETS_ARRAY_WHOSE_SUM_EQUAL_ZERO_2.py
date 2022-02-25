@@ -14,7 +14,7 @@ def f_gold ( arr , n ) :
         x = arr [ i ]
         while ( l < r ) :
             if ( x + arr [ l ] + arr [ r ] == 0 ) :
-                print ( x , arr [ l ] , arr [ r ] )
+                
                 l += 1
                 r -= 1
                 found = True
@@ -23,7 +23,8 @@ def f_gold ( arr , n ) :
             else :
                 r -= 1
     if ( found == False ) :
-        print ( " No Triplet Found" )
+        return
+        
 
 
 #TOFILL
@@ -53,7 +54,7 @@ if __name__ == '__main__':
     ([7, 3, 37, 60, 6, 26, 30, 21, 7, 59, 18, 69, 40, 47, 34, 19, 51, 27, 4, 7, 56, 4, 57, 62, 54, 9, 93, 31, 9, 85],28,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             f_gold(*parameters_set)

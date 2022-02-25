@@ -12,7 +12,7 @@ if __name__ == '__main__':
         (58,)
     ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("NUMBER_OF_BINARY_TREES_FOR_GIVEN_PREORDER_SEQUENCE_LENGTH," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

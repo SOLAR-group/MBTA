@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([42, 17, 77, 96, 72, 36, 74, 97, 7, 94, 80, 7, 27, 58, 49, 81, 51, 9],16,11,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("ANALYSIS_OF_ALGORITHMS_SET_2_ASYMPTOTIC_ANALYSIS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

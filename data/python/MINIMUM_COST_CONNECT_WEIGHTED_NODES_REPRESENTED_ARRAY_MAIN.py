@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([82, 74, 53, 91, 81, 88, 42, 62, 38, 43, 29, 60, 43, 44, 19, 28, 20, 1, 5, 94, 18, 77, 52, 38, 55, 1, 10, 29, 34, 91, 64, 80, 81, 39, 4, 47, 30, 62, 58, 66, 73, 52, 62, 9, 36, 49],38,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MINIMUM_COST_CONNECT_WEIGHTED_NODES_REPRESENTED_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -31,7 +31,7 @@ if __name__ == '__main__':
     (37,63,56,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("MODULAR_EXPONENTIATION_POWER_IN_MODULAR_ARITHMETIC," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

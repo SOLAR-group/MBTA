@@ -32,7 +32,7 @@ if __name__ == '__main__':
     ([56, 30, 33, 5, 67, 35, 22, 54, 36, 55, 94, 89, 40, 65, 29, 76, 17, 14, 14, 49, 40, 44, 35, 69, 63, 2, 81, 78, 19, 67, 12, 14, 68, 30, 82, 85, 12, 2, 94, 33, 85, 75, 97, 31, 69, 31, 85, 26],46,47,47,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CEILING_IN_A_SORTED_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

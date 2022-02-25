@@ -12,7 +12,7 @@ if __name__ == '__main__':
         ([93,40,48,99,95,59,43,58,79,70,28],9,5,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("PAIR_WITH_GIVEN_PRODUCT_SET_1_FIND_IF_ANY_PAIR_EXISTS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

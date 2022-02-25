@@ -39,7 +39,7 @@ if __name__ == '__main__':
     ([4, 39, 50, 37, 71, 66, 55, 34, 1, 41, 34, 99, 69, 31],11,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("LONGEST_SUBARRAY_COUNT_1S_ONE_COUNT_0S," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

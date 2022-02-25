@@ -11,10 +11,11 @@ def f_gold ( arr , n ) :
         for j in range ( i + 1 , n - 1 ) :
             for k in range ( j + 1 , n ) :
                 if ( arr [ i ] + arr [ j ] + arr [ k ] == 0 ) :
-                    print ( arr [ i ] , arr [ j ] , arr [ k ] )
+                    
                     found = True
     if ( found == False ) :
-        print ( " not exist " )
+        return
+        
 
 
 #TOFILL
@@ -44,7 +45,7 @@ if __name__ == '__main__':
     ([17, 60],1,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             f_gold(*parameters_set)

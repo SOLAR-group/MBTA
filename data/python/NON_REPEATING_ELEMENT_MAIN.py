@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([2, 21, 42, 92, 65, 62, 75, 43, 81, 17, 92, 86, 37, 63, 27, 97, 24, 61, 85, 49, 84, 7, 14, 19, 60, 55, 68, 79, 8, 12, 75, 12, 92, 79, 42],27,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("NON_REPEATING_ELEMENT," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

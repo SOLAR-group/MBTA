@@ -33,7 +33,7 @@ if __name__ == '__main__':
     (11,86,96,81,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("BASIC_AND_EXTENDED_EUCLIDEAN_ALGORITHMS_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

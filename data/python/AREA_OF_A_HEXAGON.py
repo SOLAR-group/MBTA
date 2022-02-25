@@ -26,7 +26,7 @@ if __name__ == '__main__':
     (-6458.751326919488,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("AREA_OF_A_HEXAGON," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

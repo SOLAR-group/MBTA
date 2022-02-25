@@ -34,7 +34,7 @@ if __name__ == '__main__':
     ([86, 43, 74, 84, 86, 14, 45, 7, 92, 36, 79, 13, 67, 18, 96, 77, 13, 22, 28, 36, 57, 56, 99, 57, 8, 48, 5, 79, 65, 64, 96, 6, 36, 91, 53, 55, 11, 12, 80, 99, 50, 40, 4, 9, 52, 41],40,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("PROGRAM_FIND_SMALLEST_DIFFERENCE_ANGLES_TWO_PARTS_GIVEN_CIRCLE," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

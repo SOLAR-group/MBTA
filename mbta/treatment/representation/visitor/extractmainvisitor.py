@@ -89,7 +89,7 @@ class ExtractMainVisitor(ClassVisitor):
                 elif inside_main == 1:
                     if line.strip().startswith("for i, parameters_set in enumerate(param):"):
                         inside_main = 2
-                        file_writer.write('    print("class,mutant,test_index,result\\n")\n')
+                        file_writer.write('    print("class,mutant,test_index,result")\n')
                     file_writer.write(line)
                 elif inside_main == 2:
                     file_writer.write("""\

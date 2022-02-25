@@ -18,7 +18,7 @@ if __name__ == '__main__':
             param[i][0] = [[0 if e % 2 == 0 or e % 3 == 0 else e for e in l] for l in p_set[0]]
 
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("CHECK_GIVEN_MATRIX_SPARSE_NOT," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([6, 21, 86, 58, 48, 27, 18, 73, 16, 79, 51, 33, 63, 26, 37, 88, 48, 58, 44, 32, 58, 23, 31],[87, 77, 44, 15, 70, 89, 36, 79, 82, 3, 18, 76, 37, 79, 85, 97, 19, 53, 17, 74, 87, 58, 49],14,22,19,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("K_TH_ELEMENT_TWO_SORTED_ARRAYS," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))

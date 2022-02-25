@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ([55, 44, 75, 97, 25, 65, 76, 53, 20, 78, 25, 59, 61, 29, 81, 35, 15, 78, 41, 44, 31, 33, 39, 93, 26, 67],23,20,)
         ]
     n_success = 0
-    print("class,mutant,test_index,result\n")
+    print("class,mutant,test_index,result")
     for i, parameters_set in enumerate(param):
         try:
             print("FIRST_ELEMENT_OCCURRING_K_TIMES_ARRAY," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
