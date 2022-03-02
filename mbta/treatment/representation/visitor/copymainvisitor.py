@@ -25,6 +25,8 @@ class CopyMainVisitor(ClassVisitor):
                     else:
                         break
                 with open(os.path.join(self.main_path, source_path.stem + "_MAIN" + source_path.suffix)) as main_file:
+                    if copy:
+                        file_reader_writer.seek(file_reader_writer.tell() - 3)
                     for line in main_file:
                         file_reader_writer.write(line)
                     file_reader_writer.write("}\n")
