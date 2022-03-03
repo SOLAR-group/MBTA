@@ -52,7 +52,7 @@ try:
     unzip_mutant(sys.argv[1], sys.argv[2])
     file = create_file_representation(Path(os.path.join(sys.argv[1], "MuJava", "result", sys.argv[2])))
     print("Executing " + str(file.source_path))
-    translate_visitor = ExecutorVisitor()
+    translate_visitor = ExecutorVisitor(file.source_path.parent.name)
     file.accept(translate_visitor)
     print("Zipping results...")
     zip_results(sys.argv[1], sys.argv[2])
