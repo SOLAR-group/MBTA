@@ -15,8 +15,10 @@ class ExecutorVisitor(ClassVisitor):
                                    mutant_id if mutant_id is not None else "ORIGINAL"],
                                   cwd=source_path.parent.absolute()) as process_object:
                 try:
-                    process_object.wait(3)
+                    process_object.communicate(timeout=3)
                 except TimeoutError:
+                    process_object.kill()
+                    process_object.communicate()
                     with open(csv_output, "w+") as output_file:
                         output_file.write("TIMEOUT")
                         output_file.truncate()
