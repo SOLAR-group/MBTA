@@ -1,4 +1,5 @@
 import os.path
+import signal
 import subprocess
 from pathlib import Path
 
@@ -18,12 +19,11 @@ class ExecutorVisitor(ClassVisitor):
                                    self.mutant_id if self.mutant_id is not None else "ORIGINAL"],
                                   cwd=source_path.parent.absolute()) as process_object:
                 try:
-                    process_object.communicate(timeout=3)
-                except TimeoutError:
-                    process_object.kill()
-                    process_object.communicate()
+                    process_object.wait(timeout=3)
+                except:
+                    os.kill(process_object.pid, signal.SIGKILL)
                     with open(csv_output, "w+") as output_file:
-                        output_file.write("TIMEOUT")
+                        output_file.write("TIMEOUT\n")
                         output_file.truncate()
 
     def visit_python_file(self, source_file):
@@ -35,8 +35,9 @@ class ExecutorVisitor(ClassVisitor):
                     cwd=source_path.parent.absolute(),
                     stdout=output_file) as process_object:
                 try:
-                    process_object.wait(3)
-                except TimeoutError:
+                    process_object.wait(timeout=3)
+                except:
+                    os.kill(process_object.pid, signal.SIGKILL)
                     output_file.seek(0, 0)
-                    output_file.write("TIMEOUT")
+                    output_file.write("TIMEOUT\n")
                     output_file.truncate()
