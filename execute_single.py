@@ -18,17 +18,17 @@ def create_file_representation(path: Path) -> SourceFile:
         pass
 
 
-def unzip_mutant(path: str, mutant: str):
+def unzip_mutant(path: str, mutant):
     mutant_path = Path("MuJava/result/" + mutant)
     command = f'''
 cd {path}
-unzip -q -o MuJava.zip "{mutant_path.with_suffix(".class")}"
+unzip -q -o MuJava.zip "{mutant_path}"
 '''
     with subprocess.Popen(command, shell=True) as process_object:
         process_object.wait()
 
 
-def zip_results(path: str, mutant: str):
+def zip_results(path: str, mutant):
     mutant_path = Path("MuJava/result/" + mutant)
     command = f'''
 cd {path}
@@ -49,8 +49,11 @@ rm -rf "{mutant_path.parent}"
 
 
 try:
-    unzip_mutant(sys.argv[1], sys.argv[2])
     file = create_file_representation(Path(os.path.join(sys.argv[1], "MuJava", "result", sys.argv[2])))
+    if isinstance(file, JavaFile):
+        unzip_mutant(sys.argv[1], Path(sys.argv[2]).with_suffix(".class"))
+    else:
+        unzip_mutant(sys.argv[1], sys.argv[2])
     print("Executing " + str(file.source_path))
     translate_visitor = ExecutorVisitor(file.source_path.parent.name)
     file.accept(translate_visitor)
