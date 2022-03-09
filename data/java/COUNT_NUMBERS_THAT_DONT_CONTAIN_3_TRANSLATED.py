@@ -1,5 +1,6 @@
-====================
-def count_NUMBERS_THAT_DONT_CONTAIN_3 ( n ) :
+import sys
+
+def f_gold ( n ) :
     if n < 3 :
         return n
     if n >= 3 and n < 10 :
@@ -13,3 +14,23 @@ def count_NUMBERS_THAT_DONT_CONTAIN_3 ( n ) :
     else :
         return f_gold ( msd * po - 1 )
 
+if __name__ == '__main__':
+    param = [
+    (85,),
+    (86,),
+    (3,),
+    (35,),
+    (59,),
+    (38,),
+    (33,),
+    (15,),
+    (75,),
+    (74,)
+        ]
+    n_success = 0
+    print("class,mutant,test_index,result")
+    for i, parameters_set in enumerate(param):
+        try:
+            print("COUNT_NUMBERS_THAT_DONT_CONTAIN_3," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
+        except:
+            print("COUNT_NUMBERS_THAT_DONT_CONTAIN_3," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

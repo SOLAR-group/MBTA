@@ -1,7 +1,28 @@
-====================
-def count_number_of_ways_to_cover_a_distance_1 ( dist ) :
+import sys
+
+def f_gold ( dist ) :
     count = [ 1 , 1 , 2 , 2 ]
     for i in range ( 3 , dist + 1 ) :
         count.append ( count [ i - 1 ] + count [ i - 2 ] + count [ i - 3 ] )
     return count
 
+if __name__ == '__main__':
+    param = [
+    (37,),
+    (82,),
+    (87,),
+    (80,),
+    (92,),
+    (58,),
+    (98,),
+    (53,),
+    (11,),
+    (58,)
+        ]
+    n_success = 0
+    print("class,mutant,test_index,result")
+    for i, parameters_set in enumerate(param):
+        try:
+            print("COUNT_NUMBER_OF_WAYS_TO_COVER_A_DISTANCE_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
+        except:
+            print("COUNT_NUMBER_OF_WAYS_TO_COVER_A_DISTANCE_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

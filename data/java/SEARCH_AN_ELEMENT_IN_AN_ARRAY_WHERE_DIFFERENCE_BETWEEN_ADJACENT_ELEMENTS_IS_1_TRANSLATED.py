@@ -1,4 +1,5 @@
-====================
+import sys
+
 def f_gold ( arr , n , x ) :
     i = 0
     while i < n :
@@ -8,3 +9,23 @@ def f_gold ( arr , n , x ) :
     print ( "number is not" + " present!" )
     return - 1
 
+if __name__ == '__main__':
+    param = [
+    ([8, 7, 6, 7, 6, 5, 4, 3, 2, 3, 4, 3],12,3,),
+    ([6, 90],1,1,),
+    ([1, 2, 3, 4, 5, 4],6,5,),
+    ([97, 35, 60, 96, 3, 67, 72, 95, 55, 9, 69, 28, 15, 91, 31, 59],15,9,),
+    ([-84, -78, -74, -70, -68, -60, -56, -54, -48, -46, -28, -16, -6, 0, 0, 8, 8, 8, 12, 16, 26, 30, 32, 34, 36, 40, 46, 48, 70, 70, 72, 76, 78, 78, 80, 84, 84, 86],22,31,),
+    ([1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1],5,7,),
+    ([55, 64, 76, 79, 93, 96],4,4,),
+    ([66, -90, 98, -50, 0, 46, 42, 64, -96, -80, -96, 20, -10, -84],8,13,),
+    ([0, 0, 0, 0, 0, 0, 1],6,5,),
+    ([94, 4, 34, 87, 32, 3, 92, 68, 57, 76, 24, 33, 3, 4, 30, 70, 49, 30, 72, 82, 16, 53, 6, 24, 92, 96, 89, 28, 21, 8, 36, 9, 40, 85, 51, 1, 63, 68, 74, 26, 40, 3, 9, 32, 67, 4, 6, 73],25,25,)
+        ]
+    n_success = 0
+    print("class,mutant,test_index,result")
+    for i, parameters_set in enumerate(param):
+        try:
+            print("SEARCH_AN_ELEMENT_IN_AN_ARRAY_WHERE_DIFFERENCE_BETWEEN_ADJACENT_ELEMENTS_IS_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
+        except:
+            print("SEARCH_AN_ELEMENT_IN_AN_ARRAY_WHERE_DIFFERENCE_BETWEEN_ADJACENT_ELEMENTS_IS_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

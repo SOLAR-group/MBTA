@@ -21,7 +21,7 @@ class ExecutorVisitor(ClassVisitor):
                 try:
                     process_object.wait(timeout=3)
                 except:
-                    os.kill(process_object.pid, signal.SIGKILL)
+                    os.kill(process_object.pid, signal.SIGTERM)
                     with open(csv_output, "w+") as output_file:
                         output_file.write("TIMEOUT\n")
                         output_file.truncate()
@@ -37,7 +37,9 @@ class ExecutorVisitor(ClassVisitor):
                 try:
                     process_object.wait(timeout=3)
                 except:
-                    os.kill(process_object.pid, signal.SIGKILL)
+                    print("TIMEOUT")
+                    os.kill(process_object.pid, signal.SIGTERM)
                     output_file.seek(0, 0)
                     output_file.write("TIMEOUT\n")
                     output_file.truncate()
+                    print("Exiting TIMEOUT")

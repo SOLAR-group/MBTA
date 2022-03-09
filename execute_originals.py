@@ -7,7 +7,7 @@ from mbta.treatment.representation.files.pythonfile import PythonFile
 from mbta.treatment.representation.files.sourcefile import SourceFile
 from mbta.treatment.representation.visitor.executorvisitor import ExecutorVisitor
 
-files: list[SourceFile] = [PythonFile(Path(file)) for file in glob.glob("data/python/*.py")]
+files: list[SourceFile] = [PythonFile(Path(file)) for file in glob.glob("data/java/*.py")]
 
 execute_visitor = ExecutorVisitor()
 

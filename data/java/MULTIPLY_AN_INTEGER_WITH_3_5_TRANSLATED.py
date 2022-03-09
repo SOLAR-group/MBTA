@@ -1,5 +1,26 @@
-====================
-def test_multiply_an_integer_with_3_5 ( ) :
+import sys
+
+def f_gold ( ) :
     x = symbols ( 'x' , integer = True , positive = True )
     assert multiply_an_integer ( x ) == ( x << 1 ) + x + ( x >> 1 )
 
+if __name__ == '__main__':
+    param = [
+    (58,),
+    (16,),
+    (82,),
+    (33,),
+    (88,),
+    (51,),
+    (81,),
+    (38,),
+    (79,),
+    (89,)
+        ]
+    n_success = 0
+    print("class,mutant,test_index,result")
+    for i, parameters_set in enumerate(param):
+        try:
+            print("MULTIPLY_AN_INTEGER_WITH_3_5," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
+        except:
+            print("MULTIPLY_AN_INTEGER_WITH_3_5," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

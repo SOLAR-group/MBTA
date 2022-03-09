@@ -1,6 +1,27 @@
-====================
-def c_program_factorial_number ( n ) :
+import sys
+
+def f_gold ( n ) :
     if n == 0 :
         return 1
     return n * f_gold ( n - 1 )
 
+if __name__ == '__main__':
+    param = [
+    (84,),
+    (41,),
+    (5,),
+    (38,),
+    (79,),
+    (80,),
+    (64,),
+    (62,),
+    (24,),
+    (12,)
+        ]
+    n_success = 0
+    print("class,mutant,test_index,result")
+    for i, parameters_set in enumerate(param):
+        try:
+            print("C_PROGRAM_FACTORIAL_NUMBER," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
+        except:
+            print("C_PROGRAM_FACTORIAL_NUMBER," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

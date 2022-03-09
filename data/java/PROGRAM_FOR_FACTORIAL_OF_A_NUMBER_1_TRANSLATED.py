@@ -1,7 +1,28 @@
-====================
-def program_for_factorial_of_a_number_1 ( n ) :
+import sys
+
+def f_gold ( n ) :
     res , i = 1 , 0
     for i in range ( 2 , n + 1 ) :
         res *= i
     return res
 
+if __name__ == '__main__':
+    param = [
+    (57,),
+    (28,),
+    (23,),
+    (79,),
+    (52,),
+    (42,),
+    (79,),
+    (77,),
+    (99,),
+    (70,)
+        ]
+    n_success = 0
+    print("class,mutant,test_index,result")
+    for i, parameters_set in enumerate(param):
+        try:
+            print("PROGRAM_FOR_FACTORIAL_OF_A_NUMBER_1," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
+        except:
+            print("PROGRAM_FOR_FACTORIAL_OF_A_NUMBER_1," + sys.argv[1] + "," + str(i) + ",EXCEPTION")

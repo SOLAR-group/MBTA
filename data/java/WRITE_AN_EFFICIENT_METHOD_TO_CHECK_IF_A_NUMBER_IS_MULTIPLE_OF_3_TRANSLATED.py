@@ -1,5 +1,6 @@
-====================
-def write_an_efficient_method_to_check_if_a_number_is_multiple_of_3 ( n ) :
+import sys
+
+def f_gold ( n ) :
     odd_count = 0
     even_count = 0
     if n < 0 :
@@ -16,3 +17,23 @@ def write_an_efficient_method_to_check_if_a_number_is_multiple_of_3 ( n ) :
         n = n >> 2
     return f_gold ( abs ( odd_count - even_count ) )
 
+if __name__ == '__main__':
+    param = [
+    (94,),
+    (94,),
+    (79,),
+    (39,),
+    (16,),
+    (90,),
+    (64,),
+    (76,),
+    (83,),
+    (47,)
+        ]
+    n_success = 0
+    print("class,mutant,test_index,result")
+    for i, parameters_set in enumerate(param):
+        try:
+            print("WRITE_AN_EFFICIENT_METHOD_TO_CHECK_IF_A_NUMBER_IS_MULTIPLE_OF_3," + sys.argv[1] + "," + str(i) + "," + str(f_gold(*parameters_set)))
+        except:
+            print("WRITE_AN_EFFICIENT_METHOD_TO_CHECK_IF_A_NUMBER_IS_MULTIPLE_OF_3," + sys.argv[1] + "," + str(i) + ",EXCEPTION")
