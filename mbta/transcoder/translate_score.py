@@ -12,8 +12,9 @@ def get_huge_data_frame(csvs: list, language: str = None):
     data_frames = list()
     global non_executable
     for csv in csvs:
-        if os.path.getsize(csv) > 0:
-            data_frame = pd.read_csv(csv, names=["class", "mutant", "result"])
+        if os.path.isfile(csv) and os.path.getsize(csv) > 0:
+            # print("Reading " + csv)
+            data_frame = pd.read_csv(csv, header=0, names=["class", "mutant", "test_index", "result"])
             data_frames.append(data_frame)
         else:
             non_executable += 1
@@ -21,16 +22,17 @@ def get_huge_data_frame(csvs: list, language: str = None):
     df: pd.DataFrame = pd.concat(data_frames).dropna()
     if language is not None:
         df["language"] = language
-    df['index'] = df.index
     return df
 
 
 if __name__ == "__main__":
     global non_executable
-    python_csvs = set(glob.glob('../../Transcode/output/*python.csv')) - set(
-        glob.glob('../../Transcode/output/*original*.csv'))
-    java_csvs = set(glob.glob('../../Transcode/output/*.csv')) - set(
-        glob.glob('../../Transcode/output/*original*.csv')) - set(python_csvs)
+    directory = '../..'
+    with open(f'{directory}/intersecting_java_mutants.txt', 'r') as mutants_file:
+        lines = mutants_file.readlines()
+
+    python_csvs = [directory + '/../MuJava/result/' + line.replace("\r\n", "").replace('\n', '').replace(".java", "_TRANSLATED.csv") for line in lines]
+    java_csvs = [directory + '/../MuJava/result/' + line.replace("\r\n", "").replace('\n', '').replace(".java", ".csv") for line in lines]
 
     non_executable = 0
     java_df = get_huge_data_frame(java_csvs)
@@ -48,9 +50,9 @@ if __name__ == "__main__":
 
     java_df = pd.read_csv("csvs/java.csv")
     python_df = pd.read_csv("csvs/python.csv")
-    merged: pd.DataFrame = pd.merge(java_df, python_df, on=["class", "mutant", 'index'], suffixes=['_java', '_python'],
+    merged: pd.DataFrame = pd.merge(java_df, python_df, on=["class", "mutant", 'test_index'], suffixes=('_java', '_python'),
                                     how='left')
-    merged = merged[['class', 'mutant', 'index', 'result_java', 'result_python']]
+    merged = merged[['class', 'mutant', 'test_index', 'result_java', 'result_python']]
 
     merged.to_csv("full.csv", index=False, na_rep="NA")
     merged: pd.DataFrame = pd.read_csv("full.csv", low_memory=False, dtype=str)

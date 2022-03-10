@@ -4,53 +4,52 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 from pandas import DataFrame
-from progress.bar import Bar
+from tqdm import tqdm
 
 
 def analyse_mutant():
-    with Bar('Processing', max=len(lines)) as bar:
-        bar.check_tty = False
-        for line in lines:
-            bar.next()
-            line = line.replace('\n', '')
-            split_line = line.split('/')
-            mutant_dir = directory + '/mutants/' + line + '/' + split_line[0]
+    progress = tqdm(lines)
+    for line in progress:
+        line = line.replace("\r\n", "").replace('\n', '')
+        mutant_dir = directory + line.replace(".java", "")
 
-            result = dict()
-            python_translated = mutant_dir + '.py'
-            result["translated"] = os.path.isfile(python_translated) and os.path.getsize(python_translated) > 0
+        result = dict()
+        python_translated = mutant_dir + '_TRANSLATED.py'
+        result["translated"] = os.path.isfile(python_translated) and os.path.getsize(python_translated) > 0
 
-            python_compiled = mutant_dir + '.pyc'
-            result["compiled"] = os.path.isfile(python_compiled) and os.path.getsize(python_compiled) > 0
+        python_compiled = mutant_dir + '_TRANSLATED.pyc'
+        result["compiled"] = os.path.isfile(python_compiled) and os.path.getsize(python_compiled) > 0
 
-            output_dir = directory + '/output/' + line.replace('/', '-')
-            python_output = output_dir + "_python.csv"
-            result["runnable"] = os.path.isfile(python_output) and os.path.getsize(python_output) > 0
+        python_output = mutant_dir + "_TRANSLATED.csv"
+        result["runnable"] = os.path.isfile(python_output) and os.path.getsize(python_output) > 0
 
+        if result["runnable"]:
             with open(python_output, 'r') as output_file:
                 output_lines = output_file.readlines()
-            result["success"] = len(output_lines) == 10 and not any("EXCEPTION" in element for element in output_lines)
+            result["success"] = len(output_lines) == 11 and not any("EXCEPTION" in element for element in output_lines)
+        else:
+            result["success"] = False
 
-            yield result
+        yield result
 
 
 if __name__ == "__main__":
-    directory = '../../TransCode'
-    with open(f'{directory}/mutants.txt', 'r') as mutants_file:
+    directory = '../../../MuJava/result/'
+    with open(f'../../intersecting_java_mutants.txt', 'r') as mutants_file:
         lines = mutants_file.readlines()
 
     programs = [item.split("/")[0] for item in lines]
-    mutants = [item.split("/")[-1].replace("\n", "") for item in lines]
+    mutants = [item.split("/")[-1].replace("\r\n", "").replace('\n', '') for item in lines]
 
-    # mutant_results = analyse_mutant()
-    #
-    # data = DataFrame({'Program': programs, 'Mutant': mutants})
-    # data[["Translated", "Compiled", "Runnable", "Success"]] = pd.DataFrame(mutant_results)
-    #
-    # if not os.path.exists("csvs"):
-    #     os.makedirs("csvs", exist_ok=True)
-    # data.to_csv("csvs/j2py_mutants.csv", index=False)
-    data = pd.read_csv("csvs/j2py_mutants.csv")
+    mutant_results = analyse_mutant()
+
+    data = DataFrame({'Program': programs, 'Mutant': mutants})
+    data[["Translated", "Compiled", "Runnable", "Success"]] = pd.DataFrame(mutant_results)
+
+    if not os.path.exists("csvs"):
+        os.makedirs("csvs", exist_ok=True)
+    data.to_csv("csvs/transcoder_mutants.csv", index=False)
+    # data = pd.read_csv("csvs/transcoder_mutants.csv")
     percentage = lambda item: sum(item) / len(item)
     grouped = data.groupby('Program').agg({"Mutant": "size",
                                            "Compiled": percentage,
