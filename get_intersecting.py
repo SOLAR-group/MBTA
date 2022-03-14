@@ -11,10 +11,13 @@ python_files = python_files - set([Path(file).stem for file in glob.glob("data/p
 java_files: set = set([Path(file).stem for file in glob.glob("data/java/*.java")])
 java_files = java_files - set([Path(file).stem for file in glob.glob("data/java/*_MAIN.java")])
 
-intersection = python_files.intersection(java_files)
+# intersection = python_files.intersection(java_files)
 
-with open("intersecting_classes.txt", "w+") as classes_file:
-    [classes_file.write(clazz + "\n") for clazz in intersection]
+# with open("intersecting_classes.txt", "w+") as classes_file:
+#     [classes_file.write(clazz + "\n") for clazz in intersection]
+
+with open("intersecting_classes.txt", "r") as classes_file:
+    intersection = [clazz.replace("\n", "") for clazz in classes_file]
 
 with open("intersecting_java_mutants.txt", "w+") as intersecting_mutants_file, open("java_mutants.txt", "r") as java_mutants_file:
     java_mutants = java_mutants_file.readlines()

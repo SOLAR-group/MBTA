@@ -51,11 +51,11 @@ if __name__ == "__main__":
         mutants = mutants_file.readlines()
 
     print("Getting Java CSVs")
-    # java_csvs = [directory + line.replace(".java", ".csv").replace("\n", "") for line in mutants]
-    # java_csvs.extend(["../../data/java/" + line.replace("\n", "") + ".csv" for line in classes])
+    java_csvs = [directory + line.replace(".java", ".csv").replace("\n", "") for line in mutants]
+    java_csvs.extend(["../../data/java/" + line.replace("\n", "") + ".csv" for line in classes])
     print("Reading Java CSVs")
-    # java_data_frame = read_data_frame(java_csvs)
-    java_data_frame = pd.read_csv("csvs/java.csv", low_memory=False, dtype=str)
+    java_data_frame = read_data_frame(java_csvs)
+    # java_data_frame = pd.read_csv("csvs/java.csv", low_memory=False, dtype=str)
     java_data_frame = filter_data_frame(java_data_frame)
     print_data_frame_to_csv(java_data_frame, "java")
 
@@ -63,11 +63,11 @@ if __name__ == "__main__":
         mutants = mutants_file.readlines()
 
     print("Getting Python CSVs")
-    # python_csvs = [directory + line.replace(".py", ".csv").replace("\n", "") for line in mutants]
-    # python_csvs.extend(["../../data/java/" + line.replace("\n", "") + "_TRANSLATED.csv" for line in classes])
+    python_csvs = [directory + line.replace(".py", ".csv").replace("\n", "") for line in mutants]
+    python_csvs.extend(["../../data/java/" + line.replace("\n", "") + "_TRANSLATED.csv" for line in classes])
     print("Reading Python CSVs")
-    # python_data_frame = read_data_frame(python_csvs)
-    python_data_frame = pd.read_csv("csvs/python.csv", low_memory=False, dtype=str)
+    python_data_frame = read_data_frame(python_csvs)
+    # python_data_frame = pd.read_csv("csvs/python.csv", low_memory=False, dtype=str)
     python_data_frame = filter_data_frame(python_data_frame)
     print_data_frame_to_csv(python_data_frame, "python")
 
