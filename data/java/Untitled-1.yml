@@ -1,0 +1,35 @@
+\begin{table}
+    \centering
+    \begin{tabular}{lrr}
+        \toprule
+        Measure                       & TransCoder       & j2py             \\
+        \midrule
+        Translations                  & 52,377 (99.98\%) & 47,247 (90.19\%) \\
+        Compilable Translations       & 47,729 (91.11\%) & 39,237 (74.90\%) \\
+        Timeouts                      & 496 (0.95\%)     & 883 (1.69\%)     \\
+        Exceptions                    & 19,018 (36.30\%) & 23,859 (45.54\%) \\
+        Non-Anomalous Translations    & 26,829 (51.21\%) & 13,794 (26.33\%) \\
+        \midrule
+        Overall \methodname           & 36899 (0.7044)   &                  \\
+        Median Individual \methodname & 0.7877           &                  \\
+        Mean Individual \methodname   & 0.6848           &                  \\
+        Std. Individual \methodname   & 0.3034           &                  \\
+        Overall CA                    & 0.3632           &                  \\
+        Median Individual CA          & 0.0              &                  \\
+        Mean Individual CA            & 0.3700           &                  \\
+        Std. Individual CA            & 0.4545           &                  \\
+        \bottomrule
+    \end{tabular}
+    \caption{RQ1-2: Summary of the results obtained during the experiments.}
+    \label{tab:results}
+\end{table}
+
+Number of killed mutants: 37,008
+General MTS: 0.7798
+Median: 0.9101
+Mean: 0.7235
+Standard Deviation: 0.3304
+CA: 0.3279
+Median: 0.0
+Mean: 0.3279
+Standard Deviation: 0.4566

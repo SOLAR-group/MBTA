@@ -42,7 +42,7 @@ if __name__ == "__main__":
                     num_java_runnable += 1
                     with codecs.open(java_output, 'r', encoding="unicode_escape") as output_file:
                         output_lines = output_file.readlines()
-                        if len(output_lines) == 1 and 'TIMEOUT' in output_lines[0]:
+                        if 'TIMEOUT' in output_lines[0]:
                             num_java_time_out += 1
                         elif len(output_lines) == 11:
                             num_java_10_outputs += 1
@@ -62,7 +62,7 @@ if __name__ == "__main__":
                                         num_python_runnable += 1
                                         with codecs.open(python_output, 'r', encoding="unicode_escape") as output_file:
                                             output_lines = output_file.readlines()
-                                            if len(output_lines) == 1 and 'TIMEOUT' in output_lines[0]:
+                                            if 'TIMEOUT' in output_lines[0]:
                                                 num_python_time_out += 1
                                             elif len(output_lines) == 11:
                                                 num_python_10_outputs += 1
@@ -86,3 +86,4 @@ if __name__ == "__main__":
     print(f'Number of Python 10 outputs: {num_python_10_outputs} ({round(num_python_10_outputs/num_java_success*100, 2)}%)')
     print(f'Number of Python Exceptions: {num_python_exception} ({round(num_python_exception/num_java_success*100, 2)}%)')
     print(f'Number of Python Success: {num_python_success} ({round(num_python_success/num_java_success*100, 2)}%)')
+

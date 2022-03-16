@@ -5,7 +5,7 @@ import os
 from glob import glob
 from tqdm import tqdm
 
-csvs = glob('../MuJava/result/**/*.csv', recursive=True)
+csvs = glob('../TransCode/output/*.csv', recursive=True)
 
 # progress = tqdm(csvs)
 for csv_file in csvs:

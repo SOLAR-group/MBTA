@@ -26,29 +26,31 @@ def get_huge_data_frame(csvs: list, language: str = None):
 
 
 if __name__ == "__main__":
-    global non_executable
-    python_csvs = set(glob.glob('../../Transcode/output/*python.csv')) - set(
-        glob.glob('../../Transcode/output/*original*.csv'))
-    java_csvs = set(glob.glob('../../Transcode/output/*.csv')) - set(
-        glob.glob('../../Transcode/output/*original*.csv')) - set(python_csvs)
-
-    non_executable = 0
-    java_df = get_huge_data_frame(java_csvs)
-    java_df.to_csv("java.csv", index=False)
-    print(f'Mutants Java: {len(java_csvs)}')
-    print(f'Non-executable Java: {non_executable}')
+    # global non_executable
+    # python_csvs = set(glob.glob('../../Transcode/output/*python.csv')) - set(
+    #     glob.glob('../../Transcode/output/*original*.csv'))
+    # java_csvs = set(glob.glob('../../Transcode/output/*.csv')) - set(
+    #     glob.glob('../../Transcode/output/*original*.csv')) - set(python_csvs)
+    #
+    # non_executable = 0
+    # java_df = get_huge_data_frame(java_csvs)
+    # java_df.to_csv("java.csv", index=False)
+    java_df = pd.read_csv("csvs/java_mutants.csv")
+    # print(f'Mutants Java: {len(java_csvs)}')
+    # print(f'Non-executable Java: {non_executable}')
     print(f'No timeout Java: {len(java_df.groupby(["class", "mutant"]))}')
 
-    non_executable = 0
-    python_df = get_huge_data_frame(python_csvs)
-    python_df.to_csv("python.csv", index=False)
-    print(f'Mutants Python: {len(python_csvs)}')
-    print(f'Non-executable Python: {non_executable}')
+    # non_executable = 0
+    # python_df = get_huge_data_frame(python_csvs)
+    # python_df.to_csv("python.csv", index=False)
+    python_df = pd.read_csv("csvs/python_mutants.csv")
+    # print(f'Mutants Python: {len(python_csvs)}')
+    # print(f'Non-executable Python: {non_executable}')
     print(f'No timeout Python: {len(python_df.groupby(["class", "mutant"]))}')
 
-    java_df = pd.read_csv("csvs/java.csv")
-    python_df = pd.read_csv("csvs/python.csv")
-    merged: pd.DataFrame = pd.merge(java_df, python_df, on=["class", "mutant", 'index'], suffixes=['_java', '_python'],
+    # java_df = pd.read_csv("csvs/java.csv")
+    # python_df = pd.read_csv("csvs/python.csv")
+    merged: pd.DataFrame = pd.merge(java_df, python_df, on=["class", "mutant", 'index'], suffixes=('_java', '_python'),
                                     how='left')
     merged = merged[['class', 'mutant', 'index', 'result_java', 'result_python']]
 

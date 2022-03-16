@@ -1,21 +1,29 @@
 import codecs
 import os
-from typing import Union
+from typing import Union, Any
 
 import pandas as pd
 from pandas import DataFrame
 from tqdm import tqdm
 
 
+def is_float(element: Any) -> bool:
+    try:
+        float(element)
+        return True
+    except:
+        return False
+
+
 def read_data_frame(csvs: Union[list, set]) -> DataFrame:
     data_frames = list()
     progress = tqdm(csvs)
     for csv in progress:
-        # progress.set_description(csv)
-        if os.path.exists(csv) and os.path.getsize(csv) > 0:
-            with codecs.open(csv, 'r', encoding="unicode_escape") as output_file:
-                output_line = output_file.readline()
-                if 'TIMEOUT' not in output_line:
+        progress.set_description(csv)
+        if os.path.isfile(csv) and os.path.getsize(csv) > 0:
+            with codecs.open(csv, 'r', encoding="latin-1") as output_file:
+                output_lines = output_file.readlines()
+                if 'TIMEOUT' not in output_lines[0] and len(output_lines) == 11:
                     data_frame = pd.read_csv(csv, names=["class", "mutant", "test_index", "result"], dtype=str,
                                              on_bad_lines='skip')
                     data_frames.append(data_frame)
@@ -57,6 +65,8 @@ if __name__ == "__main__":
     java_data_frame = read_data_frame(java_csvs)
     # java_data_frame = pd.read_csv("csvs/java.csv", low_memory=False, dtype=str)
     java_data_frame = filter_data_frame(java_data_frame)
+    java_data_frame['result'] = pd.to_numeric(java_data_frame['result'], errors="ignore").apply(
+        lambda x: round(float(x), 8) if is_float(x) else x)
     print_data_frame_to_csv(java_data_frame, "java")
 
     with open(f'../../intersecting_translated_python_mutants.txt', 'r') as mutants_file:
@@ -69,13 +79,15 @@ if __name__ == "__main__":
     python_data_frame = read_data_frame(python_csvs)
     # python_data_frame = pd.read_csv("csvs/python.csv", low_memory=False, dtype=str)
     python_data_frame = filter_data_frame(python_data_frame)
+    python_data_frame['result'] = pd.to_numeric(python_data_frame['result'], errors="ignore").apply(
+        lambda x: round(float(x), 8) if is_float(x) else x)
     print_data_frame_to_csv(python_data_frame, "python")
 
     print("Merging DataFrames")
     merged = pd.merge(java_data_frame, python_data_frame, on=["class", "mutant", 'test_index'],
                       suffixes=('_java', '_python'), how='left')
     print("Mutating DataFrame. Adding 'equal_results'")
-    merged['equal_results'] = merged['result_python'].str.lower() == merged['result_java'].str.lower()
+    merged['equal_results'] = merged['result_python'].astype(str).str.lower() == merged['result_java'].astype(str).str.lower()
     print("Reordering Columns")
     merged = merged[['class', 'mutant', 'test_index', 'result_java', 'result_python', 'equal_results']]
     print_data_frame_to_csv(merged, "merged")
