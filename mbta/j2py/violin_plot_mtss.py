@@ -22,7 +22,7 @@ if __name__ == "__main__":
     print(f"Number of classes: {len(data.groupby(['class']))}")
     print(f"Number of non-anomalous mutants: {len(data.groupby(['class', 'mutant']))}")
     print(f"Number of killed mutants: {len(grouped[grouped[mts_name] != 0])}")
-    print(f"General MTS: {grouped.agg({mts_name: percentage})[mts_name]}")
+    print(f"General MTS: {len(grouped[grouped[mts_name] != 0]) / 52386}")
     # Group by class and get the percentage of mutants that were killed
     grouped = grouped.groupby(["class"]).agg({mts_name: percentage})
 
@@ -87,7 +87,8 @@ if __name__ == "__main__":
     plt.ylabel(accuracy_name)
     plt.savefig("plots/scatter_j2py.png")
 
-    # merged = merged[merged[mts_name] == 1]
+    # merged = merged[merged[mts_name] > 0]
     # merged = merged[merged[accuracy_name] == 1]
-    # print(merged)
+    print(merged)
     print(stats.spearmanr(merged[mts_name], merged[accuracy_name]))
+    print(stats.kendalltau(merged[mts_name], merged[accuracy_name]))

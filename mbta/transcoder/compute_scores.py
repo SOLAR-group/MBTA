@@ -82,5 +82,7 @@ if __name__ == "__main__":
     # merged[merged[mts_name] == 0].append(merged[merged[mts_name] == 1]).to_csv("boundaries_mutants.csv")
     # merged = merged[merged[mts_name] > 0]
     # merged = merged[merged[accuracy_name] == 1]
-    # print(merged)
-    # print(stats.spearmanr(merged[mts_name], merged[accuracy_name]))
+    print(merged)
+    print(stats.spearmanr(merged[mts_name], merged[accuracy_name]))
+    print(stats.kendalltau(merged[mts_name], merged[accuracy_name]))
+
