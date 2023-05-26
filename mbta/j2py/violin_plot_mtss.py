@@ -81,14 +81,16 @@ if __name__ == "__main__":
 
     merged = grouped.merge(original_grouped, left_index=True, right_index=True)
 
-    plt.figure()
-    plt.scatter(merged[mts_name], merged[accuracy_name])
-    plt.xlabel(mts_name)
-    plt.ylabel(accuracy_name)
-    plt.savefig("plots/scatter_j2py.png")
+    # plt.figure()
+    # plt.scatter(merged[mts_name], merged[accuracy_name])
+    # plt.xlabel(mts_name)
+    # plt.ylabel(accuracy_name)
+    # plt.savefig("plots/scatter_j2py.png")
 
-    # merged = merged[merged[mts_name] > 0]
-    # merged = merged[merged[accuracy_name] == 1]
+    # merged = merged[merged[mts_name] < 0.3]
+    # merged = merged[merged[accuracy_name] < 0.3]
     print(merged)
+    merged.plot.scatter(x=mts_name, y=accuracy_name)
+    plt.show()
     print(stats.spearmanr(merged[mts_name], merged[accuracy_name]))
     print(stats.kendalltau(merged[mts_name], merged[accuracy_name]))
