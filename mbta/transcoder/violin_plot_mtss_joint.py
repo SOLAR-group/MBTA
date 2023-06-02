@@ -108,3 +108,6 @@ if __name__ == "__main__":
     plt.ylabel(accuracy_name)
     plt.savefig("plots/scatter_correlation_nmutants_acc.png", bbox_inches='tight')
 
+    print(stats.spearmanr(merged[mts_name], merged["mutant"]))
+    print(stats.spearmanr(merged[accuracy_name], merged["mutant"]))
+
