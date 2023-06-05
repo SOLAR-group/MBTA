@@ -29,7 +29,7 @@ def save_violin_plot(data, y_column, y_label, output_path):
                 medianprops=dict(linewidth=3))
     plt.legend(frameon=False, fontsize=15, loc='upper left')
 
-    plt.savefig(output_path, bbox_inches='tight')
+    plt.savefig(output_path, bbox_inches='tight', dpi=300)
 
 if __name__ == "__main__":
     data_transcoder = pd.read_csv("csvs/merged_mutants.csv")
@@ -87,26 +87,26 @@ if __name__ == "__main__":
     plt.scatter(temp[mts_name], temp[accuracy_name], c="#88c088")
     plt.xlabel(mts_name)
     plt.ylabel(accuracy_name)
-    plt.savefig("plots/scatter_transcoder.png", bbox_inches='tight')
+    plt.savefig("plots/scatter_transcoder.png", bbox_inches='tight', dpi=300)
 
     temp = merged[merged["Translator"] == "j2py"]
     plt.figure()
     plt.scatter(temp[mts_name], temp[accuracy_name], c="#bfb3cf")
     plt.xlabel(mts_name)
     plt.ylabel(accuracy_name)
-    plt.savefig("plots/scatter_j2py.png", bbox_inches='tight')
+    plt.savefig("plots/scatter_j2py.png", bbox_inches='tight', dpi=300)
 
     plt.figure()
     plt.scatter(y=merged[mts_name], x=merged["mutant"])
     plt.xlabel("Number of Mutants")
     plt.ylabel(mts_name)
-    plt.savefig("plots/scatter_correlation_nmutants_mts.png", bbox_inches='tight')
+    plt.savefig("plots/scatter_correlation_nmutants_mts.png", bbox_inches='tight', dpi=300)
 
     plt.figure()
     plt.scatter(y=merged[accuracy_name], x=merged["mutant"])
     plt.xlabel("Number of Mutants")
     plt.ylabel(accuracy_name)
-    plt.savefig("plots/scatter_correlation_nmutants_acc.png", bbox_inches='tight')
+    plt.savefig("plots/scatter_correlation_nmutants_acc.png", bbox_inches='tight', dpi=300)
 
     print(stats.spearmanr(merged[mts_name], merged["mutant"]))
     print(stats.spearmanr(merged[accuracy_name], merged["mutant"]))
