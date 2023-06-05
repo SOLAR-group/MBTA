@@ -27,7 +27,7 @@ def save_violin_plot(data, y_column, y_label, output_path):
                 medianprops=dict(linewidth=3))
     plt.legend(frameon=False, fontsize=15, loc='upper left')
 
-    plt.savefig(output_path, bbox_inches='tight')
+    plt.savefig(output_path, bbox_inches='tight', dpi=300)
 
 def analyse_mutant():
     progress = tqdm(lines)
