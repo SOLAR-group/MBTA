@@ -11,6 +11,22 @@ from progress.bar import Bar
 pd.options.display.max_columns = None
 pd.options.display.max_rows = None
 
+def save_box_plot_mutation_operators(data, y_column, y_label, output_path):
+    plt.figure()
+    sns.boxplot(x="Mutation Operator", y=y_column, data=data, width=0.25,
+                showfliers=False,
+                # meanprops=dict(marker='X', markerfacecolor='black', markeredgecolor='white',
+                #                markersize=8, zorder=3),
+                boxprops=dict(facecolor=(0, 0, 0, 0),
+                              linewidth=2, zorder=3),
+                whiskerprops=dict(linewidth=2),
+                capprops=dict(linewidth=2),
+                medianprops=dict(linewidth=2))
+    plt.legend(frameon=False, fontsize=15, loc='upper left')
+    plt.xticks(rotation=45)
+
+    plt.savefig(output_path, bbox_inches='tight', dpi=300)
+
 def save_violin_plot(data, y_column, y_label, output_path):
     plt.figure()
     # Create violin plots without mini-boxplots inside.
@@ -45,14 +61,14 @@ if __name__ == "__main__":
     percentage = lambda item: sum(item) / len(item)
     aggregate_mutants = lambda item: not all(item)
 
-    # operator_mts = "Mutation-based Translation Score"
-    # operator_grouped: DataFrame = data_transcoder.replace(to_replace=r'_.*', value='', regex=True)
-    # operator_grouped = operator_grouped.groupby(["class", "mutant"]).agg({"equal_results": len}).reset_index()
-    # operator_grouped["equal_results"] = operator_grouped["equal_results"] / 10
-    # number_name = "Number of Generated Mutants"
-    # operator_grouped = operator_grouped.rename(columns={"equal_results": number_name, "mutant": "Mutation Operator"})
-    # print(operator_grouped)
-    # save_violin_plot(data=operator_grouped, y_column=number_name, y_label=number_name, output_path="plots/violin_operator_mts.png")
+    operator_mts = "Mutation-based Translation Score"
+    operator_grouped: DataFrame = data_transcoder.replace(to_replace=r'_.*', value='', regex=True)
+    operator_grouped = operator_grouped.groupby(["class", "mutant"]).agg({"equal_results": len}).reset_index()
+    operator_grouped["equal_results"] = operator_grouped["equal_results"] / 10
+    number_name = "Number of Generated Mutants"
+    operator_grouped = operator_grouped.rename(columns={"equal_results": number_name, "mutant": "Mutation Operator"})
+    print(operator_grouped)
+    save_box_plot_mutation_operators(data=operator_grouped, y_column=number_name, y_label=number_name, output_path="plots/violin_operator_mts.png")
 
     # Find the mutants with all at least one different output outputs
     mts_name = "Mutation-based Translation Score"
