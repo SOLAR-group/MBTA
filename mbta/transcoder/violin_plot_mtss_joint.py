@@ -126,4 +126,5 @@ if __name__ == "__main__":
 
     print(stats.spearmanr(merged[mts_name], merged["mutant"]))
     print(stats.spearmanr(merged[accuracy_name], merged["mutant"]))
+    print(stats.spearmanr(merged[accuracy_name], merged[mts_name]))
 
