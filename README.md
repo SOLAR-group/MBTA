@@ -1,6 +1,6 @@
 # MBTA
 
-This is a repository with all the required script files to run the experiments of our paper.
+This is a repository with all the required script files to run the experiments of our research article titled "Mutation analysis for evaluating code translation" published in the Springer EMSE journal.
 
 The directory `data` contains all the original programs used in our experiments, both in Java and Python.
 Inside each directory, you will find the compiled class (Java), the original source code (program.java or program.py), the main class with all the tests (program_MAIN.java or program_MAIN.py), and a CSV file with the execution results for that program.
